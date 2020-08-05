@@ -1,0 +1,6 @@
+//Mixins
+@mixin mix-pseudo-base {
+  position: absolute;
+  content: '';
+  display: block;
+}

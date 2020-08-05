@@ -1,0 +1,30 @@
+//Slick settings
+.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+
+  & button {
+    width: 9px;
+    height: 9px;
+    background: white;
+    margin: 0 10px;
+  }
+
+  & > .slick-active > button {
+    background: #D96C0D;
+  }
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+}
