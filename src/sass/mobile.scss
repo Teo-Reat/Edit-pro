@@ -425,6 +425,15 @@
     top: 50px;
     bottom: 110px;
   };
+  & .slick-dots {
+    bottom: 60px;
+    & button {
+      background: #DFE1E8;
+    }
+    & > .slick-active > button {
+      background: #D96C0D;
+    }
+  }
   &__title {
     color: white;
     padding: {
@@ -454,16 +463,71 @@
       };
     }
     &-description {
+      line-height: 20px;
       margin: {
         top: 15px;
       };
       &-wrapper {
         background: #F1F4F6;
+        height: 330px;
+        display: flex;
+        flex-direction: column;
         padding: {
           left: 20px;
           right: 5px;
         };
       }
     }
+    &-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: {
+        top: auto;
+      };
+      padding: {
+        top: 15px;
+      };
+    }
+    &-link {
+      color: #1A2757;
+      line-height: 24px;
+    }
+    &-svg {
+      width: 80px;
+      height: 80px;
+      &-wrapper {
+        margin: {
+          right: 17px;
+          bottom: 17px;
+        };
+      }
+    }
+  }
+}
+
+//Instagram section
+.instagram {
+  padding: {
+    top: 50px;
+    bottom: 40px;
+  };
+  &__title {
+    padding: {
+      bottom: 30px;
+    };
+  }
+  &__item {
+    width: 100%;
+    display: flex;
+    &-wrapper {
+      display: none;
+      &:first-child {
+        display: block;
+      }
+    }
+  }
+  &__img {
+    width: 100%;
   }
 }
