@@ -49,8 +49,32 @@ $(document).ready(() => {
 		]
 	});
 
-	//Slick slider in news section
+	//Slick slider in steps section
 	$('.steps__slider').slick({
+		autoplay: false,
+		dots: false,
+		arrows: true,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		prevArrow: '<button type="button" class="slick-prev news__actions__slick-prev"><svg class="icon icon-arrow-l"><use xlink:href="#icon-arrow-l"></use></svg></button>',
+		nextArrow: '<button type="button" class="slick-next news__actions__slick-next"><svg class="icon icon-arrow-r"><use xlink:href="#icon-arrow-r"></use></svg></button>',
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: false,
+					dots: true
+				}
+			},
+		]
+	});
+
+	//Slick slider in partners section
+	$('.partners__slider').slick({
 		autoplay: false,
 		dots: false,
 		arrows: true,
