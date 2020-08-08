@@ -289,6 +289,7 @@
 //About us section
 .about-us {
   background: #0175B2;
+  position: relative;
   padding: {
     top: 50px;
     bottom: 40px;
@@ -297,6 +298,17 @@
     font-size: 18px;
     line-height: 25px;
     color: white;
+    position: relative;
+    z-index: 5;
+  }
+  &__svg {
+    fill: #1682B8;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 146px;
+    height: 76px;
+    z-index: 0;
   }
 }
 
@@ -482,8 +494,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      height: 80px;
+      position: relative;
       margin: {
         top: auto;
+        bottom: 15px;
       };
       padding: {
         top: 15px;
@@ -492,15 +507,22 @@
     &-link {
       color: #1A2757;
       line-height: 24px;
+      margin: {
+        right: auto;
+        left: 10px;
+      };
+      &-svg {
+        width: 37px;
+        height: 37px;
+      }
     }
     &-svg {
       width: 80px;
       height: 80px;
       &-wrapper {
-        margin: {
-          right: 17px;
-          bottom: 17px;
-        };
+        position: absolute;
+        right: 12px;
+        bottom: 0;
       }
     }
   }
@@ -529,5 +551,145 @@
   }
   &__img {
     width: 100%;
+  }
+}
+
+//Footer
+.footer {
+  background: #31343D;
+  color: white;
+  text-align: center;
+  &__contacts {
+    position: relative;
+    padding: {
+      top: 70px;
+      bottom: 30px;
+    };
+    &::after {
+      @include mix-pseudo-base;
+      background: #41444D;
+      height: 1px;
+      left: -25px;
+      right: -25px;
+      bottom: 0;
+    }
+    &-phone {
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 24px;
+    }
+    &-email {
+      font-size: 18px;
+      line-height: 24px;
+      margin: {
+        top: 15px;
+      };
+    }
+    &-address {
+      color: #84868D;
+      line-height: 24px;
+      width: 205px;
+      margin: {
+        top: 10px;
+        left: auto;
+        right: auto;
+      };
+    }
+  }
+  &__menu {
+    position: relative;
+    padding: {
+      top: 30px;
+      bottom: 35px;
+    };
+    &::after {
+      @include mix-pseudo-base;
+      background: #41444D;
+      height: 1px;
+      left: -25px;
+      right: -25px;
+      bottom: 0;
+    }
+    &-link {
+      font-size: 18px;
+      line-height: 37px;
+      color: #DBDDE8;
+    }
+  }
+  &__social {
+    padding: {
+      top: 40px;
+      bottom: 75px;
+    };
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      width: 160px;
+      margin: 0 auto;
+    }
+    &-link {
+      &-svg {
+        height: 24px;
+        width: 24px;
+      }
+    }
+    &-feedback {
+      background: #2B2E35;
+      border: 1px solid rgba(223, 225, 232, 0.2);
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: white;
+      width: 100%;
+      padding: {
+        top: 15px;
+        bottom: 15px;
+      };
+      margin: {
+        top: 30px;
+      };
+    }
+  }
+  &__rights {
+    background: #262930;
+    text-align: left;
+    margin: {
+      left: -25px;
+      right: -25px;
+    };
+    padding: {
+      top: 9px;
+      bottom: 12px;
+    };
+    &-copyrights {
+      font-size: 12px;
+      line-height: 14px;
+      color: #626368;
+      margin: {
+        left: 25px;
+      };
+    }
+    &-map {
+      &-link {
+        font-size: 12px;
+        line-height: 14px;
+        color: #626368;
+        margin: {
+          left: 25px;
+        };
+      }
+    }
+    &-privacy {
+      &-link {
+        font-size: 12px;
+        line-height: 14px;
+        color: #626368;
+        margin: {
+          left: 25px;
+        };
+      }
+    }
   }
 }

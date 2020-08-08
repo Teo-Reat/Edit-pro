@@ -10,6 +10,14 @@
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
+        <symbol id="icon-ED" viewBox="0 0 60 32">
+            <path d="M26.021 24.673v7.122h-14.852v-7.122h14.852zM25.776 19.393h-14.606v-6.999h14.606v6.999zM26.144 7.482h-14.974v-7.122h14.974v7.122zM0 0.361h7.242v31.435h-7.242v-31.435zM60.143 16.078c0 9.7-6.996 15.717-16.815 15.717v-6.999c5.401-0.123 8.592-4.052 8.592-8.718 0-4.789-2.946-8.595-8.592-8.595v-7.122c9.819 0.123 16.815 6.017 16.815 15.717zM32.158 0.361h7.242v31.435h-7.242v-31.435z"></path>
+        </symbol>
+        <symbol id="icon-link" viewBox="0 0 32 32">
+            <path fill="#fff" style="fill: var(--color2, #fff)" d="M0 0h32v32h-32v-32z"></path>
+            <path fill="#0a285a" style="fill: var(--color3, #0a285a)" d="M22.309 9.691c-1.097-1.097-2.926-1.097-4.023 0l-3.657 3.749c-1.097 1.097-1.097 2.926 0 4.023l1.28-1.28c-0.457-0.457-0.457-1.006 0-1.463l3.749-3.749c0.457-0.457 1.006-0.457 1.463 0 0.183 0.183 0.274 0.457 0.274 0.731s-0.091 0.549-0.274 0.731l-2.834 2.834 1.28 1.28 2.834-2.834c0.549-0.549 0.823-1.28 0.823-2.011s-0.366-1.463-0.914-2.011z"></path>
+            <path fill="#0a285a" style="fill: var(--color3, #0a285a)" d="M16.183 15.909c0.183 0.183 0.274 0.457 0.274 0.731s-0.091 0.549-0.274 0.731l-3.749 3.657c-0.457 0.457-1.006 0.457-1.463 0-0.183-0.183-0.274-0.457-0.274-0.731s0.091-0.549 0.274-0.731l2.834-2.834-1.28-1.28-2.834 2.834c-0.549 0.549-0.823 1.28-0.823 2.011s0.274 1.463 0.823 2.011c0.549 0.549 1.28 0.823 2.011 0.823s1.463-0.274 2.011-0.823l3.749-3.749c0.549-0.549 0.823-1.28 0.823-2.011s-0.274-1.463-0.823-2.011l-1.28 1.371z"></path>
+        </symbol>
         <symbol id="icon-arrow-big-l" viewBox="0 0 32 32">
             <path fill="#fff" style="fill: var(--color1, #fff)" opacity="0.15"
                   d="M32 31.893h-32v-31.893h32v31.893zM0.533 31.36h30.933v-30.827h-30.933v30.827z"></path>
@@ -1192,10 +1200,15 @@
     </section>
     <section class="about-us">
         <div class="container">
-            <div class="about-us__text">
-                Компания hEDIT занимается установкой, настройкой и абонентским сопровождением программ 1С для
-                автоматизации
-                бизнес-процессов организаций.
+            <div class="about-us__wrapper">
+                <svg class="about-us__svg icon icon-ED">
+                    <use xlink:href="#icon-ED"></use>
+                </svg>
+                <div class="about-us__text">
+                    Компания hEDIT занимается установкой, настройкой и абонентским сопровождением программ 1С для
+                    автоматизации
+                    бизнес-процессов организаций.
+                </div>
             </div>
         </div>
     </section>
@@ -1302,7 +1315,9 @@
                             </div>
                             <div class="partners__item-footer">
                                 <div class="partners__item-link-svg-wrapper">
-                                    <img src="" alt="">
+                                    <svg class="partners__item-link-svg icon icon-link">
+                                        <use xlink:href="#icon-link"></use>
+                                    </svg>
                                 </div>
                                 <a class="partners__item-link" href="#">wmtmed.ru</a>
                                 <div class="partners__item-svg-wrapper">
@@ -1327,7 +1342,9 @@
                             </div>
                             <div class="partners__item-footer">
                                 <div class="partners__item-link-svg-wrapper">
-                                    <img src="" alt="">
+                                    <svg class="partners__item-link-svg icon icon-link">
+                                        <use xlink:href="#icon-link"></use>
+                                    </svg>
                                 </div>
                                 <a class="partners__item-link" href="#">3z.ru</a>
                                 <div class="partners__item-svg-wrapper">
@@ -1351,7 +1368,9 @@
                             </div>
                             <div class="partners__item-footer">
                                 <div class="partners__item-link-svg-wrapper">
-                                    <img src="" alt="">
+                                    <svg class="partners__item-link-svg icon icon-link">
+                                        <use xlink:href="#icon-link"></use>
+                                    </svg>
                                 </div>
                                 <a class="partners__item-link" href="#">poly-clinic.ru</a>
                                 <div class="partners__item-svg-wrapper">
@@ -1376,7 +1395,9 @@
                             </div>
                             <div class="partners__item-footer">
                                 <div class="partners__item-link-svg-wrapper">
-                                    <img src="" alt="">
+                                    <svg class="partners__item-link-svg icon icon-link">
+                                        <use xlink:href="#icon-link"></use>
+                                    </svg>
                                 </div>
                                 <a class="partners__item-link" href="#">silverbulleters.org</a>
                                 <div class="partners__item-svg-wrapper">
@@ -1450,45 +1471,91 @@
     </section>
 </main>
 <footer class="footer">
-    <section class="footer__contacts">
-        <div class="footer__contacts-phone">
-            +7 (861) 204-00-80
-        </div>
-        <div class="footer__contacts-email">
-            info@edit-pro.ru
-        </div>
-        <div class="footer__contacts-address">
-            г. Краснодар, Красная 176, лит. 5/2, офис 2035
-        </div>
-    </section>
-    <section class="footer__menu">
-        <ul class="footer__menu-list">
-            <li class="footer__menu-item">
-                <a class="footer__menu-link" href="#">О компании</a>
-            </li>
-            <li class="footer__menu-item">
-                <a class="footer__menu-link" href="#">Продукты</a>
-            </li>
-            <li class="footer__menu-item">
-                <a class="footer__menu-link" href="#">Услуги</a>
-            </li>
-            <li class="footer__menu-item">
-                <a class="footer__menu-link" href="#">Кейсы</a>
-            </li>
-            <li class="footer__menu-item">
-                <a class="footer__menu-link" href="#">Новости</a>
-            </li>
-            <li class="footer__menu-item">
-                <a class="footer__menu-link" href="#">Партнеры</a>
-            </li>
-            <li class="footer__menu-item">
-                <a class="footer__menu-link" href="#">Вакансии</a>
-            </li>
-            <li class="footer__menu-item">
-                <a class="footer__menu-link" href="#">Контакты</a>
-            </li>
-        </ul>
-    </section>
+    <div class="container">
+        <section class="footer__contacts">
+            <div class="footer__contacts-phone">
+                +7 (861) 204-00-80
+            </div>
+            <div class="footer__contacts-email">
+                info@edit-pro.ru
+            </div>
+            <div class="footer__contacts-address">
+                г. Краснодар, Красная 176, лит. 5/2, офис 2035
+            </div>
+        </section>
+        <section class="footer__menu">
+            <ul class="footer__menu-list">
+                <li class="footer__menu-item">
+                    <a class="footer__menu-link" href="#">О компании</a>
+                </li>
+                <li class="footer__menu-item">
+                    <a class="footer__menu-link" href="#">Продукты</a>
+                </li>
+                <li class="footer__menu-item">
+                    <a class="footer__menu-link" href="#">Услуги</a>
+                </li>
+                <li class="footer__menu-item">
+                    <a class="footer__menu-link" href="#">Кейсы</a>
+                </li>
+                <li class="footer__menu-item">
+                    <a class="footer__menu-link" href="#">Новости</a>
+                </li>
+                <li class="footer__menu-item">
+                    <a class="footer__menu-link" href="#">Партнеры</a>
+                </li>
+                <li class="footer__menu-item">
+                    <a class="footer__menu-link" href="#">Вакансии</a>
+                </li>
+                <li class="footer__menu-item">
+                    <a class="footer__menu-link" href="#">Контакты</a>
+                </li>
+            </ul>
+        </section>
+        <section class="footer__social">
+            <ul class="footer__social-list">
+                <li class="footer__social-item">
+                    <a class="footer__social-link" href="#">
+                        <svg class="footer__social-link-svg icon icon-smm-facebook">
+                            <use xlink:href="#icon-smm-facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a class="footer__social-link" href="#">
+                        <svg class="footer__social-link-svg icon icon-smm-twitter">
+                            <use xlink:href="#icon-smm-twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a class="footer__social-link" href="#">
+                        <svg class="footer__social-link-svg icon icon-smm-inst">
+                            <use xlink:href="#icon-smm-inst"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a class="footer__social-link" href="#">
+                        <svg class="footer__social-link-svg icon icon-smm-youtube">
+                            <use xlink:href="#icon-smm-youtube"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <button class="footer__social-feedback" type="button">Написать нам</button>
+        </section>
+        <section class="footer__rights">
+            <div class="footer__rights-copyrights">
+                © 2020 ООО "Эдит"
+            </div>
+            <div class="footer__rights-map">
+                <a class="footer__rights-map-link" href="#">Карта сайта</a>
+            </div>
+            <div class="footer__rights-privacy">
+                <a class="footer__rights-privacy-link" href="#">Политика конфиденциальности</a>
+            </div>
+        </section>
+    </div>
 </footer>
 <!--Scripts-->
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
