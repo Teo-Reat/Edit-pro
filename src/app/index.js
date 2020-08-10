@@ -125,6 +125,8 @@ $(document).ready(() => {
 		}
 	});
 
+	//reCaptcha
+
 	//Mobile menu toggle
 	$('.js-header__menu-open').click(function(){
 		$(this).toggleClass('open');

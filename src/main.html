@@ -10,6 +10,9 @@
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
+        <symbol id="icon-check" viewBox="0 0 38 32">
+            <path fill="#d96c0d" style="fill: var(--color1, #d96c0d)" d="M28.375 2.663l-15.125 17.3-7.412-6-4.025 4.988 12.2 9.863 19.188-21.925-4.825-4.225z"></path>
+        </symbol>
         <symbol id="icon-star" viewBox="0 0 28 32">
             <path fill="#d96c0d" style="fill: var(--color1, #d96c0d)" d="M11.688 16.75l-10.375-3.375 1-3.156 10.375 3.844-0.125-11.562h3.25l-0.25 11.656 10.125-3.969 1.031 3.156-10.406 3.594 6.969 9.187-2.656 1.969-6.687-9.531-6.375 9.469-2.656-1.906 6.781-9.375z"></path>
         </symbol>
@@ -942,14 +945,16 @@
                     </div>
                     <button class="mobile__feedback-submit">Отправить</button>
                     <div class="mobile__feedback-input-wrapper">
-                        <input class="mobile__feedback-check-rules" id="feedback__check" type="checkbox">
-                        <label for="feedback__check">
+                        <div class="mobile__feedback-check-description mobile__feedback-check-wrapper">
                             Нажимая кнопку «Отправить», я даю свое
                             <a class="mobile__feedback-check-link" href="#">
                                 согласие на обработку моих персональных данных
                             </a>
                             , в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ
-                        </label>
+                        </div>
+                        <input class="mobile__feedback-check-rules" id="feedback__check" type="checkbox">
+                        <label for="feedback__check"></label>
+                        <svg class="mobile__feedback-check-svg icon icon-check"><use xlink:href="#icon-check"></use></svg>
                     </div>
                 </form>
             </div>
@@ -1700,5 +1705,6 @@
 </footer>
 <!--Scripts-->
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>
