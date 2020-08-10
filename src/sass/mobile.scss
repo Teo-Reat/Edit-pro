@@ -23,6 +23,163 @@
   }
 }
 
+//Mobile menu section
+.mobile {
+  background: #0A285A;
+  &__menu {
+    &-item {
+      padding: {
+        left: 25px;
+        right: 25px;
+      };
+      border: {
+        bottom: 1px solid #2D4367;
+      };
+      &--open {
+        background: #0175B2;
+        border: none;
+        & .mobile__menu-button {
+          transform: rotate(45deg);
+        }
+      }
+      &-inner {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    &-link {
+      display: block;
+      color: white;
+      font-weight: bold;
+      line-height: 19px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      width: 100%;
+      padding: {
+        top: 30px;
+        bottom: 30px;
+      };
+    }
+    &-button {
+      display: block;
+      height: 11px;
+      width: 11px;
+      transform: rotate(225deg);
+      border: {
+        left: 2px solid white;
+        top: 2px solid white;
+      };
+      margin: {
+        top: 35px;
+        left: 25px;
+      };
+    }
+    &-sub {
+      &-list {
+        padding: {
+          bottom: 50px;
+        };
+      }
+      &-item {
+        margin: {
+          top: 20px;
+        };
+        &:first-child {
+          margin: 0;
+        }
+      }
+      &-link {
+        font-size: 18px;
+        line-height: 19px;
+        color: #C9D4E6
+      }
+    }
+  }
+  &__feedback {
+    padding: {
+      top: 30px;
+      left: 25px;
+      right: 25px;
+      bottom: 45px;
+    };
+    &-title {
+      color: white;
+    }
+    &-input {
+      width: 100%;
+      line-height: 24px;
+      font-size: 16px;
+      background: transparent;
+      color: white;
+      border: {
+        bottom: 1px solid white;
+      };
+      padding: {
+        top: 5px;
+        bottom: 5px;
+      };
+      &::placeholder {
+        font-size: 16px;
+        line-height: 24px;
+        color: white;
+        opacity: 1;
+      }
+      &-wrapper {
+        position: relative;
+        margin: {
+          top: 20px;
+        };
+        &:first-child {
+          margin: {
+            top: 40px;
+          };
+        }
+      }
+      &-svg {
+        position: absolute;
+        height: 10px;
+        width: 10px;
+        right: 5px;
+        top: 5px;
+
+      }
+    }
+    &-textarea {
+      width: 100%;
+      line-height: 24px;
+      font-size: 16px;
+      background: transparent;
+      color: white;
+      height: 60px;
+      resize: none;
+      border: {
+        bottom: 1px solid white;
+      };
+      &:focus + .mobile__feedback-textarea-pseudo-placeholder {
+        top: -15px;
+        font-size: 13px;
+      }
+      &-wrapper {
+        position: relative;
+        margin: {
+          top: 20px;
+        };
+      }
+    }
+    &-field {
+      position: absolute;
+      color: white;
+      cursor: inherit;
+      bottom: 5px;
+      left: 0;
+      transition: .3s;
+    }
+  }
+}
+
+//Focus and active placeholders
+
 //Main
 .main {
 
@@ -560,19 +717,12 @@
   color: white;
   text-align: center;
   &__contacts {
-    position: relative;
+    border-bottom: 1px solid #41444D;
+    box-sizing: border-box;
     padding: {
       top: 70px;
       bottom: 30px;
     };
-    &::after {
-      @include mix-pseudo-base;
-      background: #41444D;
-      height: 1px;
-      left: -25px;
-      right: -25px;
-      bottom: 0;
-    }
     &-phone {
       font-weight: 500;
       font-size: 26px;
@@ -597,19 +747,12 @@
     }
   }
   &__menu {
-    position: relative;
+    border-bottom: 1px solid #41444D;
+    box-sizing: border-box;
     padding: {
       top: 30px;
       bottom: 35px;
     };
-    &::after {
-      @include mix-pseudo-base;
-      background: #41444D;
-      height: 1px;
-      left: -25px;
-      right: -25px;
-      bottom: 0;
-    }
     &-link {
       font-size: 18px;
       line-height: 37px;
@@ -655,30 +798,28 @@
   &__rights {
     background: #262930;
     text-align: left;
-    margin: {
-      left: -25px;
-      right: -25px;
-    };
     padding: {
       top: 9px;
       bottom: 12px;
     };
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
     &-copyrights {
       font-size: 12px;
       line-height: 14px;
       color: #626368;
-      margin: {
-        left: 25px;
-      };
     }
     &-map {
+      margin: {
+        top: 3px;
+      };
       &-link {
         font-size: 12px;
         line-height: 14px;
         color: #626368;
-        margin: {
-          left: 25px;
-        };
       }
     }
     &-privacy {
@@ -686,9 +827,12 @@
         font-size: 12px;
         line-height: 14px;
         color: #626368;
-        margin: {
-          left: 25px;
-        };
+      }
+    }
+    &-logo {
+      &-svg {
+        width: 40px;
+        height: 35px;
       }
     }
   }

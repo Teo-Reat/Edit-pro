@@ -97,6 +97,34 @@ $(document).ready(() => {
 		]
 	});
 
+	//Input placeholders
+	let inputWrapper = $('.js-material-input');
+
+	inputWrapper.each(function() {
+		if ($(this).find('input,textarea').val()) {
+			$(this).addClass('active');
+		}
+		else {
+			$(this).removeClass('active');
+		}
+	});
+	inputWrapper.find('input,textarea').focusin(function() {
+		console.log(123);
+		$(this).closest('.js-material-input').addClass('focus');
+	});
+	inputWrapper.find('input,textarea').focusout(function() {
+		console.log(321);
+		$(this).closest('.js-material-input').removeClass('focus');
+	})
+	inputWrapper.find('input,textarea').change(function() {
+		if ($(this).val()) {
+			$(this).closest('.js-material-input').addClass('active');
+		}
+		else {
+			$(this).closest('.js-material-input').removeClass('active');
+		}
+	});
+
 	//Mobile menu toggle
 	$('.js-header__menu-open').click(function(){
 		$(this).toggleClass('open');
