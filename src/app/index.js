@@ -29,21 +29,26 @@ $(document).ready(() => {
 	// Slick slider in prime section
 	$('.js-prime__slider').slick({
 		autoplay: false,
-		dots: true,
+		dots: false,
 		arrows: true,
 		infinite: true,
 		speed: 300,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		prevArrow: '<button type="button" class="slick-prev prime__slick-prev"><svg class="icon icon-arrow_sl_l"><use xlink:href="#icon-arrow_sl_l"></use></svg></button>',
-		nextArrow: '<button type="button" class="slick-next prime__slick-next"><svg class="icon icon-arrow_sl_r"><use xlink:href="#icon-arrow_sl_r"></use></svg></button>',
+		prevArrow: '<button type="button" class="slick-prev prime__slick-prev"><svg class="icon icon-arrow-big-l">\n' +
+			'                <use xlink:href="#icon-arrow-big-l"></use>\n' +
+			'            </svg></button>',
+		nextArrow: '<button type="button" class="slick-next prime__slick-next"><svg class="icon icon-arrow-big-r">\n' +
+			'                <use xlink:href="#icon-arrow-big-r"></use>\n' +
+			'            </svg></button>',
 		responsive: [
 			{
-				breakpoint: 1024,
+				breakpoint: 768,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
 					arrows: false,
+					dots: true,
 				}
 			},
 		]
@@ -100,27 +105,25 @@ $(document).ready(() => {
 	//Input placeholders
 	let inputWrapper = $('.js-material-input');
 
-	inputWrapper.each(function() {
+	inputWrapper.each(function () {
 		if ($(this).find('input,textarea').val()) {
 			$(this).addClass('active');
-		}
-		else {
+		} else {
 			$(this).removeClass('active');
 		}
 	});
-	inputWrapper.find('input,textarea').focusin(function() {
+	inputWrapper.find('input,textarea').focusin(function () {
 		console.log(123);
 		$(this).closest('.js-material-input').addClass('focus');
 	});
-	inputWrapper.find('input,textarea').focusout(function() {
+	inputWrapper.find('input,textarea').focusout(function () {
 		console.log(321);
 		$(this).closest('.js-material-input').removeClass('focus');
 	})
-	inputWrapper.find('input,textarea').change(function() {
+	inputWrapper.find('input,textarea').change(function () {
 		if ($(this).val()) {
 			$(this).closest('.js-material-input').addClass('active');
-		}
-		else {
+		} else {
 			$(this).closest('.js-material-input').removeClass('active');
 		}
 	});
@@ -128,7 +131,7 @@ $(document).ready(() => {
 	//reCaptcha
 
 	//Mobile menu toggle
-	$('.js-header__menu-open').click(function(){
+	$('.js-header__menu-open').click(function () {
 		$(this).toggleClass('open');
 		$('.js-mobile').slideToggle()
 	});

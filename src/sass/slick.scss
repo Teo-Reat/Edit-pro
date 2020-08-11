@@ -1,30 +1,50 @@
 //Slick settings
-.slick-dots {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0;
-  position: absolute;
-  bottom: 50px;
-  left: 0;
-  right: 0;
+.slick {
+  &-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
 
-  & button {
-    width: 9px;
-    height: 9px;
-    background: white;
-    margin: 0 10px;
+    & button {
+      width: 9px;
+      height: 9px;
+      background: white;
+      margin: 0 10px;
+    }
+
+    & > .slick-active > button {
+      background: #D96C0D;
+    }
   }
-
-  & > .slick-active > button {
-    background: #D96C0D;
+  &-list {
+    overflow: hidden;
   }
-}
-
-.slick-list {
-  overflow: hidden;
-}
-
-.slick-track {
-  display: flex;
+  &-track {
+    display: flex;
+  }
+  &-next,
+  &-prev {
+    position: absolute;
+    z-index: 50;
+    left: 50%;
+    bottom: 50px;
+    margin: {
+      left: -273px;
+    };
+    & svg {
+      display: flex;
+      height: 60px;
+      width: 60px;
+    }
+  }
+  &-prev {
+    margin: {
+      left: -345px;
+    };
+  }
 }

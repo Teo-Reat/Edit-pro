@@ -290,6 +290,7 @@
   &__slider {
     &-item {
       min-height: 460px;
+      position: relative;
       padding: {
         bottom: 90px;
       };
@@ -315,9 +316,6 @@
   &__title {
     color: #FFFFFF;
     margin-top: 59px;
-    margin: {
-      right: -25px;
-    };
   }
   &__description {
     font-weight: 300;
@@ -400,6 +398,9 @@
     & > div:last-child .products__item::after {
       display: none;
     }
+  }
+  &__wrapper {
+    width: 100%;
   }
   &__item {
     display: flex;
@@ -542,7 +543,7 @@
   }
 }
 
-//About us section
+//About us part
 .about-us {
   background: #0175B2;
   position: relative;
@@ -550,6 +551,16 @@
     top: 50px;
     bottom: 40px;
   };
+  margin: {
+    left: -25px;
+    right: -25px;
+  };
+  &__wrapper {
+    padding: {
+      left: 25px;
+      right: 25px;
+    };
+  }
   &__text {
     font-size: 18px;
     line-height: 25px;
