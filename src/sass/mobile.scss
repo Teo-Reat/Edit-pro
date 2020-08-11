@@ -4,6 +4,7 @@
 //-----------------------------------------------
 //Header
 .header {
+  background: white;
   &__wrapper {
     display: flex;
     align-items: center;
@@ -23,9 +24,21 @@
   }
 }
 
+//Fixed header
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  left: 0;
+  right: 0;
+}
+
 //Mobile menu section
 .mobile {
   background: #0A285A;
+  display: none;
+  overflow-y: scroll;
+  height: calc(100vh - 65px);
   &__menu {
     &-item {
       padding: {
@@ -63,7 +76,7 @@
     }
     &-button {
       display: block;
-      height: 11px;
+      height: 10px;
       width: 11px;
       transform: rotate(225deg);
       border: {
@@ -77,6 +90,7 @@
     }
     &-sub {
       &-list {
+        display: none;
         padding: {
           bottom: 50px;
         };
@@ -135,6 +149,11 @@
             top: 40px;
           };
         }
+        &:last-child {
+          margin: {
+            top: 25px;
+          };
+        }
       }
       &-svg {
         position: absolute;
@@ -172,13 +191,34 @@
       left: 0;
       transition: .3s;
     }
+    &-captcha {
+      &-wrapper {
+        height: 66px;
+        background: white;
+        margin: {
+          top: 45px;
+        };
+      }
+    }
+    &-submit {
+      height: 60px;
+      font-size: 16px;
+      line-height: 19px;
+      color: white;
+      width: 100%;
+      text-align: center;
+      background: #0175B2;
+      margin: {
+        top: 18px;
+      };
+    }
     &-check {
       &-wrapper {
         position: relative;
       }
       &-description {
         padding: {
-          left: 20px;
+          left: 25px;
         };
       }
       &-rules {
@@ -186,39 +226,42 @@
         z-index: -1;
         opacity: 0;
         & + label {
-          display: inline-flex;
-          align-items: center;
           user-select: none;
-          position: absolute;
-          top: 0;
-          left: 0;
+          font-size: 12px;
+          line-height: 16px;
+          color: white;
+          position: relative;
+          padding: {
+            left: 20px;
+          };
           &::before {
             content: '';
-            display: inline-block;
-            width: 1em;
-            height: 1em;
-            flex-shrink: 0;
-            flex-grow: 0;
+            display: block;
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            top: 0;
+            left: 0;
             border: 1px solid #DFE1E8;
             box-sizing: border-box;
           }
         }
         &:checked+label::before {
-          background: red;
+          background-image: url("../assets/images/check.svg");
+          background-repeat: no-repeat;
+          background-size: 8px;
+          background-position-x: center;
+          background-position-y: 3px;
         }
       }
-      &-svg {
-        height: 12px;
-        width: 12px;
-        position: absolute;
-        top: 0;
-        left: 0;
+      &-link {
+        color: #0175B2;
       }
     }
   }
 }
 
-//Focus and active placeholders
+//Active placeholders
 .active .mobile__feedback-field {
   bottom: 35px;
   font-size: 13px;
@@ -227,6 +270,7 @@
   }
 }
 
+//Focus placeholders
 .focus .mobile__feedback-field {
   bottom: 35px;
   font-size: 13px;
@@ -236,8 +280,8 @@
 }
 
 //Main
-.main {
-
+.is-fixed {
+  margin-top: 65px;
 }
 
 //Prime section

@@ -10,9 +10,6 @@
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
-        <symbol id="icon-check" viewBox="0 0 38 32">
-            <path fill="#d96c0d" style="fill: var(--color1, #d96c0d)" d="M28.375 2.663l-15.125 17.3-7.412-6-4.025 4.988 12.2 9.863 19.188-21.925-4.825-4.225z"></path>
-        </symbol>
         <symbol id="icon-star" viewBox="0 0 28 32">
             <path fill="#d96c0d" style="fill: var(--color1, #d96c0d)" d="M11.688 16.75l-10.375-3.375 1-3.156 10.375 3.844-0.125-11.562h3.25l-0.25 11.656 10.125-3.969 1.031 3.156-10.406 3.594 6.969 9.187-2.656 1.969-6.687-9.531-6.375 9.469-2.656-1.906 6.781-9.375z"></path>
         </symbol>
@@ -822,7 +819,7 @@
     </div>
 </div>
 <!--Header-->
-<header class="header">
+<header class="header js-header">
     <section class="header__top">
         <div class="container">
             <div class="header__wrapper">
@@ -867,19 +864,19 @@
             </div>
         </div>
     </section>
-    <section class="mobile">
+    <section class="mobile js-mobile">
 <!--        <div class="container">-->
             <div class="mobile__menu">
                 <ul class="mobile__menu-list">
                     <li class="mobile__menu-item">
                         <a class="mobile__menu-link" href="#">О КОМПАНИИ</a>
                     </li>
-                    <li class="mobile__menu-item mobile__menu-item--open">
+                    <li class="mobile__menu-item">
                         <div class="mobile__menu-item-inner">
                             <a class="mobile__menu-link" href="#">Услуги</a>
                             <button class="mobile__menu-button js-mobile__menu-services-button"></button>
                         </div>
-                        <ul class="mobile__menu-sub-list">
+                        <ul class="mobile__menu-sub-list js-mobile__menu-sub-list-services">
                             <li class="mobile__menu-sub-item">
                                 <a class="mobile__menu-sub-link" href="#">Консалтинг</a>
                             </li>
@@ -899,6 +896,20 @@
                             <a class="mobile__menu-link" href="#">Продукты</a>
                             <button class="mobile__menu-button js-mobile__menu-products-button"></button>
                         </div>
+                        <ul class="mobile__menu-sub-list js-mobile__menu-sub-list-products">
+                            <li class="mobile__menu-sub-item">
+                                <a class="mobile__menu-sub-link" href="#">Консалтинг</a>
+                            </li>
+                            <li class="mobile__menu-sub-item">
+                                <a class="mobile__menu-sub-link" href="#">Внедрение</a>
+                            </li>
+                            <li class="mobile__menu-sub-item">
+                                <a class="mobile__menu-sub-link" href="#">Сопровождение</a>
+                            </li>
+                            <li class="mobile__menu-sub-item">
+                                <a class="mobile__menu-sub-link" href="#">Продажа</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="mobile__menu-item">
                         <a class="mobile__menu-link" href="#">КЕЙСЫ</a>
@@ -943,18 +954,17 @@
                         <textarea class="mobile__feedback-textarea" name="message" id="feedback__message"></textarea>
                         <label class="mobile__feedback-field" for="feedback__message">Сообщение</label>
                     </div>
+                    <div class="mobile__feedback-captcha-wrapper"></div>
                     <button class="mobile__feedback-submit">Отправить</button>
                     <div class="mobile__feedback-input-wrapper">
-                        <div class="mobile__feedback-check-description mobile__feedback-check-wrapper">
+                        <input class="mobile__feedback-check-rules" id="feedback__check" type="checkbox">
+                        <label for="feedback__check">
                             Нажимая кнопку «Отправить», я даю свое
                             <a class="mobile__feedback-check-link" href="#">
                                 согласие на обработку моих персональных данных
                             </a>
                             , в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ
-                        </div>
-                        <input class="mobile__feedback-check-rules" id="feedback__check" type="checkbox">
-                        <label for="feedback__check"></label>
-                        <svg class="mobile__feedback-check-svg icon icon-check"><use xlink:href="#icon-check"></use></svg>
+                        </label>
                     </div>
                 </form>
             </div>
@@ -962,7 +972,7 @@
     </section>
 </header>
 <!--Main-->
-<main class="main">
+<main class="main js-main">
     <section class="prime prime__slider js-prime__slider">
         <div class="prime__slider-item">
             <div class="prime__bg background-image">
