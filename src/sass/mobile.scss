@@ -410,8 +410,8 @@
     &::after {
       @include mix-pseudo-base;
       height: 1px;
-      left: -25px;
-      right: -25px;
+      left: 0;
+      right: 0;
       bottom: 0;
       background: rgba(255, 255, 255, 0.11);
     }
@@ -483,11 +483,17 @@
     };
   }
   &__slider {
+    width: 320px;
+    position: relative;
     margin: {
-      left: -25px;
-      right: -25px;
+      left: auto;
+      right: auto;
+      //left: -25px;
+      //right: -25px;
     };
-    background: linear-gradient(0deg, #F1F4F6, #F1F4F6), #DBE4EE;
+    &-wrapper {
+      background: linear-gradient(0deg, #F1F4F6, #F1F4F6), #DBE4EE;
+    }
     &-title {
       font-weight: bold;
       font-size: 18px;
@@ -519,7 +525,7 @@
     font-weight: bold;
     font-size: 45px;
     color: white;
-    text-shadow: 0px 2px 9px rgba(10, 40, 90, 0.18);
+    text-shadow: 0 2px 9px rgba(10, 40, 90, 0.18);
     &-wrapper {
       display: inline-block;
       position: relative;
@@ -546,19 +552,18 @@
 //About us part
 .about-us {
   background: #0175B2;
-  position: relative;
-  padding: {
-    top: 50px;
-    bottom: 40px;
-  };
-  margin: {
-    left: -25px;
-    right: -25px;
-  };
   &__wrapper {
+    position: relative;
+    width: 320px;
     padding: {
       left: 25px;
       right: 25px;
+      top: 50px;
+      bottom: 40px;
+    };
+    margin: {
+      left: auto;
+      right: auto;
     };
   }
   &__text {
@@ -572,7 +577,7 @@
     fill: #1682B8;
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 25px;
     width: 146px;
     height: 76px;
     z-index: 0;
@@ -594,6 +599,11 @@
     margin: {
       top: 20px;
     };
+    &-wrapper {
+      margin: {
+        top: 20px;
+      };
+    }
     &-bg {
       &-wrapper {
         height: 150px;
@@ -627,9 +637,6 @@
   &__main {
     border: 2px solid rgba(255, 255, 255, .11);
     box-sizing: border-box;
-    margin: {
-      top: 35px;
-    };
     &-title {
       color: white;
       padding: {
@@ -811,6 +818,10 @@
     display: flex;
     &-wrapper {
       display: none;
+      padding: {
+        left: 25px;
+        right: 25px;
+      };
       &:first-child {
         display: block;
       }
@@ -827,12 +838,27 @@
   color: white;
   text-align: center;
   &__contacts {
-    border-bottom: 1px solid #41444D;
-    box-sizing: border-box;
     padding: {
       top: 70px;
       bottom: 30px;
     };
+    position: relative;
+    &::after {
+      @include mix-pseudo-base;
+      width: 50vw;
+      height: 1px;
+      background: #41444D;
+      bottom: 0;
+      left: 50%;
+    }
+    &::before {
+      @include mix-pseudo-base;
+      width: 50vw;
+      height: 1px;
+      background: #41444D;
+      bottom: 0;
+      right: 50%;
+    }
     &-phone {
       font-weight: 500;
       font-size: 26px;
@@ -857,12 +883,27 @@
     }
   }
   &__menu {
-    border-bottom: 1px solid #41444D;
-    box-sizing: border-box;
     padding: {
       top: 30px;
       bottom: 35px;
     };
+    position: relative;
+    &::after {
+      @include mix-pseudo-base;
+      width: 50vw;
+      height: 1px;
+      background: #41444D;
+      bottom: 0;
+      left: 50%;
+    }
+    &::before {
+      @include mix-pseudo-base;
+      width: 50vw;
+      height: 1px;
+      background: #41444D;
+      bottom: 0;
+      right: 50%;
+    }
     &-link {
       font-size: 18px;
       line-height: 37px;

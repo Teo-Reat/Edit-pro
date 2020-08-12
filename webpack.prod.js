@@ -49,7 +49,7 @@ module.exports = merge(common, {
 			// 	filename: 'dealer.html',
 			// }),
 			new HtmlWebpackPlugin({
-				template: "./src/pages/main.html",
+				template: "./src/main.html",
 				filename: 'main.html',
 			}),
 		]

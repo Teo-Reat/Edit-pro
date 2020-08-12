@@ -73,5 +73,122 @@
   //Steps section
   .steps {}
 
-  //
+  //News section
+  .news {
+    &__item {
+      height: 350px;
+      margin: {
+        top: 30px;
+      };
+      &-wrapper {
+        margin: {
+          top: 10px;
+        };
+      }
+      &-bg {
+        &-wrapper {
+          height: 175px;
+        }
+      }
+      &-description {
+        height: 175px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      &-title {
+        padding: {
+          top: 30px;
+        };
+      }
+      &-date {
+        margin: {
+          bottom: 30px;
+        };
+      }
+    }
+    &__main {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
+
+  //Partners section
+  .partners {
+    & .slick {
+      &-next,
+      &-prev {
+        top: 35px;
+        bottom: auto;
+        left: auto;
+        right: 50%;
+        margin: {
+          right: -345px;
+          left: auto;
+        };
+      }
+      &-prev {
+        margin: {
+          right: -273px;
+          left: auto;
+        };
+      }
+    }
+  }
+
+  //Instagram section
+  .instagram {
+    padding: {
+      bottom: 0;
+    };
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__item {
+      &-wrapper {
+        display: block;
+        padding: 0;
+        width: 20%;
+      }
+    }
+  }
+
+  //Footer
+  .footer {
+    text-align: left;
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    &__contacts {
+      width: 45%;
+      padding: {
+        top: 40px;
+      };
+    }
+    &__menu {
+      width: 25%;
+      //width: 100%;
+      padding: {
+        top: 40px;
+      };
+      &-list {
+        //column-count: auto;
+        //height: 100px;
+        //width: 30%;
+      }
+    }
+    &__social {
+      width: 30%;
+      padding: {
+        top: 40px;
+      };
+    }
+    &__rights {
+      //width: 100%;
+    }
+  }
 }

@@ -35,10 +35,10 @@ $(document).ready(() => {
 		speed: 300,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		prevArrow: '<button type="button" class="slick-prev prime__slick-prev"><svg class="icon icon-arrow-big-l">\n' +
+		prevArrow: '<button type="button" class="slick-prev"><svg class="icon icon-arrow-big-l">\n' +
 			'                <use xlink:href="#icon-arrow-big-l"></use>\n' +
 			'            </svg></button>',
-		nextArrow: '<button type="button" class="slick-next prime__slick-next"><svg class="icon icon-arrow-big-r">\n' +
+		nextArrow: '<button type="button" class="slick-next"><svg class="icon icon-arrow-big-r">\n' +
 			'                <use xlink:href="#icon-arrow-big-r"></use>\n' +
 			'            </svg></button>',
 		responsive: [
@@ -63,8 +63,12 @@ $(document).ready(() => {
 		speed: 300,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		prevArrow: '<button type="button" class="slick-prev news__actions__slick-prev"><svg class="icon icon-arrow-l"><use xlink:href="#icon-arrow-l"></use></svg></button>',
-		nextArrow: '<button type="button" class="slick-next news__actions__slick-next"><svg class="icon icon-arrow-r"><use xlink:href="#icon-arrow-r"></use></svg></button>',
+		prevArrow: '<button type="button" class="slick-prev"><svg class="icon icon-arrow-big-l">\n' +
+			'                <use xlink:href="#icon-arrow-big-l"></use>\n' +
+			'            </svg></button>',
+		nextArrow: '<button type="button" class="slick-next"><svg class="icon icon-arrow-big-r">\n' +
+			'                <use xlink:href="#icon-arrow-big-r"></use>\n' +
+			'            </svg></button>',
 		responsive: [
 			{
 				breakpoint: 768,
@@ -85,10 +89,14 @@ $(document).ready(() => {
 		arrows: true,
 		infinite: true,
 		speed: 300,
-		slidesToShow: 1,
+		slidesToShow: 2,
 		slidesToScroll: 1,
-		prevArrow: '<button type="button" class="slick-prev news__actions__slick-prev"><svg class="icon icon-arrow-l"><use xlink:href="#icon-arrow-l"></use></svg></button>',
-		nextArrow: '<button type="button" class="slick-next news__actions__slick-next"><svg class="icon icon-arrow-r"><use xlink:href="#icon-arrow-r"></use></svg></button>',
+		prevArrow: '<button type="button" class="slick-prev"><svg class="icon icon-arrow-big-l">\n' +
+			'                <use xlink:href="#icon-arrow-big-l"></use>\n' +
+			'            </svg></button>',
+		nextArrow: '<button type="button" class="slick-next"><svg class="icon icon-arrow-big-r">\n' +
+			'                <use xlink:href="#icon-arrow-big-r"></use>\n' +
+			'            </svg></button>',
 		responsive: [
 			{
 				breakpoint: 768,
