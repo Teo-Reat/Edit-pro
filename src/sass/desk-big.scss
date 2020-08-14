@@ -1,0 +1,193 @@
+//Big desktop version
+@media (min-width: 1680px) {
+  //Header section
+  .header {
+    &__navigation {
+      margin: {
+        left: 410px;
+      };
+    }
+  }
+
+  //Prime section
+  .prime {
+    & .slick {
+      &-next,
+      &-prev {
+        bottom: 130px;
+        margin: {
+          left: -618px;
+        };
+      }
+      &-prev {
+        margin: {
+          left: -690px;
+        };
+      }
+    }
+    &__slider {
+      &-item {
+        min-height: 770px;
+        padding: {
+          bottom: 210px;
+        };
+      }
+    }
+    &__title {
+      margin: {
+        top: 230px;
+      };
+    }
+    &__description {
+      width: 350px;
+      margin: {
+        top: 45px;
+      };
+    }
+  }
+
+  //Services section
+  .services {
+    padding: {
+      top: 120px;
+      bottom: 115px;
+    };
+    &__title {
+      margin: {
+        bottom: 30px;
+      };
+    }
+  }
+
+  //Products section
+  .products {
+    padding: {
+      top: 105px;
+    };
+    &__item {
+      &-description {
+        width: 285px;
+      }
+      &-text {
+        width: 285px;
+      }
+    }
+    &__link {
+      margin: {
+        top: 35px;
+      };
+    }
+  }
+
+  //News section
+  .news {
+    padding: {
+      top: 115px;
+      bottom: 120px;
+    };
+  }
+
+  //Map section
+  .map {
+    padding: {
+      top: 110px;
+    };
+    &__body {
+      height: 750px;
+      margin: {
+        top: 60px;
+      };
+    }
+  }
+
+  //Partners section
+  .partners {
+    padding: {
+      top: 125px;
+      bottom: 135px;
+    };
+    & .slick {
+      &-next,
+      &-prev {
+        top: 125px;
+        margin: {
+          right: -690px;
+        };
+      }
+      &-prev {
+        margin: {
+          right: -618px;
+        };
+      }
+    }
+    &__item {
+      &-logo {
+        &-wrapper {
+          height: 100px;
+        }
+      }
+      &-description {
+        margin: {
+          top: 25px;
+        };
+        &-wrapper {
+          height: 325px;
+        }
+      }
+      &-title {
+        padding: {
+          top: 35px;
+        };
+      }
+      &-footer {
+        margin: {
+          bottom: 25px;
+        };
+      }
+    }
+  }
+
+  //Instagram section
+  .instagram {
+    padding: {
+      top: 110px;
+    };
+    &__title {
+      padding: {
+        bottom: 60px;
+      };
+    }
+  }
+
+  //Footer section
+  .footer {
+    &__top {
+      padding: {
+        bottom: 130px;
+      };
+      &-svg {
+        bottom: 75px;
+      }
+    }
+    &__contacts {
+      &-address {
+        margin: {
+          top: 25px;
+        };
+      }
+    }
+    &__menu {
+
+    }
+    &__social {
+      &-feedback {
+        margin: {
+          top: 70px;
+        };
+      }
+    }
+    &__rights {
+      height: 50px;
+    }
+  }
+}

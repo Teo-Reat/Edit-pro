@@ -5,21 +5,32 @@
 //Header
 .header {
   background: white;
+  box-shadow: 0 2px 10px rgba(1, 43, 77, 0.14);
   &__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 65px;
+    transition: .3s;
   }
   &__logo {
+    height: 100%;
+    display: block;
     &-svg {
       width: 75px;
-      //height: 30px;
     }
+  }
+  &__navigation {
+    display: none;
   }
   &__menu {
     &-open {
       width: 24px;
+      &-wrapper {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
     }
   }
 }
@@ -31,6 +42,11 @@
   z-index: 100;
   left: 0;
   right: 0;
+  & .header {
+    &__wrapper {
+      height: 50px;
+    }
+  }
 }
 
 //Mobile menu section
@@ -279,9 +295,14 @@
   }
 }
 
+//Desktop menu section
+.desktop {
+  display: none;
+}
+
 //Main
 .is-fixed {
-  margin-top: 65px;
+  margin-top: 50px;
 }
 
 //Prime section
@@ -297,20 +318,22 @@
     }
   }
   &__bg {
-    & img {
-      object-position: -178px;
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      display: block;
-      background: linear-gradient(0deg, #172358, #172358), #14215A;
-      mix-blend-mode: normal;
-      opacity: 0.91;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+    &-image {
+      object-position: -178px !important;
+      &-wrapper {
+        &::after {
+          content: '';
+          position: absolute;
+          display: block;
+          background: linear-gradient(0deg, #172358, #172358), #14215A;
+          mix-blend-mode: normal;
+          opacity: 0.91;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+      }
     }
   }
   &__title {
@@ -360,8 +383,10 @@
   }
   &__image {
     width: 100%;
+    height: 100%;
     &-wrapper {
       height: 150px;
+      object-fit: cover;
     }
   }
   &__description {
@@ -374,6 +399,14 @@
       left: 20px;
       right: 18px;
     };
+    &-title {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+    }
+    &-text {
+      display: none;
+    }
     &-svg {
       height: 50px;
       width: 50px;
@@ -431,6 +464,9 @@
       margin: {
         left: 15px;
       };
+    }
+    &-text {
+      display: none;
     }
   }
   &__link {
@@ -546,6 +582,9 @@
         z-index: -1;
       }
     }
+  }
+  &__spinner {
+    display: none;
   }
 }
 
@@ -837,6 +876,11 @@
   background: #31343D;
   color: white;
   text-align: center;
+  &__top {
+    &-svg {
+      display: none;
+    }
+  }
   &__contacts {
     padding: {
       top: 70px;
@@ -863,10 +907,14 @@
       font-weight: 500;
       font-size: 26px;
       line-height: 24px;
+      color: white;
+      display: block;
     }
     &-email {
       font-size: 18px;
       line-height: 24px;
+      color: white;
+      display: block;
       margin: {
         top: 15px;
       };
@@ -923,8 +971,8 @@
     }
     &-link {
       &-svg {
-        height: 24px;
-        width: 24px;
+        height: 28px;
+        width: 28px;
       }
     }
     &-feedback {
