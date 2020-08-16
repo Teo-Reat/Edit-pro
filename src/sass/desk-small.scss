@@ -26,7 +26,19 @@
     &__menu {
       &-open {
         &-wrapper {
+          display: none;
+        }
+      }
+
+    }
+    &__desktop {
+      &-open {
+        &-wrapper {
           position: relative;
+          flex-shrink: 0;
+          height: 100%;
+          display: flex;
+          align-items: center;
           margin: {
             right: 20px;
           };
@@ -50,12 +62,15 @@
 
   //Desktop menu section
   .desktop {
-    //display: block;
     background: #0A285A;
-    position: relative;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 65px;
+    z-index: 100;
     padding: {
-      top: 55px;
-      bottom: 160px;
+      top: 25px;
+      bottom: 75px;
     };
     &__menu {
       &-item {
@@ -64,13 +79,12 @@
         };
       }
       &-link {
+        font-size: 15px;
+        color: white;
         font-weight: bold;
-        font-size: 16px;
         line-height: 19px;
         letter-spacing: 0.04em;
         text-transform: uppercase;
-        color: white;
-
       }
     }
     &__sub {
@@ -80,7 +94,7 @@
         };
         &-link {
           font-weight: bold;
-          font-size: 16px;
+          font-size: 15px;
           line-height: 19px;
           letter-spacing: 0.04em;
           text-transform: uppercase;
@@ -98,7 +112,7 @@
         }
       }
       &-link {
-        font-size: 18px;
+        font-size: 17px;
         line-height: 24px;
         color: #C9D4E6;
       }
@@ -124,7 +138,7 @@
           }
         }
         &-link {
-          font-size: 16px;
+          font-size: 15px;
           line-height: 20px;
           color: #8895AC;
         }
@@ -133,17 +147,17 @@
     &__contacts {
       &-phone {
         font-weight: 500;
-        font-size: 26px;
+        font-size: 24px;
         line-height: 24px;
         color: white;
         &-wrapper {
           margin: {
-            top: 85px;
+            top: 40px;
           };
         }
       }
       &-email {
-        font-size: 18px;
+        font-size: 17px;
         line-height: 24px;
         color: white;
         &-wrapper {
@@ -153,7 +167,7 @@
         }
       }
       &-address {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 24px;
         color: #8895AC;
         margin: {
@@ -203,6 +217,13 @@
       right: 0;
       fill: #07214D;
       display: block;
+    }
+  }
+
+  //Fixed header
+  .fixed {
+    & .desktop {
+      top: 50px;
     }
   }
 
@@ -298,6 +319,10 @@
       &:hover .products__item-text {
         top: 155px;
       }
+      &:hover .products__add {
+        right: 28px;
+        top: 30px;
+      }
     }
     &__hover {
       &-img {
@@ -334,11 +359,108 @@
         }
       }
     }
+    &__add {
+      display: block;
+      top: -100px;
+      right: 28px;
+      transition: .3s;
+    }
   }
 
   //Steps section
   .steps {
+    & .slick {
+      &-next,
+      &-prev {
+        top: 100px;
+        left: 50%;
+        right: auto;
+        margin: {
+          left: -160px;
+        };
+        & > svg {
+          height: 50px;
+          width: 50px;
+          fill: #0A285A;
+        }
+      }
+      &-prev {
+        margin: {
+          left: -220px;
+        };
+      }
+    }
+    &__slider {
+      width: 465px;
+      &-wrapper {
+        height: 400px;
+        width: 50%;
+      }
+      &-title {
+        margin: {
+          top: 48px;
+        };
+      }
+      &-item {
+        position: relative;
+        height: 400px;
+        padding: {
+          left: 135px;
+          right: 15px;
+          bottom: 10px;
+        };
+      }
+    }
+    &__number {
+      font-size: 90.233px;
+      line-height: 141px;
+      &-wrapper {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+      }
+      &-svg {
+        &-wrapper {
+          top: 4px;
+          right: 17px;
+        }
+      }
+    }
+    &__about {
+      &-wrapper {
+        width: 960px;
+        flex-direction: column;
+        height: 600px;
+      }
+    }
+    &__spinner {
+      order: 3;
+      min-height: 600px;
+      &-item {
+        &-wrapper {
+          position: relative;
+          margin-top: 50px;
+          margin-left: 65px;
+        }
+      }
+      &-circle {
+        top: 125px;
+        left: 115px;
+      }
+      &-it {
+        top: 315px;
+      }
+    }
+  }
 
+  .about-us {
+    width: 50%;
+    height: 200px;
+    &__svg {
+      bottom: auto;
+      top: 0;
+      right: 0;
+    }
   }
 
   //News section

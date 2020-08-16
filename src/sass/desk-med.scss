@@ -43,6 +43,96 @@
     }
   }
 
+  //Desktop menu section
+  .desktop {
+    padding: {
+      top: 55px;
+      bottom: 160px;
+    };
+    &__menu {
+      &-link {
+        font-size: 16px;
+      }
+    }
+    &__sub {
+      &-title {
+        margin: {
+          top: 35px;
+        };
+        &-link {
+          font-size: 16px;
+        }
+      }
+      &-link {
+        font-size: 18px;
+      }
+      &menu {
+        &-link {
+          font-size: 16px;
+        }
+      }
+    }
+    &__contacts {
+      &-phone {
+        font-size: 26px;
+        &-wrapper {
+          margin: {
+            top: 85px;
+          };
+        }
+      }
+      &-email {
+        font-size: 18px;
+      }
+      &-address {
+        font-size: 16px;
+      }
+    }
+    &__social {
+      &-feedback {
+        background: #0F3068;
+        border: 1px solid rgba(223, 225, 232, 0.2);
+        box-sizing: border-box;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        width: 222px;
+        height: 52px;
+        color: white;
+        margin: {
+          top: 45px;
+        };
+      }
+      &-list {
+        display: flex;
+        justify-content: space-between;
+        width: 160px;
+        margin: {
+          top: 30px;
+          left: 0;
+          right: 0;
+        };
+      }
+      &-link {
+        &-svg {
+          height: 28px;
+          width: 28px;
+        }
+      }
+    }
+    &__svg {
+      position: absolute;
+      width: 404px;
+      height: 211px;
+      bottom: 0;
+      right: 0;
+      fill: #07214D;
+      display: block;
+    }
+  }
+
   //Prime section
   .prime {
     & .slick {
@@ -100,6 +190,10 @@
           right: 0;
         };
       }
+      &:hover .add-sign {
+        right: 32px;
+        top: 32px;
+      }
     }
     &__image {
       &-wrapper {
@@ -139,6 +233,12 @@
         width: 75px;
       }
     }
+    &__add {
+      right: -350px;
+      top: 32px;
+      display: block;
+      transition: .3s;
+    }
   }
 
   //Products section
@@ -169,6 +269,135 @@
       &-text {
         width: 250px;
       }
+    }
+  }
+
+  //Steps section
+  .steps {
+    & .slick {
+      &-next,
+      &-prev {
+        top: 42px;
+        margin: {
+          left: -180px;
+        };
+        & > svg {
+          height: 60px;
+          width: 60px;
+        }
+      }
+      &-prev {
+        margin: {
+          left: -250px;
+        };
+      }
+    }
+    &__slider {
+      width: 100%;
+      &-title {
+        font-size: 24px;
+        line-height: 24px;
+        margin: {
+          top: 96px;
+        };
+      }
+      &-wrapper {
+        height: 420px;
+      }
+      &-item {
+        padding: {
+          left: 200px;
+        };
+      }
+      &-description {
+        margin: {
+          top: 30px;
+        };
+      }
+    }
+    &__number {
+      &-wrapper {
+        left: 85px;
+      }
+      &-svg {
+        &-wrapper {
+          right: 60px;
+        }
+      }
+    }
+    &__about {
+      &-wrapper {
+        width: 1200px;
+        flex-direction: column;
+        height: 700px;
+      }
+    }
+    &__spinner {
+      min-height: 700px;
+      &-circle {
+        width: 315px;
+        height: 449px;
+        top: 130px;
+        left: 140px;
+      }
+      &-it {
+        width: 175px;
+        height: 146px;
+        top: 371px;
+      }
+      &-item {
+        height: 84px;
+        width: 84px;
+        &-inner {
+          height: 68px;
+          width: 68px;
+          margin: {
+            top: 7px;
+            left: 7px;
+          };
+        }
+      }
+      &-first {
+        top: 62px;
+        left: 34px;
+      }
+      &-second {
+        top: 62px;
+        left: 207px;
+      }
+      &-third {
+        top: 175px;
+        left: 322px;
+      }
+      &-fourth {
+        top: 348px;
+        left: 322px;
+      }
+      &-fifth {
+        top: 462px;
+        left: 207px;
+      }
+      &-sixth {
+        top: 462px;
+        left: 34px;
+      }
+    }
+  }
+
+  .about-us {
+    height: 280px;
+    &__wrapper {
+      padding: {
+        left: 53px;
+      };
+    }
+    &__svg {
+      width: 274px;
+      height: 173px;
+    }
+    &__text {
+      font-size: 22px;
+      line-height: 30px;
     }
   }
 

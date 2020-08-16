@@ -162,6 +162,12 @@ $(document).ready(() => {
 		$('.js-mobile').slideToggle()
 	});
 
+	//Desktop menu toggle
+	$('.js-header__desktop-open').click(function () {
+		$(this).toggleClass('open');
+		$('.js-desktop').slideToggle()
+	});
+
 	//Mobile menu submenu services toggle
 	$('.js-mobile__menu-services-button').click(() => {
 		$('.js-mobile__menu-sub-list-services').slideToggle();
@@ -174,17 +180,8 @@ $(document).ready(() => {
 		$('.js-mobile__menu-products-button').closest('.mobile__menu-item').toggleClass('mobile__menu-item--open')
 	})
 
-	//Tablet menu open
-	// tabletMenuButton.click(function(){
-	// 	if ($(this).hasClass('open')) {
-	// 		$(this).removeClass('open');
-	// 		$('.js-navigation__list__wrapper').slideUp()
-	// 	} else {
-	// 		$(this).addClass('open');
-	// 		$('.js-navigation__list__wrapper').slideDown()
-	// 	}
-	// });
-
+	//Spinner
+	console.log($('.steps__slider-item'))
 
 	//Yandex map
 	$(function () {

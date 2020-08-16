@@ -220,6 +220,15 @@
         border: 1px solid rgba(21, 51, 75, 0.26);
         box-sizing: border-box;
         z-index: 10;
+        &::after {
+          @include mix-pseudo-base;
+          height: 20px;
+          width: 20px;
+          font-weight: bold;
+          font-size: 17.3382px;
+          line-height: 23px;
+          color: #01447B;
+        }
         &-wrapper {
           height: 100%;
         }
@@ -240,26 +249,56 @@
       &-first {
         top: 59px;
         left: 17px;
+        &::after {
+          content: '01';
+          top: -12px;
+          right: -12px;
+        }
       }
       &-second {
         top: 60px;
         left: 150px;
+        &::after {
+          content: '02';
+          top: 5px;
+          right: -22px;
+        }
       }
       &-third {
         top: 150px;
         left: 242px;
+        &::after {
+          content: '03';
+          top: 20px;
+          right: -23px;
+        }
       }
       &-fourth {
         top: 286px;
         left: 242px;
+        &::after {
+          content: '04';
+          bottom: 20px;
+          right: -23px;
+        }
       }
       &-fifth {
         top: 375px;
         left: 150px;
+        &::after {
+          content: '05';
+          bottom: 5px;
+          right: -22px;
+        }
       }
       &-sixth {
         top: 374px;
         left: 17px;
+        &::after {
+          content: '06';
+          bottom: -12px;
+          right: -12px;
+        }
       }
       &-svg {
         height: 24px;
@@ -271,6 +310,14 @@
   .about-us {
     &__wrapper {
       width: 100%;
+      padding: {
+        right: 0;
+      };
+    }
+    &__text {
+      margin: {
+        right: 108px;
+      };
     }
     &__svg {
       width: 219px;
@@ -420,7 +467,7 @@
         display: none;
       }
       &-list {
-        column-count: 3;
+        column-count: 4;
       }
     }
     &__social {
