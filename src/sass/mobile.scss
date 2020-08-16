@@ -842,6 +842,10 @@
         };
       }
     }
+
+    &-svg {
+      display: none;
+    }
   }
 }
 
@@ -1124,6 +1128,7 @@
       &-svg {
         height: 28px;
         width: 28px;
+        fill: #919294;
       }
     }
 

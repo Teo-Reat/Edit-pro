@@ -207,13 +207,13 @@ $(document).ready(() => {
 					clusterer = new ymaps.Clusterer({
 						clusterIcons: [
 							{
-								href: 'images/mark-big.svg',
+								href: 'images/mark-cell.svg',
 								size: [57, 67],
 								offset: [-27.5, -67],
 								iconContentOffset: [23, 15],
 							},
 							{
-								href: 'images/mark-big.svg',
+								href: 'images/mark-cell.svg',
 								size: [90, 108],
 								offset: [-45, -108],
 								iconContentOffset: [25, 25],
@@ -224,20 +224,17 @@ $(document).ready(() => {
 
 
 				var MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
-					`
-<div class="popover">
-	<div class="popover__arrow"></div>
-	<div class="popover__inner">
-		<a class="popover__close" href="#">
-			<svg class="icon icon-close">
-				<use xlink:href="#icon-close"></use>
-			</svg>
-		</a>
-		$[[options.contentLayout observeSize minWidth=300 maxWidth=432]]
-		<span class="popover__tail"></span>
-	</div>
-</div>
-`, {
+					'<div class="popover">' +
+					'<div class="popover__arrow"></div>' +
+					'<div class="popover__inner">' +
+					'<a class="popover__close" href="#">' +
+					'<svg class="icon icon-close-middle"><use xlink:href="#icon-close-middle"></use></svg>' +
+					'</a>' +
+					'$[[options.contentLayout observeSize minWidth=300 maxWidth=432]]' +
+					'<span class="popover__tail"></span>' +
+					'</div>' +
+					'</div>'
+					, {
 						build: function () {
 							this.constructor.superclass.build.call(this);
 
@@ -305,35 +302,39 @@ $(document).ready(() => {
 
 				for (var i = 0; i < markers.length; i++) {
 					var marker = markers[i];
-					var balloon = `
-
-<div class="balloon">
-	<div class="balloon__header">
-		<div class="balloon__title">
-			<a href="#">Медико-биологический центр Фармалад</a>
-		</div>
-	</div>
-	<div class="balloon__body">
-		<div class="balloon__address">
-			<svg class="icon icon-mark"><use xlink:href="#icon-mark"></use></svg>
-			<span class="">г. Воронеж, ул. Правды, дом 26, офис 2</span>
-		</div>
-		<div class="balloon__phone">
-			<svg class="icon icon-tel"><use xlink:href="#icon-tel"></use></svg>
-			<a href="tel:+7 (926) 047-32-22" class="">+7 (926) 047-32-22</a>
-		</div>
-		<div class="balloon__email">
-			<svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg>
-			<a href="mailto:somemail@mail.ru">somemail@mail.ru</a>
-		</div>
-		<div class="balloon__work-time">
-			<svg class="icon icon-time"><use xlink:href="#icon-time"></use></svg>
-			<span class="">с 10:00 до 22:00</span>
-		</div>
-	</div>
-</div>
-
-`;
+					var balloon =
+						'<div class="balloon">' +
+							'<div class="balloon__header">' +
+								'<div class="balloon__title">' +
+									'<a class="balloon__title-link" href="#">Внедрение “1C:ERP управление предприятием 2.4”</a>' +
+								'</div>' +
+							'</div>' +
+							'<div class="balloon__body">' +
+								'<div class="balloon__image-wrapper">' +
+									'<img src="" alt="" class="balloon__image">' +
+								'</div>' +
+								'<div class="balloon__description">' +
+									'<div class="balloon__description-client">' +
+										'<span class="balloon__description-column">Клиент: </span>' +
+										'<span class="balloon__description-value">ООО “Три-З”</span>' +
+									'</div>' +
+									'<div class="balloon__description-strength">' +
+										'<span class="balloon__description-column">Численность компании: </span>' +
+										'<span class="balloon__description-value">1000 чел.</span>' +
+									'</div>' +
+									'<div class="balloon__description-date">' +
+										'<span class="balloon__description-column">Дата проведения работ: </span>' +
+										'<span class="balloon__description-value">Декабрь 2017</span>' +
+									'</div>' +
+								'</div>' +
+							'</div>' +
+							'<div class="balloon__footer">' +
+								'<div class="balloon__footer-description">' +
+									'Для целей бухгалтерского и управленческого учета была внедрена система «1С:ERP Управление предприятием 2».' +
+								'</div>' +
+							'</div>' +
+						'</div>'
+					;
 
 					geoObjects[i] = new ymaps.Placemark(marker, {
 						balloonContent: balloon,
@@ -342,7 +343,7 @@ $(document).ready(() => {
 						balloonLayout: MyBalloonLayout,
 						balloonContentLayout: MyBalloonContentLayout,
 						iconLayout: 'default#image',
-						iconImageHref: 'images/mark-small.svg',
+						iconImageHref: 'images/mark.svg',
 						iconImageSize: [39, 45],
 						iconImageOffset: [-19.5, -45]
 					});

@@ -19,12 +19,14 @@
           left: -618px;
         };
       }
+
       &-prev {
         margin: {
           left: -690px;
         };
       }
     }
+
     &__slider {
       &-item {
         min-height: 770px;
@@ -33,11 +35,13 @@
         };
       }
     }
+
     &__title {
       margin: {
         top: 230px;
       };
     }
+
     &__description {
       width: 350px;
       margin: {
@@ -52,6 +56,7 @@
       top: 120px;
       bottom: 115px;
     };
+
     &__title {
       margin: {
         bottom: 30px;
@@ -64,14 +69,17 @@
     padding: {
       top: 105px;
     };
+
     &__item {
       &-description {
         width: 285px;
       }
+
       &-text {
         width: 285px;
       }
     }
+
     &__link {
       margin: {
         top: 35px;
@@ -89,16 +97,19 @@
           left: -235px;
         };
       }
+
       &-prev {
         margin: {
           left: -305px;
         };
       }
     }
+
     &__slider {
       &-wrapper {
         height: 420px;
       }
+
       &-item {
         padding: {
           left: 240px;
@@ -106,40 +117,50 @@
         };
       }
     }
+
     &__number {
       &-wrapper {
         left: 85px;
       }
+
       &-svg {
         &-wrapper {
           right: 60px;
         }
       }
     }
+
     &__about {
       &-wrapper {
         width: 1410px;
       }
     }
+
     &__spinner {
       &-circle {
         left: 174px;
       }
+
       &-first {
         left: 68px;
       }
+
       &-second {
         left: 241px;
       }
+
       &-third {
         left: 356px;
       }
+
       &-fourth {
         left: 356px;
       }
+
       &-fifth {
         left: 241px;
       }
+
       &-sixth {
         left: 68px;
       }
@@ -168,6 +189,7 @@
     padding: {
       top: 110px;
     };
+
     &__body {
       height: 750px;
       margin: {
@@ -182,6 +204,7 @@
       top: 125px;
       bottom: 135px;
     };
+
     & .slick {
       &-next,
       &-prev {
@@ -190,31 +213,37 @@
           right: -690px;
         };
       }
+
       &-prev {
         margin: {
           right: -618px;
         };
       }
     }
+
     &__item {
       &-logo {
         &-wrapper {
           height: 100px;
         }
       }
+
       &-description {
         margin: {
           top: 25px;
         };
+
         &-wrapper {
           height: 325px;
         }
       }
+
       &-title {
         padding: {
           top: 35px;
         };
       }
+
       &-footer {
         margin: {
           bottom: 25px;
@@ -228,6 +257,7 @@
     padding: {
       top: 110px;
     };
+
     &__title {
       padding: {
         bottom: 60px;
@@ -241,10 +271,12 @@
       padding: {
         bottom: 130px;
       };
+
       &-svg {
         bottom: 75px;
       }
     }
+
     &__contacts {
       &-address {
         margin: {
@@ -252,9 +284,11 @@
         };
       }
     }
+
     &__menu {
 
     }
+
     &__social {
       &-feedback {
         margin: {
@@ -262,6 +296,7 @@
         };
       }
     }
+
     &__rights {
       height: 50px;
     }

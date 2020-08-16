@@ -1,0 +1,128 @@
+//Balloon style
+.popover {
+  background: white;
+  width: 470px;
+  box-shadow: 0 10px 7px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  &::after {
+    @include mix-pseudo-base;
+    background: white;
+    left: 50%;
+    bottom: -9px;
+    //z-index: 200;
+    width: 18px;
+    height: 18px;
+    transform: rotate(45deg);
+    margin: {
+      left: -9px;
+    };
+  }
+
+  &__inner {
+    min-height: 20px;//---Old---
+    //background: #DADADA;
+    position: relative;//---Old---
+    padding: 40px;//---Old---
+    padding: {
+      top: 20px;
+      left: 28px;
+      right: 20px;
+      bottom: 30px;
+    };
+  }
+  &__content {
+    width: 100%;//---Old---
+  }
+  &__close {
+    position: absolute;//---Old---
+    right: 23px;//---Old---
+    top: 19px;//---Old---
+    & > svg {
+      width: 18px;//---Old---
+      height: 18px;//---Old---
+      fill: #aaaaaa;//---Old---
+    }
+  }
+}
+
+.balloon {
+
+  & svg {
+    position: absolute;//---Old---
+    top: 0;//---Old---
+    left: 0;//---Old---
+    height: 24px;//---Old---
+    width: 24px;//---Old---
+    fill: #747373;//---Old---
+  }
+
+  &__title {
+    &-link {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+  &__body {
+    display: flex;
+  }
+  &__description {
+    &-column {
+      color: #222222;
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: bold;
+    }
+    &-value {
+      color: #222222;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+  &__footer {
+    &-description {
+      font-size: 14px;
+      line-height: 21px;
+      color: #222222;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .popover {
+    width: 100%;//---Old---
+  }
+
+  .balloon {
+
+    &__title {
+      padding-bottom: 10px;//---Old---
+      & a {
+        font-size: 18px;//---Old---
+      }
+    }
+    &__address {
+      font-size: 12px;//---Old---
+      padding: 10px 0 10px 30px;//---Old---
+      & svg {
+        top: 8px;//---Old---
+      }
+    }
+    &__phone {
+      margin-top: 10px;//---Old---
+      padding-left: 30px;//---Old---
+    }
+    &__email {
+      margin-top: 5px;//---Old---
+      padding-left: 30px;//---Old---
+      & > a {
+        //color: $black;
+      }
+    }
+    &__work-time {
+      margin-top: 5px;//---Old---
+      //position: relative;
+      padding-left: 30px;//---Old---
+    }
+  }
+}

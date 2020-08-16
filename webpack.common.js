@@ -10,15 +10,15 @@ module.exports = {
 		]
 	},
 	plugins: [
-		// new CopyPlugin({
-			// patterns: [
-				// { from: 'src/assets/images/map', to: 'images' },
+		new CopyPlugin({
+			patterns: [
+				{ from: 'src/assets/images/map', to: 'images' },
 				// { from: 'src/assets/images/favicon', to: 'favicon' }
-			// ],
-			// options: {
-			// 	concurrency: 100,
-			// },
-		// }),
+			],
+			options: {
+				concurrency: 100,
+			},
+		}),
 	],
 	module: {
 		rules: [
