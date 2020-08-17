@@ -24,6 +24,10 @@
       &-link {
         font-size: 12px;
         font-weight: bold;
+        transition: .3s;
+        &:hover {
+          color: #D96C0D;
+        }
       }
     }
 
@@ -94,6 +98,10 @@
         line-height: 19px;
         letter-spacing: 0.04em;
         text-transform: uppercase;
+        transition: .3s;
+        &:hover {
+          color: #D96C0D;
+        }
       }
     }
 
@@ -110,6 +118,10 @@
           letter-spacing: 0.04em;
           text-transform: uppercase;
           color: white;
+          transition: .3s;
+          &:hover {
+            color: #D96C0D;
+          }
         }
       }
 
@@ -129,6 +141,10 @@
         font-size: 17px;
         line-height: 24px;
         color: #C9D4E6;
+        transition: .3s;
+        &:hover {
+          color: #D96C0D;
+        }
       }
 
       &menu {
@@ -159,6 +175,10 @@
           font-size: 15px;
           line-height: 20px;
           color: #8895AC;
+          transition: .3s;
+          &:hover {
+            color: #D96C0D;
+          }
         }
       }
     }
@@ -169,6 +189,10 @@
         font-size: 24px;
         line-height: 24px;
         color: white;
+        transition: .3s;
+        &:hover {
+          color: #D96C0D;
+        }
 
         &-wrapper {
           margin: {
@@ -181,6 +205,10 @@
         font-size: 17px;
         line-height: 24px;
         color: white;
+        transition: .3s;
+        &:hover {
+          color: #D96C0D;
+        }
 
         &-wrapper {
           margin: {
@@ -215,6 +243,10 @@
         margin: {
           top: 45px;
         };
+        transition: .3s;
+        &:hover {
+          background: #D96C0D;
+        }
       }
 
       &-list {
@@ -233,6 +265,10 @@
           height: 28px;
           width: 28px;
           fill: #919294;
+          transition: .3s;
+          &:hover {
+            fill: #D96C0D;
+          }
         }
       }
     }
@@ -394,7 +430,7 @@
         height: 40px;
         transition: .3s;
         position: absolute;
-        top: 275px;
+        top: 280px;
       }
 
       &-svg {
@@ -412,6 +448,13 @@
       top: -100px;
       right: 28px;
       transition: .3s;
+    }
+
+    &__link {
+      transition: .3s;
+      &:hover {
+        background: #D96C0D;
+      }
     }
   }
 
@@ -589,6 +632,9 @@
 
       &-link {
         transition: .3s;
+        &-svg {
+          transition: .3s;
+        }
       }
 
       &:hover .partners__item-link {
@@ -597,6 +643,10 @@
 
       &:hover .partners__item-title {
         color: #D96C0D;
+      }
+
+      &:hover .partners__item-link-svg {
+        fill: #D96C0D;
       }
     }
   }
@@ -661,6 +711,22 @@
 
     &__rights {
       height: 50px;
+      &-privacy {
+        &-link {
+          transition: .3s;
+          &:hover {
+            color: #D96C0D;
+          }
+        }
+      }
+      &-map {
+        &-link {
+          transition: .3s;
+          &:hover {
+            color: #D96C0D;
+          }
+        }
+      }
     }
   }
 }

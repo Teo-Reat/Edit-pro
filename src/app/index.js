@@ -54,8 +54,72 @@ $(document).ready(() => {
 		]
 	});
 
+	//Spinner
+	let stepSlider = $('.steps__slider');
+	let spinnerItem = $('.steps__spinner-item')
+	stepSlider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+
+		let spinner = [
+			$('.steps__spinner-first'),
+			$('.steps__spinner-second'),
+			$('.steps__spinner-third'),
+			$('.steps__spinner-fourth'),
+			$('.steps__spinner-fifth'),
+			$('.steps__spinner-sixth'),
+		]
+
+		switch (nextSlide) {
+			case (0):
+				spinner[0].addClass('active-spinner');
+				spinner[1].removeClass('active-spinner')
+				spinner[2].removeClass('active-spinner')
+				spinner[3].removeClass('active-spinner')
+				spinner[4].removeClass('active-spinner')
+				spinner[5].removeClass('active-spinner')
+				break;
+			case (1):
+				spinner[0].addClass('active-spinner');
+				spinner[1].addClass('active-spinner');
+				spinner[2].removeClass('active-spinner')
+				spinner[3].removeClass('active-spinner')
+				spinner[4].removeClass('active-spinner')
+				spinner[5].removeClass('active-spinner')
+				break;
+			case (2):
+				spinner[0].addClass('active-spinner');
+				spinner[1].addClass('active-spinner');
+				spinner[2].addClass('active-spinner');
+				spinner[3].removeClass('active-spinner')
+				spinner[4].removeClass('active-spinner')
+				spinner[5].removeClass('active-spinner')
+				break;
+			case (3):
+				spinner[0].addClass('active-spinner');
+				spinner[1].addClass('active-spinner');
+				spinner[2].addClass('active-spinner');
+				spinner[3].addClass('active-spinner');
+				spinner[4].removeClass('active-spinner')
+				spinner[5].removeClass('active-spinner')
+				break;
+			case (4):
+				spinner[0].addClass('active-spinner');
+				spinner[1].addClass('active-spinner');
+				spinner[2].addClass('active-spinner');
+				spinner[3].addClass('active-spinner');
+				spinner[4].addClass('active-spinner');
+				spinner[5].removeClass('active-spinner')
+				break;
+			case (5):
+				spinner[0].addClass('active-spinner');
+				spinner[1].addClass('active-spinner');
+				spinner[2].addClass('active-spinner');
+				spinner[3].addClass('active-spinner');
+				spinner[4].addClass('active-spinner');
+				spinner[5].addClass('active-spinner');
+		}
+	});
 	//Slick slider in steps section
-	$('.steps__slider').slick({
+	stepSlider.slick({
 		autoplay: false,
 		dots: false,
 		arrows: true,
@@ -181,7 +245,7 @@ $(document).ready(() => {
 	})
 
 	//Spinner
-	console.log($('.steps__slider-item'))
+	// console.log($('.steps__slider-item'))
 
 	//Yandex map
 	$(function () {
@@ -228,9 +292,9 @@ $(document).ready(() => {
 					'<div class="popover__arrow"></div>' +
 					'<div class="popover__inner">' +
 					'<a class="popover__close" href="#">' +
-					'<svg class="icon icon-close-middle"><use xlink:href="#icon-close-middle"></use></svg>' +
+					'<svg class="popover__close-svg icon icon-close-middle"><use xlink:href="#icon-close-middle"></use></svg>' +
 					'</a>' +
-					'$[[options.contentLayout observeSize minWidth=300 maxWidth=432]]' +
+					'$[[options.contentLayout observeSize minWidth=300 maxWidth=470]]' +
 					'<span class="popover__tail"></span>' +
 					'</div>' +
 					'</div>'
@@ -304,35 +368,35 @@ $(document).ready(() => {
 					var marker = markers[i];
 					var balloon =
 						'<div class="balloon">' +
-							'<div class="balloon__header">' +
-								'<div class="balloon__title">' +
-									'<a class="balloon__title-link" href="#">Внедрение “1C:ERP управление предприятием 2.4”</a>' +
-								'</div>' +
-							'</div>' +
-							'<div class="balloon__body">' +
-								'<div class="balloon__image-wrapper">' +
-									'<img src="" alt="" class="balloon__image">' +
-								'</div>' +
-								'<div class="balloon__description">' +
-									'<div class="balloon__description-client">' +
-										'<span class="balloon__description-column">Клиент: </span>' +
-										'<span class="balloon__description-value">ООО “Три-З”</span>' +
-									'</div>' +
-									'<div class="balloon__description-strength">' +
-										'<span class="balloon__description-column">Численность компании: </span>' +
-										'<span class="balloon__description-value">1000 чел.</span>' +
-									'</div>' +
-									'<div class="balloon__description-date">' +
-										'<span class="balloon__description-column">Дата проведения работ: </span>' +
-										'<span class="balloon__description-value">Декабрь 2017</span>' +
-									'</div>' +
-								'</div>' +
-							'</div>' +
-							'<div class="balloon__footer">' +
-								'<div class="balloon__footer-description">' +
-									'Для целей бухгалтерского и управленческого учета была внедрена система «1С:ERP Управление предприятием 2».' +
-								'</div>' +
-							'</div>' +
+						'<div class="balloon__header">' +
+						'<div class="balloon__title">' +
+						'<a class="balloon__title-link" href="#">Внедрение “1C:ERP управление предприятием 2.4”</a>' +
+						'</div>' +
+						'</div>' +
+						'<div class="balloon__body">' +
+						'<div class="balloon__image-wrapper">' +
+						'<img src="images/partners_logo_1.png" alt="" class="balloon__image">' +
+						'</div>' +
+						'<div class="balloon__description">' +
+						'<div class="balloon__description-client">' +
+						'<span class="balloon__description-column">Клиент: </span>' +
+						'<span class="balloon__description-value">ООО “Три-З”</span>' +
+						'</div>' +
+						'<div class="balloon__description-strength">' +
+						'<span class="balloon__description-column">Численность компании: </span>' +
+						'<span class="balloon__description-value">1000 чел.</span>' +
+						'</div>' +
+						'<div class="balloon__description-date">' +
+						'<span class="balloon__description-column">Дата проведения работ: </span>' +
+						'<span class="balloon__description-value">Декабрь 2017</span>' +
+						'</div>' +
+						'</div>' +
+						'</div>' +
+						'<div class="balloon__footer">' +
+						'<div class="balloon__footer-description">' +
+						'Для целей бухгалтерского и управленческого учета была внедрена система «1С:ERP Управление предприятием 2».' +
+						'</div>' +
+						'</div>' +
 						'</div>'
 					;
 

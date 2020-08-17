@@ -4,12 +4,14 @@
   width: 470px;
   box-shadow: 0 10px 7px rgba(0, 0, 0, 0.25);
   position: absolute;
+  margin: {
+    top: -14px;
+  };
   &::after {
     @include mix-pseudo-base;
     background: white;
     left: 50%;
     bottom: -9px;
-    //z-index: 200;
     width: 18px;
     height: 18px;
     transform: rotate(45deg);
@@ -20,27 +22,25 @@
 
   &__inner {
     min-height: 20px;//---Old---
-    //background: #DADADA;
     position: relative;//---Old---
-    padding: 40px;//---Old---
-    padding: {
-      top: 20px;
-      left: 28px;
-      right: 20px;
-      bottom: 30px;
-    };
+    padding: 0;//---Old---
   }
   &__content {
     width: 100%;//---Old---
   }
   &__close {
-    position: absolute;//---Old---
-    right: 23px;//---Old---
-    top: 19px;//---Old---
-    & > svg {
-      width: 18px;//---Old---
-      height: 18px;//---Old---
-      fill: #aaaaaa;//---Old---
+    position: absolute;
+    z-index: 10;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 12px;
+    top: 17px;
+    &-svg {
+      width: 12px;
+      height: 12px;
     }
   }
 }
@@ -56,6 +56,26 @@
     fill: #747373;//---Old---
   }
 
+  &__header {
+    position: relative;
+    padding: {
+      top: 20px;
+      left: 28px;
+      right: 20px;
+      bottom: 25px;
+    };
+    &::before {
+      @include mix-pseudo-base;
+      //width: 100%;
+      height: 1px;
+      left: -28px;
+      right: -20px;
+      bottom: 0;
+      background: #19275D;
+      opacity: 0.14;
+    }
+  }
+
   &__title {
     &-link {
       font-weight: 500;
@@ -65,8 +85,27 @@
   }
   &__body {
     display: flex;
+    position: relative;
+    padding: {
+      top: 15px;
+      left: 28px;
+      right: 20px;
+      bottom: 20px;
+    };
+    &::before {
+      @include mix-pseudo-base;
+      height: 1px;
+      left: -28px;
+      right: -20px;
+      bottom: 0;
+      background: #19275D;
+      opacity: 0.14;
+    }
   }
   &__description {
+    margin: {
+      left: 40px;
+    };
     &-column {
       color: #222222;
       font-size: 14px;
@@ -80,6 +119,13 @@
     }
   }
   &__footer {
+    position: relative;
+    padding: {
+      top: 20px;
+      left: 28px;
+      right: 20px;
+      bottom: 25px;
+    };
     &-description {
       font-size: 14px;
       line-height: 21px;

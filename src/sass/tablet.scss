@@ -153,6 +153,11 @@
         };
       }
     }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   //Steps section
@@ -343,6 +348,21 @@
       &-svg {
         height: 24px;
         width: 24px;
+      }
+    }
+  }
+
+  .active-spinner {
+    & .steps {
+      &__spinner {
+        &-item {
+          &-inner {
+            background: #D96C0D;
+          }
+        }
+        &-svg {
+          fill: white;
+        }
       }
     }
   }
