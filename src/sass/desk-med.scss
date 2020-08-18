@@ -40,7 +40,7 @@
       &__logo {
         &-svg {
           margin: {
-            top: -17px;
+            //top: -17px;
           };
         }
       }
@@ -147,6 +147,7 @@
       right: 0;
       fill: #07214D;
       display: block;
+      z-index: -1;
     }
   }
 
@@ -223,6 +224,7 @@
     }
 
     &__image {
+      width: 340px;
       &-wrapper {
         flex-shrink: 0;
         width: 340px;
@@ -234,6 +236,9 @@
       width: 100%;
       justify-content: flex-start;
       align-items: flex-start;
+      padding: {
+        left: 43px;
+      };
 
       &-title {
         transition: .3s;
@@ -262,6 +267,10 @@
       &-svg {
         height: 75px;
         width: 75px;
+        &-wrapper {
+          bottom: 29px;
+          right: 27px;
+        }
       }
     }
 
@@ -311,6 +320,10 @@
 
   //Steps section
   .steps {
+    padding: {
+      top: 90px;
+      bottom: 90px;
+    };
     & .slick {
       &-next,
       &-prev {
@@ -367,7 +380,7 @@
 
       &-svg {
         &-wrapper {
-          right: 60px;
+          right: 52px;
         }
       }
     }
@@ -393,7 +406,7 @@
       &-it {
         width: 175px;
         height: 146px;
-        top: 371px;
+        top: 275px;
       }
 
       &-item {
@@ -453,7 +466,7 @@
 
     &__svg {
       width: 274px;
-      height: 173px;
+      height: 147px;
     }
 
     &__text {
@@ -468,49 +481,6 @@
       top: 65px;
       bottom: 110px;
     };
-
-    &__main {
-      &-title {
-        padding: {
-          left: 60px;
-          right: 50px;
-        };
-      }
-
-      &-inner {
-        position: relative;
-        margin: {
-          top: 37px;
-        };
-      }
-
-      &-date {
-        &-dd {
-          font-size: 90px;
-          line-height: 105px;
-          letter-spacing: -3.6px;
-        }
-
-        &-mm {
-          line-height: 22px;
-        }
-
-        &-yy {
-          line-height: 22px;
-        }
-      }
-
-      &-svg {
-        display: block;
-        width: 74px;
-        height: 74px;
-        position: absolute;
-        right: 33px;
-        bottom: 42px;
-        fill: white;
-        opacity: .2;
-      }
-    }
 
     &__item {
       height: 400px;

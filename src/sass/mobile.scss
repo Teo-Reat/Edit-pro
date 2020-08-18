@@ -21,6 +21,10 @@
     display: block;
 
     &-svg {
+      transition: .3s;
+      margin: {
+        top: -4px;
+      };
       width: 75px;
     }
   }
@@ -61,6 +65,13 @@
   & .header {
     &__wrapper {
       height: 50px;
+    }
+    &__logo {
+      &-svg {
+        margin: {
+          top: -11px;
+        };
+      }
     }
   }
 }
@@ -784,6 +795,7 @@
   &__main {
     border: 2px solid rgba(255, 255, 255, .11);
     box-sizing: border-box;
+    overflow: visible;
 
     &-title {
       color: white;
@@ -807,6 +819,10 @@
       &-wrapper {
         width: 168px;
         display: flex;
+        margin: {
+          bottom: -1px;
+          left: -1px;
+        };
       }
     }
 
@@ -845,6 +861,9 @@
 
     &-svg {
       display: none;
+      &-top {
+        display: none;
+      }
     }
   }
 }
@@ -936,32 +955,42 @@
     }
 
     &-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       height: 80px;
       position: relative;
+      display: flex;
+      align-items: center;
       margin: {
         top: auto;
-        bottom: 15px;
       };
       padding: {
         top: 15px;
+        bottom: 15px;
       };
     }
 
     &-link {
       color: #1A2757;
       line-height: 24px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
       margin: {
         right: auto;
         left: 10px;
       };
+      &-text {
+        margin: {
+          left: 11px;
+        };
+      }
 
       &-svg {
         width: 37px;
         height: 37px;
         fill: #0a285a;
+        &-wrapper {
+          height: 37px;
+        }
       }
     }
 
@@ -971,8 +1000,8 @@
 
       &-wrapper {
         position: absolute;
-        right: 12px;
-        bottom: 0;
+        right: 17px;
+        bottom: 17px;
       }
     }
   }

@@ -4,6 +4,83 @@ import 'slick-carousel'
 
 $(document).ready(() => {
 	//Variables
+	let time = 2;
+	let bar,
+		slick,
+		isPause,
+		tick,
+		percentTime;
+
+	slick = $('.js-prime__slider');
+	slick.slick({
+		pauseOnHover: true,
+		autoplay: true,
+		dots: false,
+		arrows: true,
+		infinite: true,
+		speed: 200,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		prevArrow: '<button type="button" class="slick-prev"><svg class="icon icon-arrow-big-l">\n' +
+			'                <use xlink:href="#icon-arrow-big-l"></use>\n' +
+			'            </svg></button>',
+		nextArrow: '<button type="button" class="slick-next"><svg class="icon icon-arrow-big-r">\n' +
+			'                <use xlink:href="#icon-arrow-big-r"></use>\n' +
+			'            </svg></button>',
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: false,
+					dots: true,
+				}
+			},
+		]
+	});
+
+	bar = $('.js-prime__fill');
+
+	$('.prime').on({
+		mouseenter: function() {
+			isPause = true;
+		},
+		mouseleave: function() {
+			isPause = false;
+		}
+	})
+
+	function startProgressbar() {
+		resetProgressbar();
+		percentTime = 0;
+		isPause = false;
+		tick = setInterval(interval, 10);
+	}
+
+	function interval() {
+		if(isPause === false) {
+			percentTime += 1 / (time+0.1);
+			bar.css({
+				width: percentTime+"%"
+			});
+			if(percentTime >= 100)
+			{
+				slick.slick('slickNext');
+				startProgressbar();
+			}
+		}
+	}
+
+
+	function resetProgressbar() {
+		bar.css({
+			width: 0+'%'
+		});
+		clearTimeout(tick);
+	}
+
+	startProgressbar();
 
 	//Fixed menu
 	function fixed_menu() {
@@ -27,32 +104,32 @@ $(document).ready(() => {
 	});
 
 	// Slick slider in prime section
-	$('.js-prime__slider').slick({
-		autoplay: false,
-		dots: false,
-		arrows: true,
-		infinite: true,
-		speed: 300,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		prevArrow: '<button type="button" class="slick-prev"><svg class="icon icon-arrow-big-l">\n' +
-			'                <use xlink:href="#icon-arrow-big-l"></use>\n' +
-			'            </svg></button>',
-		nextArrow: '<button type="button" class="slick-next"><svg class="icon icon-arrow-big-r">\n' +
-			'                <use xlink:href="#icon-arrow-big-r"></use>\n' +
-			'            </svg></button>',
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					arrows: false,
-					dots: true,
-				}
-			},
-		]
-	});
+	// $('.js-prime__slider').slick({
+	// 	autoplay: false,
+	// 	dots: false,
+	// 	arrows: true,
+	// 	infinite: true,
+	// 	speed: 300,
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	prevArrow: '<button type="button" class="slick-prev"><svg class="icon icon-arrow-big-l">\n' +
+	// 		'                <use xlink:href="#icon-arrow-big-l"></use>\n' +
+	// 		'            </svg></button>',
+	// 	nextArrow: '<button type="button" class="slick-next"><svg class="icon icon-arrow-big-r">\n' +
+	// 		'                <use xlink:href="#icon-arrow-big-r"></use>\n' +
+	// 		'            </svg></button>',
+	// 	responsive: [
+	// 		{
+	// 			breakpoint: 768,
+	// 			settings: {
+	// 				slidesToShow: 1,
+	// 				slidesToScroll: 1,
+	// 				arrows: false,
+	// 				dots: true,
+	// 			}
+	// 		},
+	// 	]
+	// });
 
 	//Spinner
 	let stepSlider = $('.steps__slider');
@@ -68,63 +145,81 @@ $(document).ready(() => {
 			$('.steps__spinner-sixth'),
 		]
 
-		switch (nextSlide) {
-			case (0):
-				spinner[0].addClass('active-spinner');
-				spinner[1].removeClass('active-spinner')
-				spinner[2].removeClass('active-spinner')
-				spinner[3].removeClass('active-spinner')
-				spinner[4].removeClass('active-spinner')
-				spinner[5].removeClass('active-spinner')
-				break;
-			case (1):
-				spinner[0].addClass('active-spinner');
-				spinner[1].addClass('active-spinner');
-				spinner[2].removeClass('active-spinner')
-				spinner[3].removeClass('active-spinner')
-				spinner[4].removeClass('active-spinner')
-				spinner[5].removeClass('active-spinner')
-				break;
-			case (2):
-				spinner[0].addClass('active-spinner');
-				spinner[1].addClass('active-spinner');
-				spinner[2].addClass('active-spinner');
-				spinner[3].removeClass('active-spinner')
-				spinner[4].removeClass('active-spinner')
-				spinner[5].removeClass('active-spinner')
-				break;
-			case (3):
-				spinner[0].addClass('active-spinner');
-				spinner[1].addClass('active-spinner');
-				spinner[2].addClass('active-spinner');
-				spinner[3].addClass('active-spinner');
-				spinner[4].removeClass('active-spinner')
-				spinner[5].removeClass('active-spinner')
-				break;
-			case (4):
-				spinner[0].addClass('active-spinner');
-				spinner[1].addClass('active-spinner');
-				spinner[2].addClass('active-spinner');
-				spinner[3].addClass('active-spinner');
-				spinner[4].addClass('active-spinner');
-				spinner[5].removeClass('active-spinner')
-				break;
-			case (5):
-				spinner[0].addClass('active-spinner');
-				spinner[1].addClass('active-spinner');
-				spinner[2].addClass('active-spinner');
-				spinner[3].addClass('active-spinner');
-				spinner[4].addClass('active-spinner');
-				spinner[5].addClass('active-spinner');
+		// for (let i = 0; i < spinner.length; i++) {
+		//
+		// }
+
+		if (currentSlide > nextSlide) {
+			spinner[nextSlide].addClass('active-spinner')
+			console.log(spinner[nextSlide])
+			// console.log('true ' + currentSlide + ' / ' + nextSlide)
+		} else {
+			spinner[currentSlide].removeClass('active-spinner')
+			console.log(spinner[nextSlide])
+			// console.log('false ' + currentSlide + ' / ' + nextSlide)
 		}
+
+		// switch (nextSlide) {
+			// case (0):
+				// spinner[0].addClass('active-spinner');
+				// spinner[1].removeClass('active-spinner')
+				// spinner[2].removeClass('active-spinner')
+				// spinner[3].removeClass('active-spinner')
+				// spinner[4].removeClass('active-spinner')
+				// spinner[5].removeClass('active-spinner')
+		// 		break;
+		// 	case (1):
+		// 		spinner[0].addClass('active-spinner');
+		// 		spinner[1].addClass('active-spinner');
+		// 		spinner[2].removeClass('active-spinner')
+		// 		spinner[3].removeClass('active-spinner')
+		// 		spinner[4].removeClass('active-spinner')
+		// 		spinner[5].removeClass('active-spinner')
+		// 		break;
+		// 	case (2):
+		// 		spinner[0].addClass('active-spinner');
+		// 		spinner[1].addClass('active-spinner');
+		// 		spinner[2].addClass('active-spinner');
+		// 		spinner[3].removeClass('active-spinner')
+		// 		spinner[4].removeClass('active-spinner')
+		// 		spinner[5].removeClass('active-spinner')
+		// 		break;
+		// 	case (3):
+		// 		spinner[0].addClass('active-spinner');
+		// 		spinner[1].addClass('active-spinner');
+		// 		spinner[2].addClass('active-spinner');
+		// 		spinner[3].addClass('active-spinner');
+		// 		spinner[4].removeClass('active-spinner')
+		// 		spinner[5].removeClass('active-spinner')
+		// 		break;
+		// 	case (4):
+		// 		spinner[0].addClass('active-spinner');
+		// 		spinner[1].addClass('active-spinner');
+		// 		spinner[2].addClass('active-spinner');
+		// 		spinner[3].addClass('active-spinner');
+		// 		spinner[4].addClass('active-spinner');
+		// 		spinner[5].removeClass('active-spinner')
+		// 		break;
+		// 	case (5):
+		// 		spinner[0].addClass('active-spinner');
+		// 		spinner[1].addClass('active-spinner');
+		// 		spinner[2].addClass('active-spinner');
+		// 		spinner[3].addClass('active-spinner');
+		// 		spinner[4].addClass('active-spinner');
+		// 		spinner[5].addClass('active-spinner');
+		// }
 	});
 	//Slick slider in steps section
 	stepSlider.slick({
-		autoplay: false,
+		autoplay: true,
 		dots: false,
 		arrows: true,
+		fade: true,
 		infinite: true,
-		speed: 300,
+		// speed: 500,
+		// fade: true,
+		// cssEase: 'linear',
+		speed: 900,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		prevArrow: '<button type="button" class="slick-prev"><svg class="icon icon-arrow-big-l">\n' +
@@ -228,6 +323,7 @@ $(document).ready(() => {
 
 	//Desktop menu toggle
 	$('.js-header__desktop-open').click(function () {
+		$('body').toggleClass('scroll-hidden');
 		$(this).toggleClass('open');
 		$('.js-desktop').slideToggle()
 	});

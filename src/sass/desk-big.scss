@@ -16,13 +16,13 @@
       &-prev {
         bottom: 130px;
         margin: {
-          left: -618px;
+          left: -632px;
         };
       }
 
       &-prev {
         margin: {
-          left: -690px;
+          left: -705px;
         };
       }
     }
@@ -62,6 +62,12 @@
         bottom: 30px;
       };
     }
+
+    &__item {
+      &:hover .services__image-wrapper {
+        width: 170px;
+      }
+    }
   }
 
   //Products section
@@ -89,20 +95,30 @@
 
   //Steps section
   .steps {
+    padding: {
+      top: 105px;
+      bottom: 133px;
+    };
     & .slick {
       &-next,
       &-prev {
         top: 101px;
         margin: {
-          left: -235px;
+          left: -250px;
         };
       }
 
       &-prev {
         margin: {
-          left: -305px;
+          left: -320px;
         };
       }
+    }
+
+    &__title {
+      padding: {
+        bottom: 60px;
+      };
     }
 
     &__slider {
@@ -125,14 +141,14 @@
 
       &-svg {
         &-wrapper {
-          right: 60px;
+          right: 55px;
         }
       }
     }
 
     &__about {
       &-wrapper {
-        width: 1410px;
+        width: 1440px;
       }
     }
 
@@ -182,6 +198,39 @@
       top: 115px;
       bottom: 120px;
     };
+    &__main {
+      &-title {
+        margin: {
+          top: auto;
+        };
+      }
+      &-inner {
+        margin: {
+          top: 20px;
+        };
+      }
+      &-img {
+        &-wrapper {
+          width: 212px;
+          //margin: {
+          //  top: 20px;
+          //};
+        }
+      }
+      &-date {
+        margin: {
+          left: 87px;
+        };
+      }
+    }
+
+    &__item {
+      &-wrapper {
+        margin: {
+          top: 40px;
+        };
+      }
+    }
   }
 
   //Map section
@@ -210,15 +259,21 @@
       &-prev {
         top: 125px;
         margin: {
-          right: -690px;
+          right: -705px;
         };
       }
 
       &-prev {
         margin: {
-          right: -618px;
+          right: -632px;
         };
       }
+    }
+
+    &__title {
+      padding: {
+        bottom: 62px;
+      };
     }
 
     &__item {

@@ -2,14 +2,6 @@
 @media (min-width: 768px) {
   //Header section
   .header {
-    &__logo {
-      &-svg {
-        transition: .3s;
-        margin: {
-          top: -4px;
-        };
-      }
-    }
 
     &__navigation {
       display: block;
@@ -56,9 +48,7 @@
 
       &__logo {
         &-svg {
-          margin: {
-            top: -11px;
-          };
+          width: 72px;
         }
       }
     }
