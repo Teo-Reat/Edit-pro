@@ -1,0 +1,55 @@
+@media (min-width: 576px) {
+  //Steps section
+  .steps {
+    padding: {
+      bottom: 45px;
+    };
+    &__about {
+      &-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 540px;
+        margin: {
+          left: auto;
+          right: auto;
+        };
+        padding: {
+          left: 15px;
+          right: 15px;
+        };
+      }
+    }
+  }
+
+  .about-us {
+    &__wrapper {
+      width: 190px;
+    }
+  }
+
+  //News section
+  .news {
+    &__item {
+      &-title {
+        padding: {
+          top: 40px;
+        };
+      }
+    }
+
+    &__main {
+      display: flex;
+      &-title {
+        order: 2;
+        margin: {
+          left: 20px;
+        };
+      }
+      &-inner {
+        margin: {
+          top: 0;
+        };
+      }
+    }
+  }
+}

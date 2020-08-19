@@ -1,5 +1,7 @@
 window.$ = window.jQuery = require('jquery');
 import 'slick-carousel'
+import './jquery.mCustomScrollbar.js'
+// import './device'
 
 
 $(document).ready(() => {
@@ -10,6 +12,15 @@ $(document).ready(() => {
 		isPause,
 		tick,
 		percentTime;
+
+	//Scrolling
+
+	(function ($) {
+		$(window).on("load", function () {
+			$(".js-desktop").mCustomScrollbar();
+		});
+	})(jQuery);
+
 
 	slick = $('.js-prime__slider');
 	slick.slick({
@@ -149,65 +160,65 @@ $(document).ready(() => {
 		//
 		// }
 
-		if (currentSlide > nextSlide) {
-			spinner[nextSlide].addClass('active-spinner')
-			console.log(spinner[nextSlide])
+		// if (currentSlide > nextSlide) {
+		// 	spinner[nextSlide].addClass('active-spinner')
+			// console.log(spinner[nextSlide])
 			// console.log('true ' + currentSlide + ' / ' + nextSlide)
-		} else {
-			spinner[currentSlide].removeClass('active-spinner')
-			console.log(spinner[nextSlide])
+		// } else {
+		// 	spinner[currentSlide].removeClass('active-spinner')
+			// console.log(spinner[nextSlide])
 			// console.log('false ' + currentSlide + ' / ' + nextSlide)
-		}
-
-		// switch (nextSlide) {
-			// case (0):
-				// spinner[0].addClass('active-spinner');
-				// spinner[1].removeClass('active-spinner')
-				// spinner[2].removeClass('active-spinner')
-				// spinner[3].removeClass('active-spinner')
-				// spinner[4].removeClass('active-spinner')
-				// spinner[5].removeClass('active-spinner')
-		// 		break;
-		// 	case (1):
-		// 		spinner[0].addClass('active-spinner');
-		// 		spinner[1].addClass('active-spinner');
-		// 		spinner[2].removeClass('active-spinner')
-		// 		spinner[3].removeClass('active-spinner')
-		// 		spinner[4].removeClass('active-spinner')
-		// 		spinner[5].removeClass('active-spinner')
-		// 		break;
-		// 	case (2):
-		// 		spinner[0].addClass('active-spinner');
-		// 		spinner[1].addClass('active-spinner');
-		// 		spinner[2].addClass('active-spinner');
-		// 		spinner[3].removeClass('active-spinner')
-		// 		spinner[4].removeClass('active-spinner')
-		// 		spinner[5].removeClass('active-spinner')
-		// 		break;
-		// 	case (3):
-		// 		spinner[0].addClass('active-spinner');
-		// 		spinner[1].addClass('active-spinner');
-		// 		spinner[2].addClass('active-spinner');
-		// 		spinner[3].addClass('active-spinner');
-		// 		spinner[4].removeClass('active-spinner')
-		// 		spinner[5].removeClass('active-spinner')
-		// 		break;
-		// 	case (4):
-		// 		spinner[0].addClass('active-spinner');
-		// 		spinner[1].addClass('active-spinner');
-		// 		spinner[2].addClass('active-spinner');
-		// 		spinner[3].addClass('active-spinner');
-		// 		spinner[4].addClass('active-spinner');
-		// 		spinner[5].removeClass('active-spinner')
-		// 		break;
-		// 	case (5):
-		// 		spinner[0].addClass('active-spinner');
-		// 		spinner[1].addClass('active-spinner');
-		// 		spinner[2].addClass('active-spinner');
-		// 		spinner[3].addClass('active-spinner');
-		// 		spinner[4].addClass('active-spinner');
-		// 		spinner[5].addClass('active-spinner');
 		// }
+
+		switch (nextSlide) {
+			case (0):
+				spinner[0].addClass('active-spinner');
+				spinner[1].removeClass('active-spinner')
+				spinner[2].removeClass('active-spinner')
+				spinner[3].removeClass('active-spinner')
+				spinner[4].removeClass('active-spinner')
+				spinner[5].removeClass('active-spinner')
+				break;
+			case (1):
+				spinner[0].addClass('active-spinner');
+				spinner[1].addClass('active-spinner');
+				spinner[2].removeClass('active-spinner')
+				spinner[3].removeClass('active-spinner')
+				spinner[4].removeClass('active-spinner')
+				spinner[5].removeClass('active-spinner')
+				break;
+			case (2):
+				spinner[0].addClass('active-spinner');
+				spinner[1].addClass('active-spinner');
+				spinner[2].addClass('active-spinner');
+				spinner[3].removeClass('active-spinner')
+				spinner[4].removeClass('active-spinner')
+				spinner[5].removeClass('active-spinner')
+				break;
+			case (3):
+				spinner[0].addClass('active-spinner');
+				spinner[1].addClass('active-spinner');
+				spinner[2].addClass('active-spinner');
+				spinner[3].addClass('active-spinner');
+				spinner[4].removeClass('active-spinner')
+				spinner[5].removeClass('active-spinner')
+				break;
+			case (4):
+				spinner[0].addClass('active-spinner');
+				spinner[1].addClass('active-spinner');
+				spinner[2].addClass('active-spinner');
+				spinner[3].addClass('active-spinner');
+				spinner[4].addClass('active-spinner');
+				spinner[5].removeClass('active-spinner')
+				break;
+			case (5):
+				spinner[0].addClass('active-spinner');
+				spinner[1].addClass('active-spinner');
+				spinner[2].addClass('active-spinner');
+				spinner[3].addClass('active-spinner');
+				spinner[4].addClass('active-spinner');
+				spinner[5].addClass('active-spinner');
+		}
 	});
 	//Slick slider in steps section
 	stepSlider.slick({
@@ -298,11 +309,9 @@ $(document).ready(() => {
 		}
 	});
 	inputWrapper.find('input,textarea').focusin(function () {
-		console.log(123);
 		$(this).closest('.js-material-input').addClass('focus');
 	});
 	inputWrapper.find('input,textarea').focusout(function () {
-		console.log(321);
 		$(this).closest('.js-material-input').removeClass('focus');
 	})
 	inputWrapper.find('input,textarea').change(function () {
@@ -317,6 +326,7 @@ $(document).ready(() => {
 
 	//Mobile menu toggle
 	$('.js-header__menu-open').click(function () {
+		$('body').toggleClass('scroll-hidden');
 		$(this).toggleClass('open');
 		$('.js-mobile').slideToggle()
 	});

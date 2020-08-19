@@ -75,7 +75,7 @@
   //Desktop menu section
   .desktop {
     background: #0A285A;
-    //position: absolute;
+    position: absolute;
     left: 0;
     right: 0;
     top: 65px;
@@ -108,6 +108,9 @@
     }
 
     &__sub {
+      position: relative;
+      z-index: 5;
+
       &-title {
         margin: {
           top: 35px;
@@ -189,6 +192,9 @@
     }
 
     &__contacts {
+      position: relative;
+      z-index: 5;
+
       &-phone {
         font-weight: 500;
         font-size: 24px;
@@ -235,6 +241,9 @@
     }
 
     &__social {
+      position: relative;
+      z-index: 5;
+
       &-feedback {
         background: #0F3068;
         border: 1px solid rgba(223, 225, 232, 0.2);
@@ -336,16 +345,45 @@
 
   //Services section
   .services {
+
     &__item {
       display: flex;
       height: 235px;
       position: relative;
+      overflow: hidden;
+
+      &:hover .services__image-wrapper {
+        width: 70px;
+      }
+
+      &:hover .services__description-title {
+        margin: {
+          top: 35px;
+        };
+      }
+
+      &:hover .services__description-text {
+        visibility: visible;
+        opacity: 1;
+        margin: {
+          right: 0;
+        };
+      }
+
+      &:hover .add-sign {
+        right: 32px;
+        top: 32px;
+      }
     }
 
     &__image {
+      width: 340px;
+
       &-wrapper {
         height: 100%;
         width: 40%;
+        flex-shrink: 0;
+        transition: .3s;
       }
     }
 
@@ -354,30 +392,82 @@
       display: flex;
       flex-direction: column;
       position: relative;
-      width: 60%;
+      width: 100%;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: {
+        left: 25px;
+      };
 
       &-title {
         font-size: 20px;
         line-height: 28px;
+        transition: .3s;
         margin: {
-          top: 20px;
+          top: 50px;
         };
       }
 
       &-text {
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s;
+        width: 340px;
+        font-size: 16px;
+        line-height: 22px;
+        color: #2E2E2E;
         display: block;
         padding: {
           bottom: 20px;
         };
+        margin: {
+          right: -350px;
+          top: 20px;
+        };
       }
 
       &-svg {
+        height: 75px;
+        width: 75px;
+
         &-wrapper {
           position: absolute;
           right: 25px;
           bottom: 45px;
         }
       }
+    }
+
+    &__add {
+      right: -350px;
+      top: 32px;
+      display: block;
+      transition: .3s;
+    }
+  }
+
+  .tablet .services {
+    &__image-wrapper {
+      width: 70px;
+    }
+
+    &__description-title {
+      margin: {
+        top: 35px;
+      };
+    }
+
+    &__description-text {
+      visibility: visible;
+      opacity: 1;
+      margin: {
+        right: 0;
+      };
+    }
+
+    & .add-sign {
+      right: 32px;
+      top: 32px;
     }
   }
 
@@ -616,9 +706,11 @@
         transition: .3s;
       }
     }
+
     &__main {
       overflow: visible;
       position: relative;
+
       &-title {
         padding: {
           left: 60px;
@@ -658,6 +750,7 @@
         bottom: 42px;
         fill: white;
         opacity: .2;
+
         &-top {
           width: 62px;
           height: 62px;

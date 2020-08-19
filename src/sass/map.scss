@@ -46,15 +46,7 @@
 }
 
 .balloon {
-
-  & svg {
-    position: absolute;//---Old---
-    top: 0;//---Old---
-    left: 0;//---Old---
-    height: 24px;//---Old---
-    width: 24px;//---Old---
-    fill: #747373;//---Old---
-  }
+  background: white;
 
   &__header {
     position: relative;
@@ -136,39 +128,21 @@
 
 @media (max-width: 575px) {
   .popover {
-    width: 100%;//---Old---
+    position: absolute;
+    width: 100%;
   }
 
   .balloon {
-
-    &__title {
-      padding-bottom: 10px;//---Old---
-      & a {
-        font-size: 18px;//---Old---
-      }
+    width: 255px;
+    &__body {
+      display: flex;
+      flex-direction: column;
     }
-    &__address {
-      font-size: 12px;//---Old---
-      padding: 10px 0 10px 30px;//---Old---
-      & svg {
-        top: 8px;//---Old---
-      }
-    }
-    &__phone {
-      margin-top: 10px;//---Old---
-      padding-left: 30px;//---Old---
-    }
-    &__email {
-      margin-top: 5px;//---Old---
-      padding-left: 30px;//---Old---
-      & > a {
-        //color: $black;
-      }
-    }
-    &__work-time {
-      margin-top: 5px;//---Old---
-      //position: relative;
-      padding-left: 30px;//---Old---
+    &__description {
+      margin: {
+        top: 20px;
+        left: 0;
+      };
     }
   }
 }

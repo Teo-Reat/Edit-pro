@@ -81,10 +81,11 @@
   background: #0A285A;
   display: none;
   overflow-y: scroll;
-  height: calc(100vh - 65px);
+  height: calc(100vh - 50px);
 
   &__menu {
     &-item {
+      transition: .3s;
       padding: {
         left: 25px;
         right: 25px;
@@ -128,6 +129,7 @@
       height: 10px;
       width: 11px;
       transform: rotate(225deg);
+      transition: .3s;
       border: {
         left: 2px solid white;
         top: 2px solid white;
@@ -507,7 +509,8 @@
   }
 
   &__list {
-    & > div:last-child .products__item::after {
+    & > div:last-child .products__item::after,
+    & > div:last-child .products__item::before {
       display: none;
     }
   }
@@ -522,13 +525,19 @@
     height: 70px;
     position: relative;
 
-    &::after {
+    &::after,
+    &::before {
       @include mix-pseudo-base;
       height: 1px;
-      left: 0;
-      right: 0;
+      left: 50%;
+      width: 50vw;
       bottom: 0;
       background: rgba(255, 255, 255, 0.11);
+    }
+
+    &::before {
+      left: auto;
+      right: 50%;
     }
 
     &:last-child {
@@ -564,7 +573,7 @@
     font-family: 'Open Sans', sans-serif;
     color: white;
     height: 57px;
-    width: 200px;
+    width: 270px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -835,7 +844,7 @@
       font-size: 14px;
       line-height: 16px;
       margin: {
-        left: 30px;
+        left: 24px;
         bottom: 30px;
       };
 
@@ -1026,10 +1035,6 @@
 
     &-wrapper {
       display: none;
-      padding: {
-        left: 25px;
-        right: 25px;
-      };
 
       &:first-child {
         display: block;
@@ -1225,6 +1230,7 @@
 
     &-logo {
       display: block;
+      height: 35px;
       &-svg {
         width: 40px;
         height: 35px;

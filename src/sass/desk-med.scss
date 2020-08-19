@@ -196,89 +196,10 @@
       bottom: 105px;
     };
 
-    &__item {
-      overflow: hidden;
-
-      &:hover .services__image-wrapper {
-        width: 70px;
-      }
-
-      &:hover .services__description-title {
-        margin: {
-          top: 40px;
-        };
-      }
-
-      &:hover .services__description-text {
-        visibility: visible;
-        opacity: 1;
-        margin: {
-          right: 0;
-        };
-      }
-
-      &:hover .add-sign {
-        right: 32px;
-        top: 32px;
-      }
-    }
-
-    &__image {
-      width: 340px;
-      &-wrapper {
-        flex-shrink: 0;
-        width: 340px;
-        transition: .3s;
-      }
-    }
-
     &__description {
-      width: 100%;
-      justify-content: flex-start;
-      align-items: flex-start;
       padding: {
         left: 43px;
       };
-
-      &-title {
-        transition: .3s;
-        margin: {
-          top: 50px;
-        };
-      }
-
-      &-text {
-        visibility: hidden;
-        opacity: 0;
-        transition: .3s;
-        width: 350px;
-        font-size: 16px;
-        line-height: 22px;
-        color: #2E2E2E;
-        padding: {
-          bottom: 20px;
-        };
-        margin: {
-          right: -350px;
-          top: 20px;
-        };
-      }
-
-      &-svg {
-        height: 75px;
-        width: 75px;
-        &-wrapper {
-          bottom: 29px;
-          right: 27px;
-        }
-      }
-    }
-
-    &__add {
-      right: -350px;
-      top: 32px;
-      display: block;
-      transition: .3s;
     }
   }
 
@@ -590,12 +511,11 @@
       }
     }
 
-    &__social {
-      //width: 170px;
-    }
-
     &__rights {
-      height: 50px;
+      padding: 0;
+      &-wrapper {
+        height: 50px;
+      }
     }
   }
 }
