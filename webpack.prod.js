@@ -36,22 +36,22 @@ module.exports = merge(common, {
 			// 	template: "./src/pages/lk-personal.html",
 			// 	filename: 'lk-personal.html',
 			// }),
-			// new HtmlWebpackPlugin({
-			// 	template: "./src/pages/lk-instructions.html",
-			// 	filename: 'lk-instructions.html',
-			// }),
-			// new HtmlWebpackPlugin({
-			// 	template: "./src/pages/lk-form.html",
-			// 	filename: 'lk-form.html',
-			// }),
-			// new HtmlWebpackPlugin({
-			// 	template: "./src/pages/dealer.html",
-			// 	filename: 'dealer.html',
-			// }),
 			new HtmlWebpackPlugin({
-				template: "./src/main.html",
-				filename: 'about-us.html',
+				template: "./src/services-detail.html",
+				filename: 'services.html',
 			}),
+			// new HtmlWebpackPlugin({
+			// 	template: "./src/about-us.html",
+			// 	filename: 'about-us.html',
+			// }),
+			// new HtmlWebpackPlugin({
+			// 	template: "./src/services.html",
+			// 	filename: 'services.html',
+			// }),
+			// new HtmlWebpackPlugin({
+			// 	template: "./src/main.html",
+			// 	filename: 'main.html',
+			// }),
 		]
 	},
 	plugins: [

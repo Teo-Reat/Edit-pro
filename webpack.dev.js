@@ -13,12 +13,12 @@ module.exports = merge(common, {
 		// new HtmlWebpackPlugin({
 		// 	template: "./src/main.html"
 		// }),
-		new HtmlWebpackPlugin({
-			template: "./src/about-us.html"
-		}),
 		// new HtmlWebpackPlugin({
-		// 	template: "./src/pages/lk-personal.html"
+		// 	template: "./src/about-us.html"
 		// }),
+		new HtmlWebpackPlugin({
+			template: "./src/services-detail.html"
+		}),
 		// new HtmlWebpackPlugin({
 		// 	template: "./src/pages/lk-instructions.html"
 		// }),

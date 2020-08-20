@@ -1,0 +1,13 @@
+//Services page
+@media (min-width: 1410px) {
+  .services {
+    &-page {
+      &__title {
+        padding: {
+          bottom: 26px;
+        };
+      }
+    }
+  }
+}
+
