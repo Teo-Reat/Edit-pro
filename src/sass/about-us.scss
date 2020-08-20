@@ -1,0 +1,445 @@
+//About us page
+.about {
+  &__title {
+    margin: {
+      top: 42px;
+      //top: 83px;
+      bottom: 30px;
+      //bottom: 60px;
+    };
+  }
+  &__description {
+    position: relative;
+    padding: {
+      top: 45px;
+      bottom: 50px;
+    };
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+    background: #0175B2;
+    &-wrapper {
+      width: 270px;
+      margin: {
+        left: auto;
+        right: auto;
+      };
+    }
+    &-one {
+      position: relative;
+      z-index: 3;
+      font-size: 22px;
+      line-height: 30px;
+    }
+    &-two {
+      position: relative;
+      z-index: 3;
+      font-size: 18px;
+      line-height: 26px;
+      margin: {
+        top: 20px;
+      };
+
+    }
+    &-svg {
+      z-index: 1;
+      left: 50%;
+    }
+  }
+  &__image {
+    &-wrapper {
+      position: relative;
+      z-index: 5;
+      min-height: 200px;
+      padding: 0;
+      margin: 0;
+    }
+
+    &-svg {
+      z-index: 10;
+      position: absolute;
+      right: 50%;
+      height: 76px;
+      width: 93px;
+      fill: white;
+      opacity: .17;
+    }
+  }
+}
+
+.clients {
+  padding: {
+    top: 45px;
+    bottom: 25px;
+  };
+  &__question {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  &__answer {
+    &-item {
+      position: relative;
+      padding: {
+        //left: 38px;
+        left: 23px;
+      };
+      margin: {
+        top: 20px;
+      };
+      &:first-child {
+        margin: {
+          top: 30px;
+        };
+      }
+      &::before {
+        @include mix-pseudo-base;
+        width: 10px;
+        height: 10px;
+        background: #3D9CD4;
+        top: 7px;
+        left: 0;
+      }
+    }
+    &-link {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}
+
+.about-page {
+  &__steps {
+    background: linear-gradient(0deg, #F1F4F6, #F1F4F6), #DBE4EE;
+    &-title {
+      position: relative;
+      &::after,
+      &::before {
+        @include mix-pseudo-base;
+        height: 1px;
+        left: 50%;
+        width: 50vw;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.07);
+      }
+
+      &::before {
+        left: auto;
+        right: 50%;
+      }
+    }
+    &-wrapper {
+      background: none;
+    }
+  }
+
+}
+
+.about__text {
+  position: relative;
+  color: white;
+  font-size: 18px;
+  line-height: 24px;
+  padding: {
+    top: 75px;
+    bottom: 40px;
+  };
+}
+
+@media (min-width: 768px) {
+  .about {
+    &__description {
+      width: 50%;
+      &-image {
+        &-wrapper {
+          width: 720px;
+          display: flex;
+          margin: {
+            left: auto;
+            right: auto;
+          };
+          padding: {
+            left: 15px;
+            right: 15px;
+          };
+        }
+      }
+      &-wrapper {
+        padding: {
+          left: 15px;
+          right: 15px;
+        };
+      }
+      &-svg {
+        left: auto;
+        right: 0;
+      }
+    }
+    &__image {
+      &-wrapper {
+        width: 50%;
+      }
+
+      &-svg {
+        height: 115px;
+        width: 140px;
+        right: auto;
+        left: 0;
+        bottom: 100px;
+        top: auto;
+      }
+    }
+  }
+
+  .clients {
+    &__answer {
+      &-item {
+        &:first-child {
+          margin: {
+            top: 0;
+          };
+        }
+      }
+    }
+  }
+
+  .about-page {
+    &__spinner {
+      &-bg {
+        &-wrapper {
+          z-index: 0;
+        }
+      }
+    }
+    &__steps {
+      background: none;
+
+      & .slick {
+        &-next,
+        &-prev {
+          bottom: auto;
+          top: -75px;
+        }
+      }
+
+      &-title {
+        margin: {
+          bottom: -100px;
+        };
+        padding: {
+          left: 34px;
+        };
+        &::before {
+          width: auto;
+          left: 0;
+        }
+        &::after {
+          display: none;
+        }
+      }
+
+      &-slider {
+        top: 100px;
+        &-wrapper {
+          height: 550px;
+          background: linear-gradient(0deg, #F1F4F6, #F1F4F6), #DBE4EE;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .about {
+    &__description {
+      &-wrapper {
+        width: auto;
+        padding: {
+          left: 75px;
+          right: 45px;
+        };
+      }
+      &-image {
+        &-wrapper {
+          width: 960px;
+        }
+      }
+      &-svg {
+        bottom: 0;
+        top: auto;
+      }
+    }
+  }
+
+  .clients {
+    &__question {
+      margin: {
+        left: 75px;
+        right: 35px;
+      };
+    }
+  }
+
+  .about-page {
+    &__steps {
+
+      & .slick {
+        &-next,
+        &-prev {
+          right: 94px;
+          left: auto;
+          margin: 0;
+        }
+        &-next {
+          right: 34px;
+        }
+      }
+
+      &-slider {
+        &-wrapper {
+          height: 600px;
+        }
+        &-item {
+          height: 500px;
+          padding: {
+            left: 100px;
+          };
+        }
+      }
+
+      &-number {
+        &-wrapper {
+          left: 100px;
+        }
+      }
+    }
+  }
+
+  .about__text {
+    &-contain {
+      width: 720px;
+      margin: {
+        left: auto;
+        right: auto;
+      };
+    }
+  }
+}
+
+@media (min-width: 1410px) {
+  .about {
+    &__title {
+      margin: {
+        top: 83px;
+        bottom: 60px;
+      };
+    }
+    &__description {
+      padding: {
+        top: 100px;
+        bottom: 90px;
+      };
+      &-wrapper {
+        padding: {
+          left: 100px;
+          right: 55px;
+        };
+      }
+      &-image {
+        &-wrapper {
+          width: 1200px;
+          height: 450px;
+        }
+      }
+    }
+    &__image {
+      &-svg {
+        height: 147px;
+        width: 179px;
+        bottom: 136px;
+      }
+    }
+  }
+
+  .clients {
+    padding: {
+      top: 100px;
+      bottom: 110px;
+    };
+    &__question {
+      width: 325px;
+      margin: {
+        left: 100px;
+        right: 45px;
+      };
+    }
+    &__answer {
+      &-item {
+        padding: {
+          left: 38px;
+        };
+      }
+    }
+  }
+
+  .about-page {
+    &__steps {
+      & .slick {
+        &-next,
+        &-prev {
+          right: 140px;
+          top: -42px;
+        }
+        &-next {
+          right: 68px;
+        }
+      }
+
+      &-title {
+        line-height: 24px;
+        margin: {
+          bottom: -170px;
+        };
+        padding: {
+          bottom: 60px;
+          left: 68px;
+        };
+      }
+      &-slider {
+        &-wrapper {
+          height: 700px;
+        }
+        &-title {
+          margin: {
+            top: 142px;
+          };
+        }
+        &-item {
+          height: 600px;
+          padding: {
+            right: 36px;
+          };
+        }
+      }
+    }
+  }
+
+  .about__text {
+    padding: {
+      top: 104px;
+      bottom: 114px;
+    };
+  }
+}
+
+@media (min-width: 1680px) {
+  .about {
+    &__description {
+      &-image {
+        &-wrapper {
+          width: 1440px;
+        }
+      }
+    }
+  }
+}

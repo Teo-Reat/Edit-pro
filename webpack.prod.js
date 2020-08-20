@@ -50,7 +50,7 @@ module.exports = merge(common, {
 			// }),
 			new HtmlWebpackPlugin({
 				template: "./src/main.html",
-				filename: 'main.html',
+				filename: 'about-us.html',
 			}),
 		]
 	},

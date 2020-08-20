@@ -1,6 +1,6 @@
 window.$ = window.jQuery = require('jquery');
 import 'slick-carousel'
-import './jquery.mCustomScrollbar.js'
+// import './jquery.mCustomScrollbar.js'
 // import './device'
 
 
@@ -14,14 +14,14 @@ $(document).ready(() => {
 		percentTime;
 
 	//Scrolling
+	// (function ($) {
+	// 	$(window).on("load", function () {
+	// 		$(".js-desktop").mCustomScrollbar();
+	// 	});
+	// })(jQuery);
 
-	(function ($) {
-		$(window).on("load", function () {
-			$(".js-desktop").mCustomScrollbar();
-		});
-	})(jQuery);
 
-
+	// Load bar
 	slick = $('.js-prime__slider');
 	slick.slick({
 		pauseOnHover: true,
@@ -83,7 +83,6 @@ $(document).ready(() => {
 		}
 	}
 
-
 	function resetProgressbar() {
 		bar.css({
 			width: 0+'%'
@@ -92,6 +91,7 @@ $(document).ready(() => {
 	}
 
 	startProgressbar();
+
 
 	//Fixed menu
 	function fixed_menu() {

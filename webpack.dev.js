@@ -10,12 +10,12 @@ module.exports = merge(common, {
 		path: path.resolve(__dirname, "dist")
 	},
 	plugins: [
-		new HtmlWebpackPlugin({
-			template: "./src/main.html"
-		}),
 		// new HtmlWebpackPlugin({
-		// 	template: "./src/pages/template.html"
+		// 	template: "./src/main.html"
 		// }),
+		new HtmlWebpackPlugin({
+			template: "./src/about-us.html"
+		}),
 		// new HtmlWebpackPlugin({
 		// 	template: "./src/pages/lk-personal.html"
 		// }),
