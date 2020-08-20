@@ -492,5 +492,140 @@
         flex-wrap: wrap;
       }
     }
+
+    & .mobile__feedback {
+      width: 960px;
+      padding: {
+        left: 15px;
+        right: 15px;
+      };
+      margin: {
+        left: auto;
+        right: auto;
+      };
+    }
+  }
+}
+
+@media (min-width: 1410px) {
+  .consulting {
+    padding: {
+      bottom: 139px;
+    };
+    &__title {
+      width: 638px;
+      padding: {
+        left: 68px;
+        top: 85px;
+        bottom: 63px;
+      };
+      &-wrapper {
+        height: 313px;
+      }
+      &-svg {
+        left: 478px;
+        top: 40px;
+      }
+    }
+    &__description {
+      font-size: 18px;
+      line-height: 26px;
+      margin: {
+        top: 77px;
+      };
+    }
+    &__meeting {
+      &-image {
+        &-wrapper {
+          width: 1170px;
+          height: 510px;
+          margin: {
+            top: 79px;
+            left: auto;
+            right: auto;
+          };
+        }
+      }
+    }
+  }
+
+  .enters {
+    padding: {
+      top: 80px;
+      bottom: 80px;
+    };
+    &__1c {
+      &-svg {
+        width: 459px;
+        height: 218px;
+      }
+    }
+  }
+
+  .advantages {
+    padding: {
+      top: 95px;
+      bottom: 125px;
+    };
+    &__item {
+      height: 522px;
+      padding: {
+        left: 30px;
+        right: 30px;
+      };
+      &:first-child {
+        margin: {
+          top: 70px;
+        };
+      }
+      &-number {
+        &-wrapper {
+          top: 90px;
+        }
+      }
+      &-description {
+        padding: {
+          left: 0;
+          right: 0;
+          top: 310px;
+        };
+      }
+    }
+  }
+
+  .sd {
+    & .products {
+      &__wrapper {
+        width: 25%;
+      }
+      &__item {
+        &:hover .products__add {
+          right: 10px;
+        }
+      }
+      &__add {
+        right: 10px;
+      }
+    }
+
+    & .mobile__feedback {
+      width: 1200px;
+      padding: {
+        top: 50px;
+      };
+      &-form {
+        margin: {
+          top: 25px;
+        };
+      }
+    }
+  }
+}
+
+@media (min-width: 1680px) {
+  .sd {
+    & .mobile__feedback {
+      width: 1440px;
+    }
   }
 }
