@@ -1,0 +1,170 @@
+//Products page
+.products-pg {
+  &__title {
+    &-inner {
+      display: flex;
+    }
+  }
+
+  &__price {
+    &-wrapper {
+      display: none;
+    }
+  }
+
+  &__description {
+    margin: {
+      top: 30px;
+    };
+  }
+
+  &__meeting {
+    &-image {
+      &-wrapper {
+        position: relative;
+        height: 335px;
+        margin: {
+          top: 50px;
+        };
+      }
+    }
+  }
+}
+
+.compare {
+  background: #F7F8FD;
+  &__list {
+    &-item {
+      position: relative;
+      &::after,
+      &::before {
+        @include mix-pseudo-base;
+        height: 1px;
+        left: 50%;
+        width: 50vw;
+        bottom: 0;
+        background: #DFE1E8;
+      }
+
+      &::before {
+        left: auto;
+        right: 50%;
+      }
+    }
+    &-link {
+      height: 70px;
+    }
+  }
+  &__table {
+    background: white;
+    margin: {
+      top: 10px; //temp
+      bottom: 10px; //temp
+    };
+    //border-bottom: 1px solid #DFE1E8;
+    &-row {
+      //border-bottom: 1px solid #DFE1E8;
+    }
+    &-column {
+      border-bottom: 1px solid #DFE1E8;
+    }
+    &-svg {
+      width: 16px;
+      height: 16px;
+      fill: #0175B2;
+    }
+  }
+}
+
+.cost {
+  &__item {
+    &-svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .products-pg {
+    &__price {
+      font-size: 32px;
+      line-height: 37px;
+      text-transform: capitalize;
+      color: white;
+      &-wrapper {
+        display: block;
+        margin: {
+          left: 20px;
+        };
+      }
+      &-start {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 19px;
+        color: white;
+      }
+      &-buttons {
+        &-wrapper {
+
+        }
+      }
+      &-order {
+        height: 44px;
+        color: white;
+        background: #3D9CD4;
+        padding: {
+          left: 20px;
+          right: 20px;
+        };
+      }
+      &-introduction {
+        height: 44px;
+        background: white;
+        padding: {
+          left: 20px;
+          right: 20px;
+        };
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {}
+
+@media (min-width: 1410px) {
+  .products-pg {
+    &__description {
+      font-size: 18px;
+      line-height: 26px;
+      margin: {
+        top: 77px;
+      };
+    }
+    &__meeting {
+      &-image {
+        &-wrapper {
+          width: 1170px;
+          height: 510px;
+          margin: {
+            top: 79px;
+            left: auto;
+            right: auto;
+          };
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1680px) {
+  .products-pg {
+    &__meeting {
+      &-image {
+        &-wrapper {
+          width: 1410px;
+        }
+      }
+    }
+  }
+}

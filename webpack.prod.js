@@ -28,14 +28,14 @@ module.exports = merge(common, {
 				// 	removeComments: true
 				// }
 			// }),
-			// new HtmlWebpackPlugin({
-			// 	template: "./src/pages/webinar.html",
-			// 	filename: 'webinar.html',
-			// }),
 			new HtmlWebpackPlugin({
-				template: "./src/cases.html",
-				filename: 'cases.html',
+				template: "./src/products-detail.html",
+				filename: 'products-detail.html',
 			}),
+			// new HtmlWebpackPlugin({
+			// 	template: "./src/cases.html",
+			// 	filename: 'cases.html',
+			// }),
 			// new HtmlWebpackPlugin({
 			// 	template: "./src/services-detail.html",
 			// 	filename: 'services.html',

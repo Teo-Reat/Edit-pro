@@ -1,18 +1,5 @@
 //Services-detail page
 .consulting {
-  &__title {
-    margin: {
-      top: 60px;
-    };
-    &-bg {
-      &-wrapper {
-        display: none;
-      }
-    }
-    &-svg {
-      display: none;
-    }
-  }
 
   &__description {
     margin: {
@@ -247,44 +234,6 @@
 }
 
 @media (min-width: 768px) {
-  .consulting {
-    &__title {
-      width: 385px;
-      background: white;
-      margin: {
-        top: 0;
-        left: -35px;
-      };
-      padding: {
-        top: 45px;
-        bottom: 30px;
-        left: 35px;
-      };
-      &-wrapper {
-        position: relative;
-        height: 155px;
-        display: flex;
-        align-items: flex-end;
-      }
-      &-inner {
-        position: relative;
-      }
-      &-bg {
-        &-wrapper {
-          display: block;
-        }
-      }
-      &-svg {
-        position: absolute;
-        display: block;
-        transform: rotate(-90deg);
-        height: 94px;
-        width: 106px;
-        top: 20px;
-        left: 240px;
-      }
-    }
-  }
 
   .enters {
     &__1c {
@@ -375,14 +324,6 @@
 }
 
 @media (min-width: 1024px) {
-  .consulting {
-    &__title {
-      width: 490px;
-      &-svg {
-        left: 345px;
-      }
-    }
-  }
 
   .enters {
     &__1c {
@@ -509,24 +450,7 @@
 
 @media (min-width: 1410px) {
   .consulting {
-    padding: {
-      bottom: 139px;
-    };
-    &__title {
-      width: 638px;
-      padding: {
-        left: 68px;
-        top: 85px;
-        bottom: 63px;
-      };
-      &-wrapper {
-        height: 313px;
-      }
-      &-svg {
-        left: 478px;
-        top: 40px;
-      }
-    }
+
     &__description {
       font-size: 18px;
       line-height: 26px;
