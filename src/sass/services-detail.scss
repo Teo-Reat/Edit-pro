@@ -623,6 +623,16 @@
 }
 
 @media (min-width: 1680px) {
+  .consulting {
+    &__meeting {
+      &-image {
+        &-wrapper {
+          width: 1410px;
+        }
+      }
+    }
+  }
+
   .sd {
     & .mobile__feedback {
       width: 1440px;

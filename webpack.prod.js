@@ -32,14 +32,14 @@ module.exports = merge(common, {
 			// 	template: "./src/pages/webinar.html",
 			// 	filename: 'webinar.html',
 			// }),
-			// new HtmlWebpackPlugin({
-			// 	template: "./src/pages/lk-personal.html",
-			// 	filename: 'lk-personal.html',
-			// }),
 			new HtmlWebpackPlugin({
-				template: "./src/services-detail.html",
-				filename: 'services.html',
+				template: "./src/cases.html",
+				filename: 'cases.html',
 			}),
+			// new HtmlWebpackPlugin({
+			// 	template: "./src/services-detail.html",
+			// 	filename: 'services.html',
+			// }),
 			// new HtmlWebpackPlugin({
 			// 	template: "./src/about-us.html",
 			// 	filename: 'about-us.html',
