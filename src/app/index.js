@@ -298,6 +298,52 @@ $(document).ready(() => {
 		]
 	});
 
+	//Slick slider in products-detail page
+	$('.js-cases-pg__slider').slick({
+		autoplay: false,
+		dots: false,
+		arrows: true,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		prevArrow: '<button type="button" class="slick-prev"><svg class="icon icon-arrow-big-l">\n' +
+			'                <use xlink:href="#icon-arrow-big-l"></use>\n' +
+			'            </svg></button>',
+		nextArrow: '<button type="button" class="slick-next"><svg class="icon icon-arrow-big-r">\n' +
+			'                <use xlink:href="#icon-arrow-big-r"></use>\n' +
+			'            </svg></button>',
+		responsive: [
+			{
+				breakpoint: 1410,
+				settings: {
+					slidesToShow: 3,
+					// slidesToScroll: 1,
+					// arrows: false,
+					// dots: true
+				}
+			},
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 1,
+					// slidesToScroll: 1,
+					// arrows: false,
+					// dots: true
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: false,
+					dots: true
+				}
+			},
+		]
+	});
+
 	//Input placeholders
 	let inputWrapper = $('.js-material-input');
 
@@ -350,8 +396,10 @@ $(document).ready(() => {
 		$('.js-mobile__menu-products-button').closest('.mobile__menu-item').toggleClass('mobile__menu-item--open')
 	})
 
-	//Spinner
-	// console.log($('.steps__slider-item'))
+	//Products-detail page compare block
+	$('.js-compare__list-item').click(function () {
+		$(this).toggleClass('show-sub');
+	})
 
 	//Yandex map
 	$(function () {

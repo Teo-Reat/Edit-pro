@@ -1212,7 +1212,10 @@
                 <img src="assets/images/products__title-bg.jpg" alt="">
             </div>
             <div class="container products-pg__title-inner">
-                <h1 class="products-pg__title title--big">1С:Документооборот</h1>
+                <h1 class="products-pg__title title--big">1С:
+                    <br class="products-pg__br">
+                    Документооборот
+                </h1>
                 <svg class="products-pg__title-svg icon icon-element-square">
                     <use xlink:href="#icon-element-square"></use>
                 </svg>
@@ -1257,49 +1260,62 @@
                 <div class="col-12">
                     <dl class="compare__list">
                         <dt class="compare__list-title">Возможности</dt>
-                        <dd class="compare__list-item">
+                        <dd class=" compare__list-item js-compare__list-item">
                             <button class="compare__list-link">
                                 Работа с процессами и задачами
+                            </button>
+                            <ul class="compare__sub-list">
+                                <li class="compare__sub-item">
+                                    <a class="compare__sub-link" href="#table-01">
+                                        Использование электронной подписи
+                                    </a>
+                                </li>
+                            </ul>
+                        </dd>
+                        <dd class=" compare__list-item js-compare__list-item">
+                            <button class="compare__list-link">
+                                Ведение нормативно-справочной информации
                             </button>
                             <ul class="compare__sub-list">
                                 <li class="compare__sub-item">
                                     <a class="compare__sub-link" href="#">
                                         Использование электронной подписи
                                     </a>
+                                    <a class="compare__sub-link" href="#">
+                                        Horror, pestilence, and grace.
+                                    </a>
+                                    <a class="compare__sub-link" href="#">
+                                        Ho-ho-ho! faith of death.
+                                    </a>
                                 </li>
                             </ul>
                         </dd>
-                        <dd class="compare__list-item">
-                            <button class="compare__list-link">
-                                Ведение нормативно-справочной информации
-                            </button>
-                        </dd>
-                        <dd class="compare__list-item">
+                        <dd class=" compare__list-item js-compare__list-item">
                             <button class="compare__list-link">
                                 Уведомления
                             </button>
                         </dd>
-                        <dd class="compare__list-item">
+                        <dd class=" compare__list-item js-compare__list-item">
                             <button class="compare__list-link">
                                 Работа с мероприятиями
                             </button>
                         </dd>
-                        <dd class="compare__list-item">
+                        <dd class=" compare__list-item js-compare__list-item">
                             <button class="compare__list-link">
                                 Рабочий календарь пользователя
                             </button>
                         </dd>
-                        <dd class="compare__list-item">
+                        <dd class=" compare__list-item js-compare__list-item">
                             <button class="compare__list-link">
                                 Встроенная почта
                             </button>
                         </dd>
-                        <dd class="compare__list-item">
+                        <dd class=" compare__list-item js-compare__list-item">
                             <button class="compare__list-link">
                                 Уведомления
                             </button>
                         </dd>
-                        <dd class="compare__list-item">
+                        <dd class=" compare__list-item js-compare__list-item">
                             <button class="compare__list-link">
                                 Другие возможности
                             </button>
@@ -1307,11 +1323,11 @@
                     </dl>
                 </div>
                 <div class="col-12">
-                    <table class="compare__table">
+                    <table class="compare__table" id="table-01">
                         <tr class="compare__table-row">
                             <td class="compare__table-column"></td>
-                            <td class="compare__table-column">ПРОФ</td>
-                            <td class="compare__table-column">КОРП</td>
+                            <td class="compare__table-column compare__table-column-title">ПРОФ</td>
+                            <td class="compare__table-column compare__table-column-title">КОРП</td>
                         </tr>
                         <tr class="compare__table-row">
                             <td class="compare__table-column">
@@ -1527,74 +1543,85 @@
         </div>
     </section>
     <section class="cost">
+        <div class="cost__bg-image-wrapper background-image">
+            <img class="cost__bg-image" src="assets/images/cost__bg.jpg" alt="">
+        </div>
         <div class="container">
             <h2 class="cost__title">Стоимость</h2>
             <div class="cost__prof">
                 <div class="cost__item">
-                    <div class="cost__item-thing">
-                        <div class="cost__item-title title--small">1С:Документооборот ПРОФ</div>
-                        <div class="cost__item-description">
-                            Подходит малым и средним коммерческим предприятиям, бюджетным учреждениям, которые
-                            отличаются несложным документооборотом и организационной структурой
-                        </div>
-                        <div class="cost__item-price">
-                            36 000 ₽
+                    <div class="cost__item-thing-wrapper">
+                        <div class="cost__item-thing">
+                            <div class="cost__item-title title--small">1С:Документооборот ПРОФ</div>
+                            <div class="cost__item-description">
+                                Подходит малым и средним коммерческим предприятиям, бюджетным учреждениям, которые
+                                отличаются несложным документооборотом и организационной структурой
+                            </div>
+                            <div class="cost__item-price">
+                                36 000 ₽
+                            </div>
                         </div>
                     </div>
-                    <div class="cost__item-conditions">
-                        <div class="cost__item-added">В СТОИМОСТЬ ВХОДИТ</div>
-                        <div class="cost__item-install">
-                            <svg class="cost__item-svg icon icon-product-install">
-                                <use xlink:href="#icon-product-install"></use>
-                            </svg>
-                            <span class="cost__item-conditions-span">Установка</span>
-                        </div>
-                        <div class="cost__item-delivery">
-                            <svg class="cost__item-svg icon icon-product-delivery">
-                                <use xlink:href="#icon-product-delivery"></use>
-                            </svg>
-                            <span class="cost__item-conditions-span">Доставка</span>
-                        </div>
-                        <div class="cost__item-support">
-                            <svg class="cost__item-svg icon icon-product-time">
-                                <use xlink:href="#icon-product-time"></use>
-                            </svg>
-                            <span class="cost__item-conditions-span">3 месяца 1С:ИТС</span>
+                    <div class="cost__item-conditions-wrapper">
+                        <div class="cost__item-conditions">
+                            <div class="cost__item-added">В СТОИМОСТЬ ВХОДИТ</div>
+                            <div class="cost__item-install">
+                                <svg class="cost__item-svg icon icon-product-install">
+                                    <use xlink:href="#icon-product-install"></use>
+                                </svg>
+                                <span class="cost__item-conditions-span">Установка</span>
+                            </div>
+                            <div class="cost__item-delivery">
+                                <svg class="cost__item-svg icon icon-product-delivery">
+                                    <use xlink:href="#icon-product-delivery"></use>
+                                </svg>
+                                <span class="cost__item-conditions-span">Доставка</span>
+                            </div>
+                            <div class="cost__item-support">
+                                <svg class="cost__item-svg icon icon-product-time">
+                                    <use xlink:href="#icon-product-time"></use>
+                                </svg>
+                                <span class="cost__item-conditions-span">3 месяца 1С:ИТС</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="cost__corp">
                 <div class="cost__item">
-                    <div class="cost__item-thing">
-                        <div class="cost__item-title title--small">1С:Документооборот КОРП</div>
-                        <div class="cost__item-description">
-                            Подходит малым и средним коммерческим предприятиям, бюджетным учреждениям, которые
-                            отличаются несложным документооборотом и организационной структурой
-                        </div>
-                        <div class="cost__item-price">
-                            46 000 ₽
+                    <div class="cost__item-thing-wrapper">
+                        <div class="cost__item-thing">
+                            <div class="cost__item-title title--small">1С:Документооборот КОРП</div>
+                            <div class="cost__item-description">
+                                Подходит малым и средним коммерческим предприятиям, бюджетным учреждениям, которые
+                                отличаются несложным документооборотом и организационной структурой
+                            </div>
+                            <div class="cost__item-price">
+                                46 000 ₽
+                            </div>
                         </div>
                     </div>
-                    <div class="cost__item-conditions">
-                        <div class="cost__item-added">В СТОИМОСТЬ ВХОДИТ</div>
-                        <div class="cost__item-install">
-                            <svg class="cost__item-svg icon icon-product-install">
-                                <use xlink:href="#icon-product-install"></use>
-                            </svg>
-                            <span class="cost__item-conditions-span">Установка</span>
-                        </div>
-                        <div class="cost__item-delivery">
-                            <svg class="cost__item-svg icon icon-product-delivery">
-                                <use xlink:href="#icon-product-delivery"></use>
-                            </svg>
-                            <span class="cost__item-conditions-span">Доставка</span>
-                        </div>
-                        <div class="cost__item-support">
-                            <svg class="cost__item-svg icon icon-product-time">
-                                <use xlink:href="#icon-product-time"></use>
-                            </svg>
-                            <span class="cost__item-conditions-span">3 месяца 1С:ИТС</span>
+                    <div class="cost__item-conditions-wrapper">
+                        <div class="cost__item-conditions">
+                            <div class="cost__item-added">В СТОИМОСТЬ ВХОДИТ</div>
+                            <div class="cost__item-install">
+                                <svg class="cost__item-svg icon icon-product-install">
+                                    <use xlink:href="#icon-product-install"></use>
+                                </svg>
+                                <span class="cost__item-conditions-span">Установка</span>
+                            </div>
+                            <div class="cost__item-delivery">
+                                <svg class="cost__item-svg icon icon-product-delivery">
+                                    <use xlink:href="#icon-product-delivery"></use>
+                                </svg>
+                                <span class="cost__item-conditions-span">Доставка</span>
+                            </div>
+                            <div class="cost__item-support">
+                                <svg class="cost__item-svg icon icon-product-time">
+                                    <use xlink:href="#icon-product-time"></use>
+                                </svg>
+                                <span class="cost__item-conditions-span">3 месяца 1С:ИТС</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1605,7 +1632,7 @@
         <div class="container">
             <h2 class="vista__title title--medium">Возможности программы</h2>
             <dl class="vista__list">
-                <dt class="vista__list-title">К функциям 1С:Документооборот относятся</dt>
+                <dt class="vista__list-title title--small">К функциям 1С:Документооборот относятся</dt>
                 <dd class="vista__list-item">
                     централизованное безопасное хранение документации;
                 </dd>
@@ -1799,6 +1826,36 @@
                 </div>
                 <div class="col-12">
                     <div class="cases-pg__slider js-cases-pg__slider">
+                        <div class="cases-pg__slider-item">
+                            <div class="cases-pg__slider-text-wrapper">
+                                <div class="cases-pg__slider-title title--small">
+                                    Внедрение “1С:ERP управление предприятием 2.4”
+                                </div>
+                                <div class="cases-pg__slider-text">
+                                    Ранее для целей бухгалтерского и управленческого учета была внедрена система «1С:ERP
+                                    Управление предприятием 2». Следующим этапом было определено внедрение подсистемы
+                                    «Бюджетирование и планирование».
+                                </div>
+                            </div>
+                            <div class="cases-pg__slider-image-wrapper">
+                                <img class="cases-pg__slider-image" src="assets/images/cases__image-1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="cases-pg__slider-item">
+                            <div class="cases-pg__slider-text-wrapper">
+                                <div class="cases-pg__slider-title title--small">
+                                    Внедрение “1С:ERP управление предприятием 2.4”
+                                </div>
+                                <div class="cases-pg__slider-text">
+                                    Ранее для целей бухгалтерского и управленческого учета была внедрена система «1С:ERP
+                                    Управление предприятием 2». Следующим этапом было определено внедрение подсистемы
+                                    «Бюджетирование и планирование».
+                                </div>
+                            </div>
+                            <div class="cases-pg__slider-image-wrapper">
+                                <img class="cases-pg__slider-image" src="assets/images/cases__image-1.jpg" alt="">
+                            </div>
+                        </div>
                         <div class="cases-pg__slider-item">
                             <div class="cases-pg__slider-text-wrapper">
                                 <div class="cases-pg__slider-title title--small">
