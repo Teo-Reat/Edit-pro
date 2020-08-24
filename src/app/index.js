@@ -305,7 +305,7 @@ $(document).ready(() => {
 		arrows: true,
 		infinite: true,
 		speed: 300,
-		slidesToShow: 4,
+		// slidesToShow: 1,
 		slidesToScroll: 1,
 		prevArrow: '<button type="button" class="slick-prev"><svg class="icon icon-arrow-big-l">\n' +
 			'                <use xlink:href="#icon-arrow-big-l"></use>\n' +
@@ -317,7 +317,7 @@ $(document).ready(() => {
 			{
 				breakpoint: 1410,
 				settings: {
-					slidesToShow: 3,
+					// slidesToShow: 1,
 					// slidesToScroll: 1,
 					// arrows: false,
 					// dots: true
@@ -326,7 +326,7 @@ $(document).ready(() => {
 			{
 				breakpoint: 1024,
 				settings: {
-					slidesToShow: 1,
+					// slidesToShow: 1,
 					// slidesToScroll: 1,
 					// arrows: false,
 					// dots: true
