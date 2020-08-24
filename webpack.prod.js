@@ -29,9 +29,13 @@ module.exports = merge(common, {
 				// }
 			// }),
 			new HtmlWebpackPlugin({
-				template: "./src/products-detail.html",
-				filename: 'products-detail.html',
+				template: "./src/products.html",
+				filename: 'products.html',
 			}),
+			// new HtmlWebpackPlugin({
+			// 	template: "./src/products-detail.html",
+			// 	filename: 'products-detail.html',
+			// }),
 			// new HtmlWebpackPlugin({
 			// 	template: "./src/cases.html",
 			// 	filename: 'cases.html',
