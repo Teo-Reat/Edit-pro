@@ -97,13 +97,13 @@ $(document).ready(() => {
 	function fixed_menu() {
 		if ($(window).scrollTop() > 0) {
 			$('.js-header').addClass('fixed');
-			// $('.js-search__results').addClass('fixed__results');
 			$('.js-main').addClass('is-fixed');
+			// $('.js-search__results').addClass('fixed__results');
 
 		} else {
 			$('.js-header').removeClass('fixed');
-			// $('.js-search__results').removeClass('fixed__results');
 			$('.js-main').removeClass('is-fixed');
+			// $('.js-search__results').removeClass('fixed__results');
 			// $('.js-navigation__list__wrapper').css('display', '')
 			// tabletMenuButton.removeClass('open')
 		}
@@ -114,33 +114,6 @@ $(document).ready(() => {
 		fixed_menu();
 	});
 
-	// Slick slider in prime section
-	// $('.js-prime__slider').slick({
-	// 	autoplay: false,
-	// 	dots: false,
-	// 	arrows: true,
-	// 	infinite: true,
-	// 	speed: 300,
-	// 	slidesToShow: 1,
-	// 	slidesToScroll: 1,
-	// 	prevArrow: '<button type="button" class="slick-prev"><svg class="icon icon-arrow-big-l">\n' +
-	// 		'                <use xlink:href="#icon-arrow-big-l"></use>\n' +
-	// 		'            </svg></button>',
-	// 	nextArrow: '<button type="button" class="slick-next"><svg class="icon icon-arrow-big-r">\n' +
-	// 		'                <use xlink:href="#icon-arrow-big-r"></use>\n' +
-	// 		'            </svg></button>',
-	// 	responsive: [
-	// 		{
-	// 			breakpoint: 768,
-	// 			settings: {
-	// 				slidesToShow: 1,
-	// 				slidesToScroll: 1,
-	// 				arrows: false,
-	// 				dots: true,
-	// 			}
-	// 		},
-	// 	]
-	// });
 
 	//Spinner
 	let stepSlider = $('.steps__slider');
@@ -156,19 +129,6 @@ $(document).ready(() => {
 			$('.steps__spinner-sixth'),
 		]
 
-		// for (let i = 0; i < spinner.length; i++) {
-		//
-		// }
-
-		// if (currentSlide > nextSlide) {
-		// 	spinner[nextSlide].addClass('active-spinner')
-			// console.log(spinner[nextSlide])
-			// console.log('true ' + currentSlide + ' / ' + nextSlide)
-		// } else {
-		// 	spinner[currentSlide].removeClass('active-spinner')
-			// console.log(spinner[nextSlide])
-			// console.log('false ' + currentSlide + ' / ' + nextSlide)
-		// }
 
 		switch (nextSlide) {
 			case (0):
@@ -220,6 +180,7 @@ $(document).ready(() => {
 				spinner[5].addClass('active-spinner');
 		}
 	});
+
 	//Slick slider in steps section
 	stepSlider.slick({
 		autoplay: true,
@@ -339,6 +300,52 @@ $(document).ready(() => {
 					slidesToScroll: 1,
 					arrows: false,
 					dots: true
+				}
+			},
+		]
+	});
+
+	//Slick slide in cases-detail page
+	$('.js-company__slider').slick({
+		autoplay: false,
+		// dots: false,
+		// arrows: true,
+		infinite: true,
+		speed: 300,
+		// slidesToShow: 1,
+		slidesToScroll: 1,
+		prevArrow: '<button type="button" class="slick-prev"><svg class="icon icon-arrow-big-l">\n' +
+			'                <use xlink:href="#icon-arrow-big-l"></use>\n' +
+			'            </svg></button>',
+		nextArrow: '<button type="button" class="slick-next"><svg class="icon icon-arrow-big-r">\n' +
+			'                <use xlink:href="#icon-arrow-big-r"></use>\n' +
+			'            </svg></button>',
+		responsive: [
+			{
+				breakpoint: 1410,
+				settings: {
+					// slidesToShow: 1,
+					// slidesToScroll: 1,
+					// arrows: false,
+					// dots: true
+				}
+			},
+			{
+				breakpoint: 1024,
+				settings: {
+					// slidesToShow: 1,
+					// slidesToScroll: 1,
+					// arrows: false,
+					// dots: true
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: true,
+					dots: false
 				}
 			},
 		]

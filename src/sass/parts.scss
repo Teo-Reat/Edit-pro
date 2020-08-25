@@ -97,7 +97,8 @@
 
 //Services-detail page
 .consulting,
-.products-pg {
+.products-pg,
+.cases-dt {
   &__title {
     margin: {
       top: 60px;
@@ -116,7 +117,8 @@
 
 @media (min-width: 768px) {
   .consulting,
-  .products-pg {
+  .products-pg,
+  .cases-dt {
     &__title {
       width: 385px;
       background: white;
@@ -158,7 +160,8 @@
 
 @media (min-width: 1024px) {
   .consulting,
-  .products-pg {
+  .products-pg,
+  .cases-dt {
     &__title {
       width: 490px;
       &-svg {
@@ -170,7 +173,8 @@
 
 @media (min-width: 1410px) {
   .consulting,
-  .products-pg {
+  .products-pg,
+  .cases-dt {
     padding: {
       bottom: 139px;
     };
