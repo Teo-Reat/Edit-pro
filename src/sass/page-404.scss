@@ -1,0 +1,156 @@
+//Page 404 style
+.page-404 {
+  color: #202020;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: {
+      top: 40px;
+      bottom: 50px;
+    };
+  }
+
+  &__svg {
+    &-wrapper {
+      position: relative;
+      margin: {
+        top: 40px;
+      };
+    }
+
+    &-ed {
+      fill: #F3F5F9;
+      width: 100%;
+    }
+
+    &-404 {
+      position: absolute;
+      width: 90%;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &__title {
+    &-wrapper {
+      order: -1;
+    }
+  }
+
+  &__explanation {
+    &-list {
+      margin: {
+        top: 40px;
+      };
+
+      &-title {
+        font-weight: 500;
+      }
+
+      &-item {
+        margin: {
+          top: 20px;
+        };
+      }
+
+      &-link {
+        color: #3D9CD4;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-404 {
+    &__wrapper {
+      height: 740px;
+      flex-wrap: wrap;
+      padding: {
+        top: 45px;
+        bottom: 55px;
+      };
+    }
+
+    &__svg {
+      &-wrapper {
+        width: 50%;
+        margin: {
+          top: 135px;
+          bottom: 600px;
+        };
+      }
+
+      &-ed {
+        height: 220px;
+      }
+      &-404 {
+        bottom: 20px;
+      }
+    }
+
+    &__title {
+      &-wrapper {
+        order: 0;
+        width: 50%;
+      }
+    }
+
+    &__explanation {
+      width: 50%;
+    }
+  }
+}
+
+@media (min-width: 1410px) {
+  .page-404 {
+    &__wrapper {
+      height: 850px;
+      padding: {
+        top: 85px;
+        bottom: 60px;
+      };
+    }
+
+    &__svg {
+      &-ed {
+        height: 300px;
+      }
+
+      &-404 {
+        height: 208px;
+      }
+    }
+
+    &__title {
+      font-size: 30px;
+      line-height: 40px;
+
+      &-wrapper {
+        padding: {
+          left: 20px;
+        };
+      }
+    }
+
+    &__explanation {
+      padding: {
+        left: 20px;
+      };
+      &-list {
+        margin: {
+          top: 60px;
+        };
+        &-item {
+          &:nth-child(2) {
+            margin: {
+              top: 30px;
+            };
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1680px) {
+}
