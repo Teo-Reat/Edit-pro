@@ -29,45 +29,49 @@ module.exports = merge(common, {
 				// }
 			// }),
 			new HtmlWebpackPlugin({
-				template: "./src/news-page.html",
-				filename: 'news-page.html',
+				template: "./src/index.html",
+				filename: 'index.html',
 			}),
-			// new HtmlWebpackPlugin({
-			// 	template: "./src/page-404.html",
-			// 	filename: 'page-404.html',
-			// }),
-			// new HtmlWebpackPlugin({
-			// 	template: "./src/cases-detail.html",
-			// 	filename: 'cases-detail.html',
-			// }),
-			// new HtmlWebpackPlugin({
-			// 	template: "./src/products.html",
-			// 	filename: 'products.html',
-			// }),
-			// new HtmlWebpackPlugin({
-			// 	template: "./src/products-detail.html",
-			// 	filename: 'products-detail.html',
-			// }),
-			// new HtmlWebpackPlugin({
-			// 	template: "./src/cases.html",
-			// 	filename: 'cases.html',
-			// }),
-			// new HtmlWebpackPlugin({
-			// 	template: "./src/services-detail.html",
-			// 	filename: 'services.html',
-			// }),
-			// new HtmlWebpackPlugin({
-			// 	template: "./src/about-us.html",
-			// 	filename: 'about-us.html',
-			// }),
-			// new HtmlWebpackPlugin({
-			// 	template: "./src/services.html",
-			// 	filename: 'services.html',
-			// }),
-			// new HtmlWebpackPlugin({
-			// 	template: "./src/main.html",
-			// 	filename: 'main.html',
-			// }),
+			new HtmlWebpackPlugin({
+				template: "./src/news.html",
+				filename: 'news.html',
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/page-404.html",
+				filename: 'page-404.html',
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/cases-detail.html",
+				filename: 'cases-detail.html',
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/products.html",
+				filename: 'products.html',
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/products-detail.html",
+				filename: 'products-detail.html',
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/cases.html",
+				filename: 'cases.html',
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/services-detail.html",
+				filename: 'services-detail.html',
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/about-us.html",
+				filename: 'about-us.html',
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/services.html",
+				filename: 'services.html',
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/main.html",
+				filename: 'main.html',
+			}),
 		]
 	},
 	plugins: [

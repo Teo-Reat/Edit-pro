@@ -45,7 +45,7 @@
   },
   "browserslist": [
     "defaults",
-    "last 1 version",
+    "last 4 version",
     "> 1%",
     "IE 9"
   ]

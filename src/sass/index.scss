@@ -1,0 +1,59 @@
+//Index page styles
+.index {
+  padding: {
+    top: 50px;
+    bottom: 60px;
+  };
+
+  &__list {
+    margin: {
+      top: 30px;
+    };
+
+    &-item {
+      margin: {
+        top: 10px;
+      };
+    }
+
+    &-link {
+      transition: .3s;
+      color: #0A285A;
+
+      &:hover {
+        color: #D96C0D;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .index {
+    &__list {
+      column-count: 2;
+      &-item {
+        &:first-child {
+          margin: {
+            top: 0;
+          };
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .index {
+    &__list {
+      column-count: 3;
+    }
+  }
+}
+
+@media (min-width: 1680px) {
+  .index {
+    &__list {
+      column-count: 4;
+    }
+  }
+}
