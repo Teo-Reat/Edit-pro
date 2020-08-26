@@ -57,10 +57,6 @@
       bottom: 15px;
     };
 
-    &:hover {
-      border: 1px solid #D96C0D;
-    }
-
     &-wrapper {
       background: #F7F8FD;
       text-align: center;
@@ -99,6 +95,7 @@
       top: 83px;
       bottom: 122px;
     };
+
     &__title {
       font-size: 32px;
       line-height: 38px;
@@ -132,6 +129,7 @@
       margin: {
         bottom: 0;
       };
+
       &-title {
         font-size: 24px;
         line-height: 32px;
@@ -142,6 +140,11 @@
     }
 
     &__link {
+      transition: .3s;
+      &:hover {
+        border: 1px solid #D96C0D;
+      }
+
       &-wrapper {
         padding: 0;
         width: 930px;

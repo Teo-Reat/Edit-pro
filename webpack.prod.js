@@ -29,6 +29,10 @@ module.exports = merge(common, {
 				// }
 			// }),
 			new HtmlWebpackPlugin({
+				template: "./src/our-partners.html",
+				filename: 'our-partners.html',
+			}),
+			new HtmlWebpackPlugin({
 				template: "./src/index.html",
 				filename: 'index.html',
 			}),
