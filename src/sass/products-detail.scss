@@ -576,6 +576,8 @@
       }
 
       &-order {
+        display: flex;
+        align-items: center;
         height: 44px;
         color: white;
         background: #3D9CD4;
@@ -774,6 +776,23 @@
         margin: {
           left: 130px;
         };
+      }
+
+      &-order,
+      &-introduction {
+        transition: .3s;
+      }
+
+      &-order {
+        &:hover {
+          background: #D96C0D;
+        }
+      }
+
+      &-introduction {
+        &:hover {
+          border: 1px solid #D96C0D;
+        }
       }
     }
   }
