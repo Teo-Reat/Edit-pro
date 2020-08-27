@@ -1,0 +1,257 @@
+.vacancies {
+  padding: {
+    top: 50px;
+    bottom: 40px;
+  };
+
+  &__menu {
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin: {
+        top: 20px;
+      };
+    }
+
+    &-item {
+      transition: .3s;
+      border: 1px solid #DFE1E8;
+      box-sizing: border-box;
+      border-radius: 4px;
+      width: 270px;
+      font-size: 14px;
+      margin-left: -55px;
+      text-transform: capitalize;
+      text-align: left;
+      padding: {
+        top: 15px;
+        bottom: 15px;
+        left: 30px;
+        right: 30px;
+      };
+      margin: {
+        top: 10px;
+      };
+
+      &--active {
+        background: #F1F4F6;
+        text-align: center;
+        margin: {
+          left: 0;
+        };
+      }
+    }
+  }
+
+  &__sub {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+
+    &-wrapper {
+      position: relative;
+      //display: flex;
+    }
+  }
+
+  &__item {
+    background: #F7F8FD;
+    border: 1px solid #CCD0D3;
+    box-sizing: border-box;
+    padding: {
+      top: 30px;
+      bottom: 45px;
+      left: 15px;
+      right: 10px;
+    };
+    margin: {
+      top: 20px;
+    };
+
+    &-title {
+      font-weight: 500;
+    }
+
+    &-description {
+      margin: {
+        top: 20px;
+      };
+    }
+
+    &-payment {
+      font-weight: 500;
+      margin: {
+        top: 40px;
+      };
+    }
+  }
+
+  &__questionnaire {
+    &-vacancy,
+    &-practice {
+      background: #0175B2;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      width: 270px;
+      padding: {
+        top: 15px;
+        bottom: 15px;
+        left: 30px;
+        right: 30px;
+      };
+      margin: {
+        top: 15px;
+      };
+    }
+
+    &-practice {
+      background: white;
+      color: black;
+      border: 1px solid #DFE1E8;
+      box-sizing: border-box;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .vacancies {
+    &__questionnaire {
+      margin: {
+        top: 40px;
+      };
+
+      &-vacancy {
+        width: auto;
+      }
+
+      &-practice {
+        width: auto;
+        margin: {
+          left: 22px;
+        };
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .vacancies {
+    padding: {
+      top: 83px;
+      bottom: 127px;
+    };
+
+    &__menu {
+      &-wrapper {
+        flex-direction: row;
+        margin: {
+          top: 55px;
+        };
+      }
+
+      &-item {
+        transition: .3s;
+        text-align: center;
+        margin: {
+          left: 35px;
+        };
+
+        &:hover {
+          border: 1px solid #D96C0D;
+        }
+
+        &:first-child {
+          margin: {
+            left: 0;
+          };
+        }
+
+        &--active {
+          cursor: default;
+          margin: {
+            left: 35px;
+          };
+
+          &:hover {
+            border: 1px solid #DFE1E8;
+          }
+        }
+      }
+    }
+
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      padding: {
+        top: 36px;
+        left: 31px;
+        right: 30px;
+        bottom: 35px;
+      };
+      margin: {
+        top: 26px;
+      };
+
+      &-inner {
+        width: 665px;
+      }
+
+      &-payment {
+        margin: {
+          top: 0;
+        };
+      }
+    }
+
+    &__questionnaire {
+      margin: {
+        top: 55px;
+      };
+
+      &-vacancy {
+        transition: .3s;
+
+        &:hover {
+          background: #D96C0D;
+        }
+      }
+
+      &-practice {
+        transition: .3s;
+
+        &:hover {
+          border: 1px solid #D96C0D;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1410px) {
+  .vacancies {
+    &__item {
+
+      &-title {
+        font-size: 24px;
+        line-height: 28px;
+      }
+
+      &-description {
+        width: 765px;
+        font-size: 16px;
+        line-height: 26px;
+        margin: {
+          top: 34px;
+        };
+      }
+    }
+  }
+}
+
+@media (min-width: 1680px) {
+}

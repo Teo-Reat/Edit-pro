@@ -408,6 +408,57 @@ $(document).ready(() => {
 		$(this).toggleClass('show-sub');
 	})
 
+	//Vacancies page menu
+	let analyticsButton = $('.js-vacancies__menu-analytics')
+	let itButton = $('.js-vacancies__menu-it')
+	let startButton = $('.js-vacancies__menu-start')
+
+	let analyticsBlock = $('.js-vacancies__analytics')
+	let itBlock = $('.js-vacancies__it')
+	let startBlock = $('.js-vacancies__start')
+
+	analyticsButton.click(function () {
+		$(this).addClass('vacancies__menu-item--active')
+		itButton.removeClass('vacancies__menu-item--active')
+		startButton.removeClass('vacancies__menu-item--active')
+
+		// analyticsBlock.addClass('vacancies__sub--active')
+		// itBlock.removeClass('vacancies__sub--active')
+		// startBlock.removeClass('vacancies__sub--active')
+
+		analyticsBlock.slideDown()
+		itBlock.slideUp()
+		startBlock.slideUp()
+	})
+
+	itButton.click(function () {
+		$(this).addClass('vacancies__menu-item--active')
+		startButton.removeClass('vacancies__menu-item--active')
+		analyticsButton.removeClass('vacancies__menu-item--active')
+
+		// analyticsBlock.removeClass('vacancies__sub--active')
+		// itBlock.addClass('vacancies__sub--active')
+		// startBlock.removeClass('vacancies__sub--active')
+
+		analyticsBlock.slideUp()
+		itBlock.slideDown()
+		startBlock.slideUp()
+	})
+
+	startButton.click(function () {
+		$(this).addClass('vacancies__menu-item--active')
+		analyticsButton.removeClass('vacancies__menu-item--active')
+		itButton.removeClass('vacancies__menu-item--active')
+
+		// analyticsBlock.removeClass('vacancies__sub--active')
+		// itBlock.removeClass('vacancies__sub--active')
+		// startBlock.addClass('vacancies__sub--active')
+
+		analyticsBlock.slideUp()
+		itBlock.slideUp()
+		startBlock.slideDown()
+	})
+
 	//Yandex map
 	$(function () {
 		if ($('#map').length) {
