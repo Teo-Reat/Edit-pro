@@ -1,0 +1,245 @@
+.team {
+  padding: {
+    top: 40px;
+    bottom: 50px;
+  };
+
+  &__title {
+    padding: {
+      bottom: 10px;
+    };
+  }
+
+  &__item {
+    display: block;
+    margin: {
+      top: 15px;
+    };
+
+    &-image {
+      &-wrapper {
+        position: relative;
+        height: 210px;
+      }
+    }
+
+    &-head {
+      height: 100px;
+      background: #F7F8FD;
+      border: 1px solid #CCD0D3;
+      box-sizing: border-box;
+
+      &-inner {
+        padding: {
+          top: 18px;
+          left: 25px;
+          right: 15px;
+        };
+      }
+    }
+
+    &-title {
+      font-weight: 500;
+    }
+
+    &-description {
+      font-size: 14px;
+      line-height: 18px;
+      margin: {
+        top: 5px;
+      };
+    }
+
+    &-body {
+      position: relative;
+      background: #F7F8FD;
+      height: 250px;
+      border: {
+        left: 1px solid #CCD0D3;
+        right: 1px solid #CCD0D3;
+        bottom: 1px solid #CCD0D3;
+      };
+      box-sizing: border-box;
+
+      &-inner {
+        padding: {
+          top: 36px;
+          left: 25px;
+          right: 15px;
+        };
+      }
+
+      &-svg {
+        position: absolute;
+        height: 80px;
+        width: 80px;
+        right: 21px;
+        bottom: 18px;
+      }
+
+      &-education {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      &-duties {
+        font-size: 14px;
+        line-height: 18px;
+        margin: {
+          top: 10px;
+        };
+      }
+
+      &-hover {
+        display: none;
+      }
+    }
+
+    &-phone {
+      font-size: 14px;
+      line-height: 18px;
+      margin: {
+        left: 10px;
+      };
+
+      &-wrapper {
+        display: flex;
+        align-items: center;
+        margin: {
+          top: 30px;
+        };
+      }
+
+      &-svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &-email {
+      font-size: 14px;
+      line-height: 18px;
+      margin: {
+        left: 10px;
+      };
+
+      &-wrapper {
+        display: flex;
+        align-items: center;
+        margin: {
+          top: 10px;
+        };
+      }
+
+      &-svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .team {
+    padding: {
+      top: 70px;
+      bottom: 90px;
+    };
+
+    &__item {
+      margin: {
+        top: 30px;
+      };
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .team {
+    &__item {
+      overflow: hidden;
+
+      &:hover .team__item-body-hover {
+        visibility: visible;
+        opacity: 1;
+        top: 0;
+
+        &-description {
+          font-size: 16px;
+          line-height: 26px;
+        }
+      }
+
+      &-body {
+        &-hover {
+          display: block;
+          background: #F1F4F6;
+          height: 249px;
+          position: absolute;
+          visibility: hidden;
+          opacity: 0;
+          transition: .3s;
+          top: 260px;
+          left: 0;
+          padding: {
+            top: 36px;
+            left: 25px;
+            right: 15px;
+          };
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1410px) {
+  .team {
+    padding: {
+      top: 83px;
+      bottom: 126px;
+    };
+
+    &__title {
+      padding: {
+        bottom: 25px;
+      };
+    }
+
+    &__item {
+      &-description {
+        font-size: 16px;
+        line-height: 18px;
+      }
+
+      &-body {
+        &-education {
+          font-size: 16px;
+          line-height: 26px;
+        }
+
+        &-duties {
+          font-size: 16px;
+          line-height: 26px;
+        }
+
+        &-hover {
+          font-size: 16px;
+          line-height: 26px;
+        }
+      }
+
+      &-phone {
+        font-size: 16px;
+        line-height: 26px;
+      }
+
+      &-email {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1680px) {
+}
