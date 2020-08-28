@@ -17,7 +17,7 @@ module.exports = merge(common, {
 		// 	template: "./src/about-us.html"
 		// }),
 		new HtmlWebpackPlugin({
-			template: "./src/vacancies-detail.html"
+			template: "./src/main.html"
 		}),
 		// new HtmlWebpackPlugin({
 		// 	template: "./src/pages/lk-instructions.html"

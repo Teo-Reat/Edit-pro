@@ -1,5 +1,7 @@
 window.$ = window.jQuery = require('jquery');
+require('bootstrap')
 import 'slick-carousel'
+// import 'bootstrap.min.js'
 // import './jquery.mCustomScrollbar.js'
 // import './device'
 

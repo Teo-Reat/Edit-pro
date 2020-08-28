@@ -571,7 +571,7 @@
 
       &-buttons {
         &-wrapper {
-
+          display: flex;
         }
       }
 
@@ -588,11 +588,15 @@
       }
 
       &-introduction {
+        border: 1px solid #DFE1E8;
         height: 44px;
         background: white;
         padding: {
           left: 20px;
           right: 20px;
+        };
+        margin: {
+          left: 10px;
         };
       }
     }
@@ -1095,6 +1099,7 @@
       }
 
       &-introduction {
+        box-sizing: border-box;
         height: 54px;
         margin: {
           left: 19px;

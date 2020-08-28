@@ -28,8 +28,12 @@ module.exports = merge(common, {
 				// 	removeComments: true
 				// }
 			// }),
+			// new HtmlWebpackPlugin({
+			// 	template: "./src/modal.html",
+			// 	filename: 'modal.html',
+			// }),
 			new HtmlWebpackPlugin({
-				template: "./src/vacancies.html",
+				template: "./src/vacancies-detail.html",
 				filename: 'vacancies-detail.html',
 			}),
 			new HtmlWebpackPlugin({
@@ -51,6 +55,10 @@ module.exports = merge(common, {
 			new HtmlWebpackPlugin({
 				template: "./src/news.html",
 				filename: 'news.html',
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/news-detail.html",
+				filename: 'news-detail.html',
 			}),
 			new HtmlWebpackPlugin({
 				template: "./src/page-404.html",

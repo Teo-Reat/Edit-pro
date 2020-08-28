@@ -690,7 +690,6 @@
         </symbol>
     </defs>
 </svg>
-<!--svg end-->
 
 <!--Header-->
 <header class="header js-header">
@@ -1035,6 +1034,7 @@
         </div>
     </section>
 </header>
+
 <!--Main-->
 <main class="main js-main">
     <section class="page-404">
@@ -1196,5 +1196,87 @@
         </div>
     </section>
 </footer>
+
+<!--Modal-->
+<div class="modal fade modal__overlay" id="modal__base">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close modal__close" data-dismiss="modal">
+                    <svg class="modal__close-svg icon icon-close-middle">
+                        <use xlink:href="#icon-close-middle"></use>
+                    </svg>
+                </button>
+                <section class="sd">
+                    <div class="mobile__feedback">
+                        <div class="mobile__feedback-title title--medium">Напишите нам</div>
+                        <form class="row mobile__feedback-form" action="#">
+                            <div class="col-12 col-md-6 modal__item">
+                                <div class="mobile__feedback-input-wrapper js-material-input">
+                                    <label class="mobile__feedback-field"
+                                           for="feedback__name-services">Представьтесь</label>
+                                    <input class="mobile__feedback-input" type="text" id="feedback__name-services"
+                                           name="name">
+                                    <svg class="mobile__feedback-input-svg icon icon-star">
+                                        <use xlink:href="#icon-star"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 modal__item">
+                                <div class="mobile__feedback-input-wrapper js-material-input">
+                                    <label class="mobile__feedback-field" for="feedback__phone-services">Телефон</label>
+                                    <input class="mobile__feedback-input" type="text" id="feedback__phone-services"
+                                           name="phone">
+                                    <svg class="mobile__feedback-input-svg icon icon-star">
+                                        <use xlink:href="#icon-star"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 modal__item">
+                                <div class="mobile__feedback-input-wrapper js-material-input">
+                                    <label class="mobile__feedback-field" for="feedback__email-services">E-mail</label>
+                                    <input class="mobile__feedback-input" type="email" id="feedback__email-services"
+                                           name="email">
+                                    <svg class="mobile__feedback-input-svg icon icon-star">
+                                        <use xlink:href="#icon-star"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 modal__item">
+                                <div class="mobile__feedback-textarea-wrapper js-material-input">
+                    <textarea class="mobile__feedback-textarea" name="message"
+                              id="feedback__message-services"></textarea>
+                                    <label class="mobile__feedback-field"
+                                           for="feedback__message-services">Сообщение</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 modal__item">
+                                <div class="mobile__feedback-captcha-wrapper"></div>
+                            </div>
+                            <div class="col-12 col-md-6 modal__item">
+                                <button class="mobile__feedback-submit">Отправить заявку</button>
+                            </div>
+                            <div class="col-12 col-md-6 modal__item">
+                                <div class="mobile__feedback-input-wrapper mobile__feedback-check-wrapper">
+                                    <input class="mobile__feedback-check-rules" id="feedback__check-services"
+                                           type="checkbox">
+                                    <label for="feedback__check-services">
+                        <span class="mobile__feedback-check-span">
+                            Нажимая кнопку «Отправить», я даю свое
+                        <a class="mobile__feedback-check-link" href="#">
+                            согласие на обработку моих персональных данных
+                        </a>
+                        , в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ
+                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
