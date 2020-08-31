@@ -24,7 +24,6 @@
     }
 
     &-head {
-      height: 100px;
       background: #F7F8FD;
       border: 1px solid #CCD0D3;
       box-sizing: border-box;
@@ -47,6 +46,9 @@
       line-height: 18px;
       margin: {
         top: 5px;
+      };
+      padding: {
+        bottom: 20px;
       };
     }
 
@@ -150,6 +152,10 @@
       margin: {
         top: 30px;
       };
+
+      &-head {
+        height: 100px;
+      }
     }
   }
 }

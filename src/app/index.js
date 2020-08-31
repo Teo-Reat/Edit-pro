@@ -307,52 +307,6 @@ $(document).ready(() => {
 		]
 	});
 
-	//Slick slide in cases-detail page
-	$('.js-company__slider').slick({
-		autoplay: false,
-		// dots: false,
-		// arrows: true,
-		infinite: true,
-		speed: 300,
-		// slidesToShow: 1,
-		slidesToScroll: 1,
-		prevArrow: '<button type="button" class="slick-prev"><svg class="icon icon-arrow-big-l">\n' +
-			'                <use xlink:href="#icon-arrow-big-l"></use>\n' +
-			'            </svg></button>',
-		nextArrow: '<button type="button" class="slick-next"><svg class="icon icon-arrow-big-r">\n' +
-			'                <use xlink:href="#icon-arrow-big-r"></use>\n' +
-			'            </svg></button>',
-		responsive: [
-			{
-				breakpoint: 1410,
-				settings: {
-					// slidesToShow: 1,
-					// slidesToScroll: 1,
-					// arrows: false,
-					// dots: true
-				}
-			},
-			{
-				breakpoint: 1024,
-				settings: {
-					// slidesToShow: 1,
-					// slidesToScroll: 1,
-					// arrows: false,
-					// dots: true
-				}
-			},
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					arrows: true,
-					dots: false
-				}
-			},
-		]
-	});
-
 	//Input placeholders
 	let inputWrapper = $('.js-material-input');
 

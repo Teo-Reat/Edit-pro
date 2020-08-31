@@ -8,6 +8,7 @@
       //bottom: 60px;
     };
   }
+
   &__description {
     position: relative;
     padding: {
@@ -18,19 +19,14 @@
     line-height: 24px;
     color: white;
     background: #0175B2;
-    &-wrapper {
-      width: 270px;
-      margin: {
-        left: auto;
-        right: auto;
-      };
-    }
+
     &-one {
       position: relative;
       z-index: 3;
       font-size: 22px;
       line-height: 30px;
     }
+
     &-two {
       position: relative;
       z-index: 3;
@@ -41,16 +37,18 @@
       };
 
     }
+
     &-svg {
       z-index: 1;
       left: 50%;
     }
   }
+
   &__image {
     &-wrapper {
       position: relative;
       z-index: 5;
-      min-height: 200px;
+      min-height: 60vw;
       padding: 0;
       margin: 0;
     }
@@ -72,11 +70,13 @@
     top: 45px;
     bottom: 25px;
   };
+
   &__question {
     font-weight: 500;
     font-size: 20px;
     line-height: 28px;
   }
+
   &__answer {
     &-item {
       position: relative;
@@ -87,11 +87,13 @@
       margin: {
         top: 20px;
       };
+
       &:first-child {
         margin: {
           top: 30px;
         };
       }
+
       &::before {
         @include mix-pseudo-base;
         width: 10px;
@@ -101,6 +103,7 @@
         left: 0;
       }
     }
+
     &-link {
       font-size: 18px;
       line-height: 24px;
@@ -111,8 +114,18 @@
 .about-page {
   &__steps {
     background: linear-gradient(0deg, #F1F4F6, #F1F4F6), #DBE4EE;
+
+    &-slider {
+      width: 100%;
+
+      &-wrapper {
+        width: 100%;
+      }
+    }
+
     &-title {
       position: relative;
+
       &::after,
       &::before {
         @include mix-pseudo-base;
@@ -128,6 +141,7 @@
         right: 50%;
       }
     }
+
     &-wrapper {
       background: none;
     }
@@ -150,6 +164,7 @@
   .about {
     &__description {
       width: 50%;
+
       &-image {
         &-wrapper {
           width: 720px;
@@ -164,20 +179,23 @@
           };
         }
       }
+
       &-wrapper {
         padding: {
-          left: 15px;
-          right: 15px;
+          left: 25px;
         };
       }
+
       &-svg {
         left: auto;
         right: 0;
       }
     }
+
     &__image {
       &-wrapper {
         width: 50%;
+        min-height: 200px;
       }
 
       &-svg {
@@ -193,6 +211,10 @@
 
   .clients {
     &__answer {
+      margin: {
+        left: -15px;
+      };
+
       &-item {
         &:first-child {
           margin: {
@@ -211,6 +233,7 @@
         }
       }
     }
+
     &__steps {
       background: none;
 
@@ -229,10 +252,12 @@
         padding: {
           left: 34px;
         };
+
         &::before {
           width: auto;
           left: 0;
         }
+
         &::after {
           display: none;
         }
@@ -240,7 +265,9 @@
 
       &-slider {
         top: 100px;
+
         &-wrapper {
+          width: 50%;
           height: 550px;
           background: linear-gradient(0deg, #F1F4F6, #F1F4F6), #DBE4EE;
         }
@@ -259,11 +286,13 @@
           right: 45px;
         };
       }
+
       &-image {
         &-wrapper {
           width: 960px;
         }
       }
+
       &-svg {
         bottom: 0;
         top: auto;
@@ -290,6 +319,7 @@
           left: auto;
           margin: 0;
         }
+
         &-next {
           right: 34px;
         }
@@ -299,6 +329,7 @@
         &-wrapper {
           height: 600px;
         }
+
         &-item {
           height: 500px;
           padding: {
@@ -334,17 +365,20 @@
         bottom: 60px;
       };
     }
+
     &__description {
       padding: {
         top: 100px;
         bottom: 90px;
       };
+
       &-wrapper {
         padding: {
           left: 100px;
           right: 55px;
         };
       }
+
       &-image {
         &-wrapper {
           width: 1200px;
@@ -352,6 +386,7 @@
         }
       }
     }
+
     &__image {
       &-svg {
         height: 147px;
@@ -366,6 +401,7 @@
       top: 100px;
       bottom: 110px;
     };
+
     &__question {
       width: 325px;
       margin: {
@@ -373,6 +409,7 @@
         right: 45px;
       };
     }
+
     &__answer {
       &-item {
         padding: {
@@ -390,6 +427,7 @@
           right: 140px;
           top: -42px;
         }
+
         &-next {
           right: 68px;
         }
@@ -405,15 +443,18 @@
           left: 68px;
         };
       }
+
       &-slider {
         &-wrapper {
           height: 700px;
         }
+
         &-title {
           margin: {
             top: 142px;
           };
         }
+
         &-item {
           height: 600px;
           padding: {
