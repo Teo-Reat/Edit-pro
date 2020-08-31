@@ -170,6 +170,14 @@
         }
       }
 
+      &:hover .team__item-title {
+        color: #D96C0D;
+      }
+
+      &-title {
+        transition: .3s;
+      }
+
       &-body {
         &-hover {
           display: block;
@@ -242,4 +250,13 @@
 }
 
 @media (min-width: 1680px) {
+  .team {
+    &__item {
+      &-image {
+        &-wrapper {
+          height: 240px;
+        }
+      }
+    }
+  }
 }

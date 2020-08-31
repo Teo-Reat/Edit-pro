@@ -97,6 +97,16 @@
 
     &__explanation {
       width: 50%;
+
+      &-list {
+        &-link {
+          transition: .3s;
+
+          &:hover {
+            color: #D96C0D;
+          }
+        }
+      }
     }
   }
 }

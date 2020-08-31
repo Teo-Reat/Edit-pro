@@ -480,7 +480,7 @@ $(document).ready(() => {
 						controls: []
 					}),
 					MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-						'<span style="font-weight: 600;font-size: 18px;">{{ properties.geoObjects.length }}</span>'
+						'<span class="map__icon-font">{{ properties.geoObjects.length }}</span>'
 					),
 					clusterer = new ymaps.Clusterer({
 						clusterIcons: [

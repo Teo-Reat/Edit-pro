@@ -237,6 +237,14 @@
   .cases {
     &__item {
       min-height: 347px;
+
+      &:hover .cases__item-title {
+        color: #D96C0D;
+      }
+
+      &-title {
+        transition: .3s;
+      }
     }
   }
 
