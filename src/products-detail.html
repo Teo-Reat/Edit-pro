@@ -1036,8 +1036,10 @@
                     <textarea class="mobile__feedback-textarea" name="message" id="feedback__message"></textarea>
                     <label class="mobile__feedback-field" for="feedback__message">Сообщение</label>
                 </div>
-                <div class="mobile__feedback-captcha-wrapper"></div>
-                <button class="mobile__feedback-submit">Отправить</button>
+                <div class="mobile__feedback-captcha-wrapper">
+                    <div class="g-recaptcha mobile__feedback-captcha" data-sitekey="6LdpQcYZAAAAAKixs9Wzy_VVeC2AnIzwzcq_Ak7Y"></div>
+                    <button class="mobile__feedback-submit">Отправить</button>
+                </div>
                 <div class="mobile__feedback-input-wrapper">
                     <input class="mobile__feedback-check-rules" id="feedback__check" type="checkbox">
                     <label for="feedback__check">
@@ -1261,288 +1263,279 @@
                     <dl class="compare__list">
                         <dt class="compare__list-title">Возможности</dt>
                         <dd class=" compare__list-item js-compare__list-item">
-                            <button class="compare__list-link">
+                            <button class="compare__list-link js-compare__list-link">
                                 Работа с процессами и задачами
                             </button>
-                            <ul class="compare__sub-list">
-                                <li class="compare__sub-item">
-                                    <a class="compare__sub-link" href="#table-01">
-                                        Использование электронной подписи
-                                    </a>
-                                </li>
-                            </ul>
                         </dd>
                         <dd class=" compare__list-item js-compare__list-item">
-                            <button class="compare__list-link">
+                            <button class="
+                            compare__list-link
+                            compare__list-link--active
+                            js-compare__list-link
+                            js-compare__list-signature">
+                                Использование электронной подписи
+                            </button>
+                        </dd>
+                        <dd class=" compare__list-item js-compare__list-item">
+                            <button class="compare__list-link js-compare__list-link">
                                 Ведение нормативно-справочной информации
                             </button>
-                            <ul class="compare__sub-list">
-                                <li class="compare__sub-item">
-                                    <a class="compare__sub-link" href="#">
-                                        Использование электронной подписи
-                                    </a>
-                                    <a class="compare__sub-link" href="#">
-                                        Horror, pestilence, and grace.
-                                    </a>
-                                    <a class="compare__sub-link" href="#">
-                                        Ho-ho-ho! faith of death.
-                                    </a>
-                                </li>
-                            </ul>
                         </dd>
                         <dd class=" compare__list-item js-compare__list-item">
-                            <button class="compare__list-link">
+                            <button class="compare__list-link js-compare__list-link">
                                 Уведомления
                             </button>
                         </dd>
                         <dd class=" compare__list-item js-compare__list-item">
-                            <button class="compare__list-link">
+                            <button class="compare__list-link js-compare__list-link">
                                 Работа с мероприятиями
                             </button>
                         </dd>
                         <dd class=" compare__list-item js-compare__list-item">
-                            <button class="compare__list-link">
+                            <button class="compare__list-link js-compare__list-link">
                                 Рабочий календарь пользователя
                             </button>
                         </dd>
                         <dd class=" compare__list-item js-compare__list-item">
-                            <button class="compare__list-link">
+                            <button class="compare__list-link js-compare__list-link">
                                 Встроенная почта
                             </button>
                         </dd>
                         <dd class=" compare__list-item js-compare__list-item">
-                            <button class="compare__list-link">
+                            <button class="compare__list-link js-compare__list-link">
                                 Уведомления
                             </button>
                         </dd>
                         <dd class=" compare__list-item js-compare__list-item">
-                            <button class="compare__list-link">
+                            <button class="compare__list-link js-compare__list-link">
                                 Другие возможности
                             </button>
                         </dd>
                     </dl>
                 </div>
                 <div class="col-12 col-lg-8 compare__second">
-                    <div class="compare__table-title">
-                        <span class="compare__table-title-span">ПРОФ</span>
-                        <span class="compare__table-title-span">КОРП</span>
-                    </div>
-                    <div class="compare__table-wrapper">
-                        <table class="compare__table" id="table-01">
-                            <tr class="compare__table-row">
-                                <td class="compare__table-column compare__table-column-title"></td>
-                                <td class="compare__table-column compare__table-column-title">ПРОФ</td>
-                                <td class="compare__table-column compare__table-column-title">КОРП</td>
-                            </tr>
-                            <tr class="compare__table-row">
-                                <td class="compare__table-column">
-                                    Использование ЭП для подписания и шифрования документов и файлов
-                                </td>
-                                <td class="compare__table-column">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                                <td class="compare__table-column">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                            </tr>
-                            <tr class="compare__table-row">
-                                <td class="compare__table-column">
-                                    Подписание ЭП нескольких файлов
-                                </td>
-                                <td class="compare__table-column">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                                <td class="compare__table-column">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                            </tr>
-                            <tr class="compare__table-row">
-                                <td class="compare__table-column">
-                                    Шифрование обязательным сертификатом ЭП
-                                </td>
-                                <td class="compare__table-column">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                                <td class="compare__table-column">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                            </tr>
-                            <tr class="compare__table-row">
-                                <td class="compare__table-column">
-                                    Работа с несколькими провайдерами ЭП
-                                </td>
-                                <td class="compare__table-column">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                                <td class="compare__table-column">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                            </tr>
-                            <tr class="compare__table-row">
-                                <td class="compare__table-column">
-                                    Регистрация личных сертификатов пользователей
-                                </td>
-                                <td class="compare__table-column">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                                <td class="compare__table-column">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                            </tr>
-                            <tr class="compare__table-row">
-                                <td class="compare__table-column">
-                                    Проверка сертификата ЭП
-                                </td>
-                                <td class="compare__table-column">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                                <td class="compare__table-column">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                            </tr>
-                            <tr class="compare__table-row">
-                                <td class="compare__table-column">
-                                    Статус проверки электронной подписи и сертификата
-                                </td>
-                                <td class="compare__table-column">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                                <td class="compare__table-column">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                            </tr>
-                            <tr class="compare__table-row">
-                                <td class="compare__table-column">
-                                    Сохранение пароля сертификата ЭП
-                                </td>
-                                <td class="compare__table-column">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                                <td class="compare__table-column">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                            </tr>
-                            <tr class="compare__table-row">
-                                <td class="compare__table-column">
-                                    Проектный учет
-                                </td>
-                                <td class="compare__table-column"></td>
-                                <td class="compare__table-column">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                            </tr>
-                            <tr class="compare__table-row">
-                                <td class="compare__table-column">
-                                    Управление проектами по контрольным точкам
-                                </td>
-                                <td class="compare__table-column"></td>
-                                <td class="compare__table-column">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                            </tr>
-                            <tr class="compare__table-row">
-                                <td class="compare__table-column">
-                                    Диаграмма Ганта
-                                </td>
-                                <td class="compare__table-column"></td>
-                                <td class="compare__table-column">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                            </tr>
-                            <tr class="compare__table-row">
-                                <td class="compare__table-column">
-                                    Автоматический расчет плана проекта (с возможностью отключения)
-                                </td>
-                                <td class="compare__table-column"></td>
-                                <td class="compare__table-column">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                            </tr>
-                            <tr class="compare__table-row">
-                                <td class="compare__table-column">
-                                    Сводные отчеты по нескольким проектам
-                                </td>
-                                <td class="compare__table-column"></td>
-                                <td class="compare__table-column">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                            </tr>
-                            <tr class="compare__table-row">
-                                <td class="compare__table-column">
-                                    Учет трудозатрат в разрезе проектов
-                                </td>
-                                <td class="compare__table-column"></td>
-                                <td class="compare__table-column">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                            </tr>
-                            <tr class="compare__table-row">
-                                <td class="compare__table-column">
-                                    Контроль сроков исполнения
-                                </td>
-                                <td class="compare__table-column"></td>
-                                <td class="compare__table-column">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                            </tr>
-                            <tr class="compare__table-row">
-                                <td class="compare__table-column compare__table-column-last">
-                                    Загрузка проектов из Microsoft Project
-                                </td>
-                                <td class="compare__table-column compare__table-column-last"></td>
-                                <td class="compare__table-column compare__table-column-last">
-                                    <svg class="compare__table-svg icon icon-check">
-                                        <use xlink:href="#icon-check"></use>
-                                    </svg>
-                                </td>
-                            </tr>
-                        </table>
+                    <div class="compare__signature-wrapper js-compare__signature-wrapper">
+                        <div class="compare__table-title">
+                            <span class="compare__table-title-span">ПРОФ</span>
+                            <span class="compare__table-title-span">КОРП</span>
+                        </div>
+                        <div class="compare__table-wrapper">
+                            <table class="compare__table" id="table-01">
+                                <tr class="compare__table-row">
+                                    <td class="compare__table-column compare__table-column-title"></td>
+                                    <td class="compare__table-column compare__table-column-title">ПРОФ</td>
+                                    <td class="compare__table-column compare__table-column-title">КОРП</td>
+                                </tr>
+                                <tr class="compare__table-row">
+                                    <td class="compare__table-column">
+                                        Использование ЭП для подписания и шифрования документов и файлов
+                                    </td>
+                                    <td class="compare__table-column">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                    <td class="compare__table-column">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr class="compare__table-row">
+                                    <td class="compare__table-column">
+                                        Подписание ЭП нескольких файлов
+                                    </td>
+                                    <td class="compare__table-column">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                    <td class="compare__table-column">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr class="compare__table-row">
+                                    <td class="compare__table-column">
+                                        Шифрование обязательным сертификатом ЭП
+                                    </td>
+                                    <td class="compare__table-column">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                    <td class="compare__table-column">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr class="compare__table-row">
+                                    <td class="compare__table-column">
+                                        Работа с несколькими провайдерами ЭП
+                                    </td>
+                                    <td class="compare__table-column">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                    <td class="compare__table-column">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr class="compare__table-row">
+                                    <td class="compare__table-column">
+                                        Регистрация личных сертификатов пользователей
+                                    </td>
+                                    <td class="compare__table-column">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                    <td class="compare__table-column">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr class="compare__table-row">
+                                    <td class="compare__table-column">
+                                        Проверка сертификата ЭП
+                                    </td>
+                                    <td class="compare__table-column">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                    <td class="compare__table-column">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr class="compare__table-row">
+                                    <td class="compare__table-column">
+                                        Статус проверки электронной подписи и сертификата
+                                    </td>
+                                    <td class="compare__table-column">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                    <td class="compare__table-column">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr class="compare__table-row">
+                                    <td class="compare__table-column">
+                                        Сохранение пароля сертификата ЭП
+                                    </td>
+                                    <td class="compare__table-column">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                    <td class="compare__table-column">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr class="compare__table-row">
+                                    <td class="compare__table-column">
+                                        Проектный учет
+                                    </td>
+                                    <td class="compare__table-column"></td>
+                                    <td class="compare__table-column">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr class="compare__table-row">
+                                    <td class="compare__table-column">
+                                        Управление проектами по контрольным точкам
+                                    </td>
+                                    <td class="compare__table-column"></td>
+                                    <td class="compare__table-column">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr class="compare__table-row">
+                                    <td class="compare__table-column">
+                                        Диаграмма Ганта
+                                    </td>
+                                    <td class="compare__table-column"></td>
+                                    <td class="compare__table-column">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr class="compare__table-row">
+                                    <td class="compare__table-column">
+                                        Автоматический расчет плана проекта (с возможностью отключения)
+                                    </td>
+                                    <td class="compare__table-column"></td>
+                                    <td class="compare__table-column">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr class="compare__table-row">
+                                    <td class="compare__table-column">
+                                        Сводные отчеты по нескольким проектам
+                                    </td>
+                                    <td class="compare__table-column"></td>
+                                    <td class="compare__table-column">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr class="compare__table-row">
+                                    <td class="compare__table-column">
+                                        Учет трудозатрат в разрезе проектов
+                                    </td>
+                                    <td class="compare__table-column"></td>
+                                    <td class="compare__table-column">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr class="compare__table-row">
+                                    <td class="compare__table-column">
+                                        Контроль сроков исполнения
+                                    </td>
+                                    <td class="compare__table-column"></td>
+                                    <td class="compare__table-column">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr class="compare__table-row">
+                                    <td class="compare__table-column compare__table-column-last">
+                                        Загрузка проектов из Microsoft Project
+                                    </td>
+                                    <td class="compare__table-column compare__table-column-last"></td>
+                                    <td class="compare__table-column compare__table-column-last">
+                                        <svg class="compare__table-svg icon icon-check">
+                                            <use xlink:href="#icon-check"></use>
+                                        </svg>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1898,8 +1891,8 @@
             <form class="row mobile__feedback-form" action="#">
                 <div class="col-12 col-md-6">
                     <div class="mobile__feedback-input-wrapper js-material-input">
-                        <label class="mobile__feedback-field" for="feedback__name-services">Представьтесь</label>
-                        <input class="mobile__feedback-input" type="text" id="feedback__name-services" name="name">
+                        <label class="mobile__feedback-field" for="pd-feedback__name-services">Представьтесь</label>
+                        <input class="mobile__feedback-input" type="text" id="pd-feedback__name-services" name="name">
                         <svg class="mobile__feedback-input-svg icon icon-star">
                             <use xlink:href="#icon-star"></use>
                         </svg>
@@ -1907,8 +1900,8 @@
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="mobile__feedback-input-wrapper js-material-input">
-                        <label class="mobile__feedback-field" for="feedback__phone-services">Телефон</label>
-                        <input class="mobile__feedback-input" type="text" id="feedback__phone-services" name="phone">
+                        <label class="mobile__feedback-field" for="pd-feedback__phone-services">Телефон</label>
+                        <input class="mobile__feedback-input" type="text" id="pd-feedback__phone-services" name="phone">
                         <svg class="mobile__feedback-input-svg icon icon-star">
                             <use xlink:href="#icon-star"></use>
                         </svg>
@@ -1916,8 +1909,8 @@
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="mobile__feedback-input-wrapper js-material-input">
-                        <label class="mobile__feedback-field" for="feedback__email-services">E-mail</label>
-                        <input class="mobile__feedback-input" type="email" id="feedback__email-services" name="email">
+                        <label class="mobile__feedback-field" for="pd-feedback__email-services">E-mail</label>
+                        <input class="mobile__feedback-input" type="email" id="pd-feedback__email-services" name="email">
                         <svg class="mobile__feedback-input-svg icon icon-star">
                             <use xlink:href="#icon-star"></use>
                         </svg>
@@ -1926,20 +1919,22 @@
                 <div class="col-12 col-md-6">
                     <div class="mobile__feedback-textarea-wrapper js-material-input">
                     <textarea class="mobile__feedback-textarea" name="message"
-                              id="feedback__message-services"></textarea>
-                        <label class="mobile__feedback-field" for="feedback__message-services">Сообщение</label>
+                              id="pd-feedback__message-services"></textarea>
+                        <label class="mobile__feedback-field" for="pd-feedback__message-services">Сообщение</label>
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
-                    <div class="mobile__feedback-captcha-wrapper"></div>
+                    <div class="mobile__feedback-captcha-wrapper">
+                        <div class="g-recaptcha mobile__feedback-captcha" data-sitekey="6LdpQcYZAAAAAKixs9Wzy_VVeC2AnIzwzcq_Ak7Y"></div>
+                    </div>
                 </div>
                 <div class="col-12 col-md-6">
                     <button class="mobile__feedback-submit">Отправить заявку</button>
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="mobile__feedback-input-wrapper mobile__feedback-check-wrapper">
-                        <input class="mobile__feedback-check-rules" id="feedback__check-services" type="checkbox">
-                        <label for="feedback__check-services">
+                        <input class="mobile__feedback-check-rules" id="pd-feedback__check-services" type="checkbox">
+                        <label for="pd-feedback__check-services">
                         <span class="mobile__feedback-check-span">
                             Нажимая кнопку «Отправить», я даю свое
                         <a class="mobile__feedback-check-link" href="#">
@@ -1951,7 +1946,11 @@
                     </div>
                 </div>
             </form>
-            <a class="mobile__feedback-link" href="#">Все продукты</a>
+        </div>
+        <div class="mobile__feedback-link-wrapper">
+            <div class="container">
+                <a class="mobile__feedback-link" href="#">Все продукты</a>
+            </div>
         </div>
     </section>
 </main>
@@ -2113,7 +2112,9 @@
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 modal__item">
-                                <div class="mobile__feedback-captcha-wrapper"></div>
+                                <div class="mobile__feedback-captcha-wrapper">
+                                    <div class="g-recaptcha mobile__feedback-captcha" data-sitekey="6LdpQcYZAAAAAKixs9Wzy_VVeC2AnIzwzcq_Ak7Y"></div>
+                                </div>
                             </div>
                             <div class="col-12 col-md-6 modal__item">
                                 <button class="mobile__feedback-submit">Отправить заявку</button>

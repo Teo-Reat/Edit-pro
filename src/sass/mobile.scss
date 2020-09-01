@@ -253,9 +253,15 @@
     }
 
     &-captcha {
+      //transform: scale(.97);
+      //margin: {
+      //  left: -3px;
+      //};
+      transform: scale(.88);
+      margin: {
+        left: -15px;
+      };
       &-wrapper {
-        height: 66px;
-        background: darkred;
         margin: {
           top: 45px;
         };
@@ -1248,6 +1254,37 @@
       &-svg {
         width: 40px;
         height: 35px;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .mobile {
+    &__feedback {
+      &-captcha {
+        transform: scale(1);
+        margin: {
+          left: 0;
+        };
+        &-wrapper {
+          width: auto;
+          height: auto;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      &-submit {
+        width: 40%;
+        height: 78px;
+        padding: {
+          left: 30px;
+          right: 30px;
+        };
+        margin: {
+          top: 0;
+        };
       }
     }
   }

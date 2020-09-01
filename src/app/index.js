@@ -360,9 +360,26 @@ $(document).ready(() => {
 	})
 
 	//Products-detail page compare block
-	$('.js-compare__list-item').click(function () {
-		$(this).toggleClass('show-sub');
+	$('.js-compare__list-link').click(function () {
+		$('.js-compare__list-link').removeClass('compare__list-link--active')
+		$(this).addClass('compare__list-link--active')
+
+		if ($('.js-compare__list-signature').hasClass('compare__list-link--active')) {
+			$('.js-compare__signature-wrapper').slideDown()
+		} else {
+			$('.js-compare__signature-wrapper').slideUp()
+		}
 	})
+
+	// $('.js-compare__list-signature').click(function () {
+	// 	// $(this).addClass('compare__list-signature--active')
+	// 	$('.js-compare__signature-wrapper').slideDown()
+	// })
+
+
+
+
+
 
 	//Vacancies page menu
 	let analyticsButton = $('.js-vacancies__menu-analytics')

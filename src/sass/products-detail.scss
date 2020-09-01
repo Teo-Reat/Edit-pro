@@ -89,7 +89,21 @@
 
     &-link {
       height: 70px;
+      width: 100%;
       text-align: left;
+      transition: .3s;
+      padding: {
+        right: 25px;
+      };
+
+      &--active {
+        color: #D96C0D;
+        background: white;
+        padding: {
+          left: 25px;
+          right: 0;
+        };
+      }
     }
   }
 
@@ -132,44 +146,10 @@
     }
   }
 
-  &__sub {
-    position: relative;
-
-    &-list {
-      visibility: hidden;
-      opacity: 0;
-      transition: .3s;
-      overflow: hidden;
-      position: absolute;
-      background: white;
-      width: 100%;
-      z-index: 5;
-      top: 69px;
-      box-shadow: 0 2px 10px rgba(1, 43, 77, 0.14);
-      margin: {
-        left: -400px;
-      };
+  &__signature {
+    &-wrapper {
+      //display: none;
     }
-
-    &-link {
-      display: block;
-      padding: {
-        top: 22px;
-        bottom: 22px;
-        left: 25px;
-        right: 15px;
-      };
-    }
-  }
-}
-
-.show-sub {
-  & .compare__sub-list {
-    visibility: visible;
-    opacity: 1;
-    margin: {
-      left: 0;
-    };
   }
 }
 
@@ -543,6 +523,22 @@
   }
 }
 
+@media (min-width: 576px) {
+  .sd {
+    & .mobile {
+      &__feedback {
+        &-submit {
+          width: 100%;
+          max-width: 276px;
+          margin: {
+            top: 25px;
+          };
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 768px) {
   .products-pg {
     &__br {
@@ -771,6 +767,18 @@
       }
     }
   }
+
+  .sd {
+    & .mobile {
+      &__feedback {
+        &-submit {
+          margin: {
+            top: 45px;
+          };
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1024px) {
@@ -796,6 +804,19 @@
       &-introduction {
         &:hover {
           border: 1px solid #D96C0D;
+        }
+      }
+    }
+
+    &__meeting {
+      &-image {
+        &-wrapper {
+          width: 930px;
+          height: 405px;
+          margin: {
+            left: auto;
+            right: auto;
+          };
         }
       }
     }
@@ -1111,8 +1132,8 @@
           height: 510px;
           margin: {
             top: 79px;
-            left: auto;
-            right: auto;
+            //left: auto;
+            //right: auto;
           };
         }
       }

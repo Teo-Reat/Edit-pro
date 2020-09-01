@@ -252,6 +252,20 @@
 }
 
 @media (min-width: 768px) {
+  .consulting {
+    &__meeting {
+      &-image {
+        &-wrapper {
+          height: 430px;
+          width: 690px;
+          margin: {
+            left: auto;
+            right: auto;
+          };
+        }
+      }
+    }
+  }
 
   .enters {
     &__1c {
@@ -349,10 +363,28 @@
         width: 137px;
       }
     }
+
+    & .products {
+      &__item {
+        &-svg {
+          opacity: .5;
+        }
+      }
+    }
   }
 }
 
 @media (min-width: 1024px) {
+  .consulting {
+    &__meeting {
+      &-image {
+        &-wrapper {
+          height: 430px;
+          width: 930px;
+        }
+      }
+    }
+  }
 
   .enters {
     &__1c {
@@ -369,6 +401,7 @@
 
       &:hover .advantages__item-bg {
         width: 100%;
+        visibility: visible;
       }
 
       &:hover .advantages__item-number {
@@ -388,6 +421,7 @@
         z-index: 0;
         right: auto;
         width: 0;
+        visibility: hidden;
         transition: .3s;
       }
 
@@ -451,7 +485,6 @@
         &-svg {
           height: 60px;
           width: 60px;
-          opacity: 1;
         }
 
         &-description {
@@ -504,8 +537,6 @@
           height: 510px;
           margin: {
             top: 79px;
-            left: auto;
-            right: auto;
           };
         }
       }
