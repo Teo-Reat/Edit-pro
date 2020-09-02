@@ -41,6 +41,7 @@
     "bootstrap": "^4.5.2",
     "browserslist": "^4.13.0",
     "clean-webpack-plugin": "^2.0.0",
+    "object-fit-images": "^3.2.4",
     "postcss-cli": "^7.1.1",
     "slick-carousel": "^1.8.1"
   },

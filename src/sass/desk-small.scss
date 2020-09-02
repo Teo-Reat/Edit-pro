@@ -479,7 +479,9 @@
       position: relative;
 
       &:hover .products__hover-img-wrapper {
-        height: 100%;
+        margin: {
+          top: 0;
+        };
       }
 
       &:hover .products__item-description {
@@ -509,8 +511,11 @@
     &__hover {
       &-img {
         &-wrapper {
-          height: 0;
+          height: 100%;
           transition: .3s;
+          margin: {
+            top: -280px;
+          };
         }
       }
     }
@@ -519,6 +524,7 @@
       height: 240px;
 
       &-description {
+        width: 175px;
         transition: .3s;
         margin: {
           top: 45px;

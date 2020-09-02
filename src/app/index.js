@@ -1,4 +1,5 @@
 window.$ = window.jQuery = require('jquery');
+var objectFitImages = require('object-fit-images');
 require('bootstrap')
 import 'slick-carousel'
 // import 'bootstrap.min.js'
@@ -22,6 +23,10 @@ $(document).ready(() => {
 	// 	});
 	// })(jQuery);
 
+	//object-fit and object-position fot IE
+	$(function () { objectFitImages() });
+
+
 
 	// Load bar
 	slick = $('.js-prime__slider');
@@ -31,7 +36,7 @@ $(document).ready(() => {
 		dots: false,
 		arrows: true,
 		infinite: true,
-		speed: 200,
+		speed: 2000,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		prevArrow: '<button type="button" class="slick-prev"><svg class="icon icon-arrow-big-l">\n' +
@@ -221,7 +226,7 @@ $(document).ready(() => {
 		dots: false,
 		arrows: true,
 		infinite: true,
-		speed: 300,
+		speed: 900,
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		prevArrow: '<button type="button" class="slick-prev"><svg class="icon icon-arrow-big-l">\n' +
@@ -267,7 +272,7 @@ $(document).ready(() => {
 		dots: false,
 		arrows: true,
 		infinite: true,
-		speed: 300,
+		speed: 900,
 		// slidesToShow: 1,
 		slidesToScroll: 1,
 		prevArrow: '<button type="button" class="slick-prev"><svg class="icon icon-arrow-big-l">\n' +
@@ -457,14 +462,14 @@ $(document).ready(() => {
 						clusterIcons: [
 							{
 								href: 'images/mark-cell.svg',
-								size: [57, 67],
-								offset: [-27.5, -67],
+								size: [67, 73],
+								offset: [-25, -60],
 								iconContentOffset: [23, 15],
 							},
 							{
 								href: 'images/mark-cell.svg',
-								size: [90, 108],
-								offset: [-45, -108],
+								size: [55, 60],
+								offset: [-33.5, -73],
 								iconContentOffset: [25, 25],
 							}],
 						clusterNumbers: [100],
@@ -593,8 +598,8 @@ $(document).ready(() => {
 						balloonContentLayout: MyBalloonContentLayout,
 						iconLayout: 'default#image',
 						iconImageHref: 'images/mark.svg',
-						iconImageSize: [39, 45],
-						iconImageOffset: [-19.5, -45]
+						iconImageSize: [52, 57],
+						iconImageOffset: [-26, -57]
 					});
 
 				}

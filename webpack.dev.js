@@ -14,7 +14,8 @@ module.exports = merge(common, {
 			// template: "./src/about-us.html"
 			// template: "./src/cases.html"
 			// template: "./src/cases-detail.html"
-			// template: "./src/main.html"
+			// template: "./src/index.html"
+			template: "./src/main.html"
 			// template: "./src/news.html"
 			// template: "./src/news-detail.html"
 			// template: "./src/products.html"
@@ -22,7 +23,7 @@ module.exports = merge(common, {
 			// template: "./src/services.html"
 			// template: "./src/services-detail.html"
 			// template: "./src/our-team.html"
-			template: "./src/vacancies.html"
+			// template: "./src/vacancies.html"
 			// template: "./src/vacancies-detail.html"
 		}),
 	],

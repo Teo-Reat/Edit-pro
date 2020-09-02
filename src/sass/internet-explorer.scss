@@ -4,10 +4,11 @@
     padding-bottom: 423px;
     display: block;
     height: 100%;
+    overflow-x: hidden;
   }
 
   .footer {
-    height: 423px;
+    height: 424px;
     position: absolute;
     left: 0;
     right: 0;
@@ -15,10 +16,35 @@
   }
 
   .background-image {
+    object-fit: cover;
+    object-position: bottom;
+    font-family: 'object-fit: cover; object-position: bottom;';
+  }
+
+  .header__logo-svg {
+    height: 87px;
+  }
+  .fixed .header__logo-svg {
+    height: 72px;
+  }
+
+  .prime__progress {
+    bottom: 0;
+  }
+
+  .news__main {
+    overflow: hidden;
+  }
+
+  .prime__bg-image-wrapper {
     & > img {
-      object-fit: cover;
-      object-position: bottom;
-      font-family: 'object-fit: cover; object-position: bottom;';
+      width: auto;
     }
+  }
+
+  .news__main-title {
+    margin: {
+      top: 0;
+    };
   }
 }

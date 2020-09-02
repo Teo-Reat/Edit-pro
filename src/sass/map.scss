@@ -7,6 +7,7 @@
   margin: {
     top: -14px;
   };
+
   &::after {
     @include mix-pseudo-base;
     background: white;
@@ -21,13 +22,15 @@
   }
 
   &__inner {
-    min-height: 20px;//---Old---
-    position: relative;//---Old---
-    padding: 0;//---Old---
+    min-height: 20px; //---Old---
+    position: relative; //---Old---
+    padding: 0; //---Old---
   }
+
   &__content {
-    width: 100%;//---Old---
+    width: 100%; //---Old---
   }
+
   &__close {
     position: absolute;
     z-index: 10;
@@ -38,6 +41,7 @@
     justify-content: center;
     right: 12px;
     top: 17px;
+
     &-svg {
       width: 12px;
       height: 12px;
@@ -56,6 +60,7 @@
       right: 20px;
       bottom: 25px;
     };
+
     &::before {
       @include mix-pseudo-base;
       //width: 100%;
@@ -75,6 +80,7 @@
       line-height: 19px;
     }
   }
+
   &__body {
     display: flex;
     position: relative;
@@ -84,6 +90,7 @@
       right: 20px;
       bottom: 20px;
     };
+
     &::before {
       @include mix-pseudo-base;
       height: 1px;
@@ -94,22 +101,26 @@
       opacity: 0.14;
     }
   }
+
   &__description {
     margin: {
       left: 40px;
     };
+
     &-column {
       color: #222222;
       font-size: 14px;
       line-height: 24px;
       font-weight: bold;
     }
+
     &-value {
       color: #222222;
       font-size: 14px;
       line-height: 24px;
     }
   }
+
   &__footer {
     position: relative;
     padding: {
@@ -118,6 +129,7 @@
       right: 20px;
       bottom: 25px;
     };
+
     &-description {
       font-size: 14px;
       line-height: 21px;
@@ -134,10 +146,12 @@
 
   .balloon {
     width: 255px;
+
     &__body {
       display: flex;
       flex-direction: column;
     }
+
     &__description {
       margin: {
         top: 20px;
