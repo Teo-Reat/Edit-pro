@@ -1,7 +1,7 @@
 //Balloon style
 .popover {
   background: white;
-  width: 470px;
+  width: 270px;
   box-shadow: 0 10px 7px rgba(0, 0, 0, 0.25);
   position: absolute;
   margin: {
@@ -141,7 +141,7 @@
 @media (max-width: 575px) {
   .popover {
     position: absolute;
-    width: 100%;
+    //width: 100%;
   }
 
   .balloon {

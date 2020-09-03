@@ -28,15 +28,27 @@ $(document).ready(() => {
 
 
 
-	// Load bar
+	//Prime slider and load bar
 	slick = $('.js-prime__slider');
+
+	slick.on('init', function(event, slick) {
+		console.log('hui!')
+		$(this).find('.js-prime__title,.js-prime__description').removeClass('prime__active');
+		// $(this).find('.slick-slide').eq(0).find('.prime__slider-item').addClass('prime__active');
+		$(this).find('.slick-slide').eq(0).find('.js-prime__title').addClass('prime__active');
+		$(this).find('.slick-slide').eq(0).find('.js-prime__description').addClass('prime__active');
+	});
+
+
 	slick.slick({
 		pauseOnHover: true,
-		autoplay: true,
+		autoplay: false,
 		dots: false,
+		fade: true,
 		arrows: true,
 		infinite: true,
-		speed: 2000,
+		speed: 1000,
+		autoplaySpeed: 5000,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		prevArrow: '<button type="button" class="slick-prev"><svg class="icon icon-arrow-big-l">\n' +
@@ -73,7 +85,7 @@ $(document).ready(() => {
 		resetProgressbar();
 		percentTime = 0;
 		isPause = false;
-		tick = setInterval(interval, 10);
+		tick = setInterval(interval, 30);
 	}
 
 	function interval() {
@@ -98,6 +110,18 @@ $(document).ready(() => {
 	}
 
 	startProgressbar();
+
+	slick.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+		console.log('yes!')
+		$(this).find('.slick-slide').eq(currentSlide).find('.js-prime__title').addClass('prime__before');
+		$(this).find('.slick-slide').eq(currentSlide).find('.js-prime__description').addClass('prime__before');
+	});
+	slick.on('afterChange', function(event, slick, currentSlide){
+		console.log('nooooo!')
+		$(this).find('.js-prime__title,.js-prime__description').removeClass('prime__active prime__before');
+		$(this).find('.slick-slide').eq(currentSlide).find('.js-prime__title').addClass('prime__active');
+		$(this).find('.slick-slide').eq(currentSlide).find('.js-prime__description').addClass('prime__active');
+	});
 
 
 	//Fixed menu

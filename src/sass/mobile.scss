@@ -61,6 +61,7 @@
     &__wrapper {
       height: 50px;
     }
+
     &__logo {
       &-svg {
         margin: {
@@ -261,6 +262,7 @@
       margin: {
         left: -15px;
       };
+
       &-wrapper {
         margin: {
           top: 45px;
@@ -378,7 +380,7 @@
 
   &__slider {
     &-item {
-      min-height: 460px;
+      min-height: 500px;
       position: relative;
       padding: {
         bottom: 90px;
@@ -409,7 +411,10 @@
 
   &__title {
     color: #FFFFFF;
-    margin-top: 59px;
+    top: 55px;
+    padding: {
+      right: 10px;
+    };
   }
 
   &__description {
@@ -418,8 +423,8 @@
     color: white;
     padding: {
       left: 24px;
+      right: 15px;
     };
-    position: relative;
     margin: {
       top: 30px;
     }
@@ -431,6 +436,25 @@
       background: #009FE3;
       top: 9px;
       left: 0;
+    }
+  }
+
+  &__title,
+  &__description {
+    position: relative;
+    transition: top 0.5s ease-out 0.4s, opacity 0.5s ease-out 0.4s;
+    opacity: 0;
+    top: 50px;
+
+    &.prime__active {
+      opacity: 1;
+      transition: top 0.5s ease-out 0.4s, opacity 0.5s ease-out 0.4s;
+    }
+
+    &.prime__before {
+      top: -50px;
+      opacity: 0;
+      transition: top 0.5s ease-out 0.4s, opacity 0.5s ease-out 0.4s;
     }
   }
 }
@@ -877,6 +901,7 @@
 
     &-svg {
       display: none;
+
       &-top {
         display: none;
       }
@@ -1007,6 +1032,7 @@
         right: auto;
         left: 10px;
       };
+
       &-text {
         margin: {
           left: 11px;
@@ -1017,6 +1043,7 @@
         width: 37px;
         height: 37px;
         fill: #0a285a;
+
         &-wrapper {
           height: 37px;
         }
@@ -1251,6 +1278,7 @@
     &-logo {
       display: block;
       height: 35px;
+
       &-svg {
         width: 40px;
         height: 35px;
@@ -1267,6 +1295,7 @@
         margin: {
           left: 0;
         };
+
         &-wrapper {
           width: auto;
           height: auto;
@@ -1286,6 +1315,21 @@
           top: 0;
         };
       }
+    }
+  }
+
+  .prime {
+    &__slider {
+      &-item {
+        min-height: auto;
+        height: 400px;
+      }
+    }
+
+    &__description {
+      margin: {
+        top: 30px;
+      };
     }
   }
 }
