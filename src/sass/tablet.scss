@@ -200,15 +200,10 @@
       width: 50%;
 
       &-circle {
-        height: 352px;
-        width: 248px;
         position: absolute;
-        top: 75px;
-        left: 50px;
-        fill: #009fe3;
-        &--orange {
-          fill: red;
-        }
+        top: 77px;
+        left: 49px;
+        width: 245px;
       }
 
       &-it {
@@ -229,6 +224,7 @@
         border: 1px solid rgba(21, 51, 75, 0.26);
         box-sizing: border-box;
         z-index: 10;
+        background: rgba(255, 255, 255, 0.26);
 
         &::after {
           @include mix-pseudo-base;
@@ -342,6 +338,7 @@
             background: #D96C0D;
           }
         }
+
         &-svg {
           fill: white;
         }
@@ -413,12 +410,14 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+
       &-title {
         order: 0;
         margin: {
           left: 0;
         };
       }
+
       &-inner {
         margin: {
           top: 30px;

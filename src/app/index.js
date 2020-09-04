@@ -1,10 +1,14 @@
 window.$ = window.jQuery = require('jquery');
 var objectFitImages = require('object-fit-images');
+var ProgressBar = require('progressbar.js')
+var line = new ProgressBar.Line('#container')
 require('bootstrap')
 import 'slick-carousel'
 // import 'bootstrap.min.js'
 // import './jquery.mCustomScrollbar.js'
 // import './device'
+
+
 
 
 $(document).ready(() => {
@@ -26,15 +30,11 @@ $(document).ready(() => {
 	//object-fit and object-position fot IE
 	$(function () { objectFitImages() });
 
-
-
 	//Prime slider and load bar
 	slick = $('.js-prime__slider');
 
 	slick.on('init', function(event, slick) {
-		console.log('hui!')
 		$(this).find('.js-prime__title,.js-prime__description').removeClass('prime__active');
-		// $(this).find('.slick-slide').eq(0).find('.prime__slider-item').addClass('prime__active');
 		$(this).find('.slick-slide').eq(0).find('.js-prime__title').addClass('prime__active');
 		$(this).find('.slick-slide').eq(0).find('.js-prime__description').addClass('prime__active');
 	});
@@ -81,6 +81,22 @@ $(document).ready(() => {
 		}
 	})
 
+	slick.on('beforeChange', function(event, slick, currentSlide) {
+		let fill = setInterval(fillProgressbar, 10)
+
+		function fillProgressbar() {
+			percentTime += 1.5;
+			bar.css({
+				width: percentTime+"%"
+			})
+			if (percentTime >= 100) {
+				clearInterval(fill)
+				resetProgressbar()
+				startProgressbar()
+			}
+		}
+	})
+
 	function startProgressbar() {
 		resetProgressbar();
 		percentTime = 0;
@@ -97,7 +113,6 @@ $(document).ready(() => {
 			if(percentTime >= 100)
 			{
 				slick.slick('slickNext');
-				startProgressbar();
 			}
 		}
 	}
@@ -112,12 +127,10 @@ $(document).ready(() => {
 	startProgressbar();
 
 	slick.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-		console.log('yes!')
 		$(this).find('.slick-slide').eq(currentSlide).find('.js-prime__title').addClass('prime__before');
 		$(this).find('.slick-slide').eq(currentSlide).find('.js-prime__description').addClass('prime__before');
 	});
 	slick.on('afterChange', function(event, slick, currentSlide){
-		console.log('nooooo!')
 		$(this).find('.js-prime__title,.js-prime__description').removeClass('prime__active prime__before');
 		$(this).find('.slick-slide').eq(currentSlide).find('.js-prime__title').addClass('prime__active');
 		$(this).find('.slick-slide').eq(currentSlide).find('.js-prime__description').addClass('prime__active');
@@ -147,69 +160,30 @@ $(document).ready(() => {
 
 
 	//Spinner
-	let stepSlider = $('.steps__slider');
-	let spinnerItem = $('.steps__spinner-item')
+	const stepSlider = $('.steps__slider');
+
+	const stepsBar = new ProgressBar.Path('#spinner-path', {
+		easing: 'easeInOut',
+		duration: 1400,
+		svgStyle: null
+	});
+
 	stepSlider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
 
-		let spinner = [
-			$('.steps__spinner-first'),
-			$('.steps__spinner-second'),
-			$('.steps__spinner-third'),
-			$('.steps__spinner-fourth'),
-			$('.steps__spinner-fifth'),
-			$('.steps__spinner-sixth'),
-		]
+		const spinner = $('.steps__spinner-item');
 
+		spinner.each(function (i) {
+			if (nextSlide >= i) {
+				$(this).addClass('active-spinner')
+			} else {
+				$(this).removeClass('active-spinner')
+			}
+		})
 
-		switch (nextSlide) {
-			case (0):
-				spinner[0].addClass('active-spinner');
-				spinner[1].removeClass('active-spinner')
-				spinner[2].removeClass('active-spinner')
-				spinner[3].removeClass('active-spinner')
-				spinner[4].removeClass('active-spinner')
-				spinner[5].removeClass('active-spinner')
-				break;
-			case (1):
-				spinner[0].addClass('active-spinner');
-				spinner[1].addClass('active-spinner');
-				spinner[2].removeClass('active-spinner')
-				spinner[3].removeClass('active-spinner')
-				spinner[4].removeClass('active-spinner')
-				spinner[5].removeClass('active-spinner')
-				break;
-			case (2):
-				spinner[0].addClass('active-spinner');
-				spinner[1].addClass('active-spinner');
-				spinner[2].addClass('active-spinner');
-				spinner[3].removeClass('active-spinner')
-				spinner[4].removeClass('active-spinner')
-				spinner[5].removeClass('active-spinner')
-				break;
-			case (3):
-				spinner[0].addClass('active-spinner');
-				spinner[1].addClass('active-spinner');
-				spinner[2].addClass('active-spinner');
-				spinner[3].addClass('active-spinner');
-				spinner[4].removeClass('active-spinner')
-				spinner[5].removeClass('active-spinner')
-				break;
-			case (4):
-				spinner[0].addClass('active-spinner');
-				spinner[1].addClass('active-spinner');
-				spinner[2].addClass('active-spinner');
-				spinner[3].addClass('active-spinner');
-				spinner[4].addClass('active-spinner');
-				spinner[5].removeClass('active-spinner')
-				break;
-			case (5):
-				spinner[0].addClass('active-spinner');
-				spinner[1].addClass('active-spinner');
-				spinner[2].addClass('active-spinner');
-				spinner[3].addClass('active-spinner');
-				spinner[4].addClass('active-spinner');
-				spinner[5].addClass('active-spinner');
-		}
+		let step = nextSlide / (spinner.length - 1);
+		stepsBar.animate(step, {
+			duration: 500
+		})
 	});
 
 	//Slick slider in steps section
@@ -219,9 +193,6 @@ $(document).ready(() => {
 		arrows: true,
 		fade: true,
 		infinite: true,
-		// speed: 500,
-		// fade: true,
-		// cssEase: 'linear',
 		speed: 900,
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -309,10 +280,7 @@ $(document).ready(() => {
 			{
 				breakpoint: 1410,
 				settings: {
-					// slidesToShow: 1,
-					// slidesToScroll: 1,
-					// arrows: false,
-					// dots: true
+
 				}
 			},
 			{

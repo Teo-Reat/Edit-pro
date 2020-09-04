@@ -1,0 +1,23 @@
+#container {
+  //margin: 20px;
+  //width: 200px;
+  //height: 200px;
+  //transform: rotate(-22deg)
+  &__circle {
+
+  }
+}
+
+#next {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+}
+
+#prev {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}

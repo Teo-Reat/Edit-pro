@@ -43,7 +43,9 @@
     "clean-webpack-plugin": "^2.0.0",
     "object-fit-images": "^3.2.4",
     "postcss-cli": "^7.1.1",
-    "slick-carousel": "^1.8.1"
+    "progressbar.js": "^1.1.0",
+    "slick-carousel": "^1.8.1",
+    "vivus": "^0.4.5"
   },
   "browserslist": [
     "defaults",
